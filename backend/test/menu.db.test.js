@@ -45,14 +45,19 @@ const HALL = {
 
 const names = (items) => items.map((i) => i.name);
 
+// Drops collections one-by-one to avoid needing dbAdmin privileges.
+async function wipe(connection) {
+    for (const c of await connection.db.collections()) await c.drop();
+}
+
 describe("HT2_DB import and menu queries", { skip: !process.env.MONGODB_URI && "MONGODB_URI not set" }, () => {
     let locId;
     const search = (query) => menuService.search({ location: String(locId), exclude: [], diet: null, sort: "price", ...query });
 
     before(async () => {
-        const connection = await connectDB({ dbName: TEST_DB });
+        const connection = await connectDB({ dbName: TEST_DB, autoIndex: false }) // indexes are built below, after validators;
         assert.equal(connection.name, TEST_DB, "refusing to run against a non-test database");
-        await connection.dropDatabase();
+        await wipe(connection);
         await applyValidators(connection.db);
         await Promise.all([Location.createIndexes(), Food.createIndexes(), MenuItem.createIndexes()]);
 
@@ -66,7 +71,7 @@ describe("HT2_DB import and menu queries", { skip: !process.env.MONGODB_URI && "
     });
 
     after(async () => {
-        if (mongoose.connection.name === TEST_DB) await mongoose.connection.dropDatabase();
+        if (mongoose.connection.name === TEST_DB) await wipe(mongoose.connection);
         await disconnectDB();
     });
 

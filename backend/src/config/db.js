@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 // Connect once at startup. Mongoose keeps one connection pool and reuses it
 // for every request.
-async function connectDB({ uri = process.env.MONGODB_URI, dbName = process.env.MONGODB_DB } = {}) {
+async function connectDB({ uri = process.env.MONGODB_URI, dbName = process.env.MONGODB_DB, autoIndex = process.env.NODE_ENV !== "production" } = {}) {
     if (!uri) {
         throw new Error("MONGODB_URI is not set. Copy .env.example to .env and fill it in.");
     }
@@ -11,7 +11,7 @@ async function connectDB({ uri = process.env.MONGODB_URI, dbName = process.env.M
         dbName: dbName || "HT2_DB",
         // Build indexes automatically while developing. In production, run
         // `npm run db:indexes` instead so startup never blocks on index builds.
-        autoIndex: process.env.NODE_ENV !== "production",
+        autoIndex,
         // Never let Mongoose create collections: they must be created with
         // their $jsonSchema validator (`npm run db:validators`).
         autoCreate: false,
