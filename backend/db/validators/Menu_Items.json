@@ -1,0 +1,39 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "description": "Stores individual food items within the context of being offered by dining halls. Ex. if the same food item is offered at two dining halls, there will be two entries in Menu_Items that both point to the same item in Foods but may differ in other fields.",
+    "required": [
+      "food_id",
+      "loc_id",
+      "meal_period"
+    ],
+    "properties": {
+      "price": {
+        "bsonType": "number",
+        "description": "The price in USD for the menu item"
+      },
+      "station_id": {
+        "bsonType": "objectId",
+        "description": "if this menu item is for a dining hall, the station where this item is available"
+      },
+      "meal_period": {
+        "bsonType": "string",
+        "description": "the period for which this menu item is available: \"breakfast\", \"lunch\", \"dinner\", \"all\", \"unknown\"",
+        "enum": [
+          "breakfast",
+          "lunch",
+          "dinner",
+          "all",
+          "unknown"
+        ]
+      },
+      "food_id": {
+        "bsonType": "objectId"
+      },
+      "loc_id": {
+        "bsonType": "objectId",
+        "description": "the id of the location this menu item is offered at."
+      }
+    }
+  }
+}

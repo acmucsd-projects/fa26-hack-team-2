@@ -1,0 +1,68 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "description": "Contains information on each on campus food location including hours, sub-stations, and menu items",
+    "required": [
+      "name",
+      "type",
+      "location",
+      "stations"
+    ],
+    "properties": {
+      "name": {
+        "bsonType": "string",
+        "description": "the name of the location"
+      },
+      "location": {
+        "bsonType": "object",
+        "description": "contains all information about where this location is actually located",
+        "required": [
+          "area",
+          "geodata"
+        ],
+        "properties": {
+          "area": {
+            "bsonType": "string",
+            "description": "a general description of where the location is (ex. \"Muir College\" for Pines or \"Price Center, 1st floor\" for Santorini)"
+          },
+          "geodata": {
+            "bsonType": "object",
+            "description": "the GeoJSON object that contains all geodata"
+          }
+        }
+      },
+      "stations": {
+        "bsonType": "array",
+        "description": "A list of each station at the dining hall, empty if this location is not a dining hall",
+        "items": {
+          "bsonType": "object",
+          "description": "One station at the dining hall",
+          "required": [
+            "station_id",
+            "station_name"
+          ],
+          "properties": {
+            "station_id": {
+              "bsonType": "objectId",
+              "description": "the unique identifier for a station"
+            },
+            "station_name": {
+              "bsonType": "string",
+              "description": "the name of the station"
+            }
+          }
+        }
+      },
+      "type": {
+        "bsonType": "string",
+        "description": "The type of location this is: \"dining hall\", \"cafe\", \"market\", or \"other\"",
+        "enum": [
+          "dining hall",
+          "cafe",
+          "market",
+          "other"
+        ]
+      }
+    }
+  }
+}
