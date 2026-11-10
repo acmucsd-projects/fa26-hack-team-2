@@ -1,0 +1,348 @@
+{
+  "dining_hall": {
+    "id": "pines",
+    "name": "Pines",
+    "type": "dining_hall",
+    "area": "Muir College"
+  },
+  "tag_legend": {
+    "dairy": {
+      "icon": "pink milk bottle",
+      "label": "Contains Dairy",
+      "type": "allergen"
+    },
+    "tree_nuts": {
+      "icon": "brown nut",
+      "label": "Contains Tree Nuts",
+      "type": "allergen"
+    },
+    "soy": {
+      "icon": "green soybean pod",
+      "label": "Contains Soy",
+      "type": "allergen"
+    },
+    "wheat": {
+      "icon": "tan wheat stalk",
+      "label": "Contains Wheat",
+      "type": "allergen"
+    },
+    "fish": {
+      "icon": "blue fish",
+      "label": "Contains Fish",
+      "type": "allergen"
+    },
+    "shellfish": {
+      "icon": "orange crab",
+      "label": "Contains Shellfish",
+      "type": "allergen"
+    },
+    "peanuts": {
+      "icon": "purple peanut",
+      "label": "Contains Peanuts",
+      "type": "allergen"
+    },
+    "eggs": {
+      "icon": "yellow fried egg",
+      "label": "Contains Eggs",
+      "type": "allergen"
+    },
+    "sesame": {
+      "icon": "black dotted circle",
+      "label": "Contains Sesame",
+      "type": "allergen"
+    },
+    "gluten": {
+      "icon": "red C|G with wheat",
+      "label": "Contains Gluten",
+      "type": "allergen"
+    },
+    "vegan": {
+      "icon": "grey V",
+      "label": "Vegan",
+      "type": "diet"
+    },
+    "vegetarian": {
+      "icon": "green leaf",
+      "label": "Vegetarian",
+      "type": "diet"
+    },
+    "wellness": {
+      "icon": "teal W",
+      "label": "Wellness",
+      "type": "program"
+    },
+    "sustainability": {
+      "icon": "teal swirl",
+      "label": "Sustainability",
+      "type": "program"
+    }
+  },
+  "stations": [
+    {
+      "id": "pines-current",
+      "name": "Current",
+      "hours": null,
+      "notes": "Showed 'Now Closed'; hours unknown",
+      "items": [
+        { "category": "Poke Bowls", "name": "Seafood Poke Single", "price_cents": 900, "calories": 836, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Poke Bowls", "name": "Seafood Poke Double", "price_cents": 1400, "calories": 1014, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Poke Bowls", "name": "Plant Based Poke Single", "price_cents": 700, "calories": 698, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Poke Bowls", "name": "Plant Based Poke Double", "price_cents": 900, "calories": 788, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Miso Soup", "price_cents": 375, "calories": 54, "tags": ["fish", "soy"]  },
+        { "category": "Sides", "name": "Sesame Udon Noodle Salad", "price_cents": 425, "calories": 387, "tags": ["sesame", "soy", "vegan"]  },
+        { "category": "Sides", "name": "Thai Cooked Shrimp Salad (Pla Goong)", "price_cents": 500, "calories": 75, "tags": ["fish", "shellfish", "soy"]  },
+        { "category": "Sides", "name": "Mango Coleslaw", "price_cents": 375, "calories": 79, "tags": ["sustainability", "vegan"]  }
+      ]
+    },
+    {
+      "id": "pines-heat",
+      "name": "Heat",
+      "hours": [
+        {
+          "open": "17:00",
+          "close": null
+        }
+      ],
+      "notes": "Screenshot only showed 'Opens at 5 PM'; closing time unknown",
+      "items": [
+        { "category": "Bowls", "name": "Chicken Pad Thai Noodle Bowl", "price_cents": 850, "calories": 1200, "tags": ["eggs", "fish", "sesame", "soy"]  },
+        { "category": "Bowls", "name": "Shrimp Pad Thai Noodle Bowl", "price_cents": 1000, "calories": 1184, "tags": ["eggs", "fish", "sesame", "shellfish", "soy"]  },
+        { "category": "Bowls", "name": "Spicy Japchae Pork Belly Noodle Bowl", "price_cents": 1200, "calories": 940, "tags": ["sesame", "soy"]  },
+        { "category": "Bowls", "name": "Kabocha Red Curry Rice Bowl", "price_cents": 1000, "calories": 585, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Bowls", "name": "Beef Bibimbap Rice Bowl", "price_cents": 1000, "calories": 778, "tags": ["eggs", "sesame", "soy"]  },
+        { "category": "Bowls", "name": "Tofu Mushroom Bibimbap Rice Bowl", "price_cents": 800, "calories": 808, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Spring Rolls", "price_cents": 325, "calories": 81, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Chicken Potstickers", "price_cents": 400, "calories": 90, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Sides", "name": "Green Papaya Salad", "price_cents": 350, "calories": 55, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Calrose Rice", "price_cents": 350, "calories": 49, "tags": ["sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Pad Thai Noodles", "price_cents": 400, "calories": 415, "tags": ["eggs", "sesame", "soy", "vegetarian"]  },
+        { "category": "Sides", "name": "Namul Stir Fried Vegetables", "price_cents": 325, "calories": 90, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Thai Pickled Vegetables", "price_cents": 325, "calories": 30, "tags": ["sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Japchae Noodles", "price_cents": 400, "calories": 207, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Kimchi", "price_cents": 250, "calories": 31, "tags": ["sustainability", "vegan"]  }
+      ]
+    },
+    {
+      "id": "pines-morning-fog",
+      "name": "Morning Fog",
+      "hours": [
+        {
+          "open": "07:00",
+          "close": "21:00"
+        }
+      ],
+      "notes": "Possible gaps between screenshots in Coffeehouse (after Latte, after London Fog), Tea & Lemonade (after Mighty Leaf Hot Tea) and Su Pan Pan Dulce (after Chocolate Concha)",
+      "items": [
+        { "category": "Seasonal Drinks", "name": "Blue Haze Red Bull Infusion", "price_cents": 675, "calories": 249, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Seasonal Drinks", "name": "Pumpkin Chai Latte", "price_cents": 575, "calories": 205, "tags": []  },
+        { "category": "Seasonal Drinks", "name": "Pumpkin Pie Latte", "price_cents": 575, "calories": 248, "tags": []  },
+        { "category": "Morning Fog Signature Drinks", "name": "Iced Coconut Milk Matcha", "price_cents": 600, "calories": 178, "tags": ["vegan"]  },
+        { "category": "Morning Fog Signature Drinks", "name": "Iced Matcha Coconut Water", "price_cents": 650, "calories": 97, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Blended Green Tea Matcha Latte", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Coffee Frappe", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Chai Frappe", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Major Dickason Dark Roast Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Cold Brew", "price_cents": 500, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Americano", "price_cents": 400, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Mocha", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Chai Latte", "price_cents": 575, "calories": 158, "tags": []  },
+        { "category": "Coffeehouse", "name": "Cappuccino", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "White Mocha", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Peets Iced Black Tie Coffee", "price_cents": 500, "calories": 263, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Caramel Macchiato", "price_cents": 600, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Green Tea Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "London Fog", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Horchata Cold Brew Oat Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Cold Brew Oat Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Hot Chocolate", "price_cents": 450, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Single", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Double", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "DECAF Peets Drip Brewed Coffee", "price_cents": 325, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonade", "name": "Mighty Leaf Hot Tea", "price_cents": 325, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonade", "name": "Summer Solstice Black Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Tropical Green Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Wild Berry Hibiscus Herbal Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Black Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Green Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Hibiscus Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Water", "price_cents": 50, "calories": null, "tags": ["vegan"]  },
+        { "category": "Red Bull Infusions", "name": "Sunrise Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Red Bull Infusions", "name": "Blushing Lady Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Fruit Shakers", "name": "Strawberry Summer Solstice Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Tropical Green Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Wildberry Hibiscus Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Bagels", "name": "Plain Bagel", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Everything Bagel", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Jalapeno Cheese Bagel", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Gluten Free Everything Bagel", "price_cents": 450, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Vanilla Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Chocolate Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Nino Enbuelto (Strawberry Roll)", "price_cents": 375, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Polvorone (Sugar Cookie)", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Sweets", "name": "Ube Cookie", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Sweets", "name": "Coconut Pani Popo", "price_cents": 450, "calories": null, "tags": []  },
+        { "category": "Sweets", "name": "Lilikoi Butter Mochi", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Sweets", "name": "Brookie Bar", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Sweets", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Sweets", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Sweets", "name": "Oatmeal Raisin Cookie", "price_cents": 300, "calories": null, "tags": []  }
+      ]
+    },
+    {
+      "id": "pines-slice",
+      "name": "Slice at Pines",
+      "hours": [
+        {
+          "open": "11:00",
+          "close": "21:00"
+        }
+      ],
+      "items": [
+        { "category": "Appetizers", "name": "Buffalo Wings", "price_cents": 1000, "calories": 963, "tags": ["dairy", "eggs", "soy"]  },
+        { "category": "Appetizers", "name": "Salt & Pepper Wings", "price_cents": 1000, "calories": 896, "tags": ["dairy", "eggs", "soy"]  },
+        { "category": "Appetizers", "name": "Mozzarella Sticks", "price_cents": 700, "calories": 653, "tags": ["dairy", "gluten", "wheat", "vegetarian"]  },
+        { "category": "Slices", "name": "Three Cheese Pizza Slice", "price_cents": 350, "calories": 809, "tags": ["dairy", "gluten", "wheat", "vegetarian"]  },
+        { "category": "Slices", "name": "Pepperoni Pizza Slice", "price_cents": 350, "calories": 798, "tags": ["dairy", "gluten", "wheat"]  },
+        { "category": "Slices", "name": "Chicken Alfredo Pizza Slice", "price_cents": 350, "calories": 833, "tags": ["dairy", "gluten", "wheat"]  },
+        { "category": "Slices", "name": "Vegetarian Pesto Pizza Slice", "price_cents": 350, "calories": 770, "tags": ["dairy", "gluten", "wheat", "vegetarian"]  },
+        { "category": "Slices", "name": "Huli Huli BBQ Chicken Pizza Slice", "price_cents": 350, "calories": 786, "tags": ["dairy", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Slices", "name": "New Yorker Pizza Slice", "price_cents": 450, "calories": 830, "tags": ["dairy", "gluten", "wheat"]  },
+        { "category": "Slices", "name": "Mushroom Spinach Pizza Slice", "price_cents": 350, "calories": 833, "tags": ["dairy", "gluten", "wheat", "vegetarian"]  },
+        { "category": "Subs & Salads", "name": "Side Caesar Salad", "price_cents": 350, "calories": 200, "tags": ["dairy", "eggs", "fish", "gluten", "soy", "wheat"]  },
+        { "category": "Gelato & Sweets", "name": "Dark Chocolate Gelato", "price_cents": 400, "calories": 189, "tags": ["dairy", "eggs", "soy", "vegetarian"]  },
+        { "category": "Gelato & Sweets", "name": "Vanilla Gelato", "price_cents": 400, "calories": 150, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Gelato & Sweets", "name": "Gelato Pistachio", "price_cents": 400, "calories": 202, "tags": ["dairy", "tree_nuts", "vegetarian"]  },
+        { "category": "Gelato & Sweets", "name": "Gelato Purple Yam", "price_cents": 400, "calories": 174, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Gelato & Sweets", "name": "Mango Sorbet", "price_cents": 400, "calories": 116, "tags": ["sustainability", "vegan"]  },
+        { "category": "Gelato & Sweets", "name": "Strawberry Sorbet", "price_cents": 400, "calories": 154, "tags": ["sustainability", "vegan"]  },
+        { "category": "Gelato & Sweets", "name": "Tiramisu", "price_cents": 500, "calories": 235, "tags": ["dairy", "eggs", "gluten", "wheat", "vegetarian"]  }
+      ],
+      "notes": "Possible gap in Slices (after Chicken Alfredo Pizza Slice)"
+    },
+    {
+      "id": "pines-street-eats",
+      "name": "Street Eats",
+      "hours": [
+        {
+          "open": "07:00",
+          "close": "10:45"
+        },
+        {
+          "open": "11:15",
+          "close": "21:00"
+        }
+      ],
+      "items": [
+        { "category": "Burgers", "name": "Cali Burger", "price_cents": 1025, "calories": 965, "tags": ["dairy", "eggs", "soy", "wheat"]  },
+        { "category": "Burgers", "name": "Black Bean Burger", "price_cents": 1025, "calories": 497, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sandwiches", "name": "Marinated Tofu Banh Mi", "price_cents": 850, "calories": 773, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sandwiches", "name": "Thai Grilled Chicken Sandwich", "price_cents": 950, "calories": 728, "tags": ["dairy", "fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Sandwiches", "name": "Korean Fried Chicken Sandwich", "price_cents": 950, "calories": 871, "tags": ["dairy", "eggs", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Sandwiches", "name": "Pork Belly Banh Mi", "price_cents": 1000, "calories": 1140, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Street Bites", "name": "Triton Dog", "price_cents": 575, "calories": 389, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Street Bites", "name": "Takoyaki", "price_cents": 750, "calories": 265, "tags": ["gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Street Bites", "name": "Spam Dog", "price_cents": 575, "calories": 339, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Street Bites", "name": "Kalua Pork Moco Loco Plate", "price_cents": 900, "calories": 366, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Street Bites", "name": "Loco Moco Plate", "price_cents": 950, "calories": 731, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Street Bites", "name": "Crispy Enoki Mushroom", "price_cents": 550, "calories": 316, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Chicken Tenders", "price_cents": 950, "calories": 536, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Sides", "name": "French Fries", "price_cents": 450, "calories": 206, "tags": ["soy"]  },
+        { "category": "Sides", "name": "Grilled Chicken Breast", "price_cents": 700, "calories": 270, "tags": []  }
+      ],
+      "notes": "Possible gap between end of Sandwiches (after Pork Belly Banh Mi) and Street Bites"
+    },
+    {
+      "id": "pines-pacific-coast-hwy",
+      "name": "Pacific Coast Hwy",
+      "hours": [
+        {
+          "open": "07:00",
+          "close": "10:15"
+        },
+        {
+          "open": "10:45",
+          "close": "21:00"
+        }
+      ],
+      "items": [
+        { "category": "Plates", "name": "Baja Chicken Plate", "price_cents": 900, "calories": 572, "tags": ["soy"]  },
+        { "category": "Plates", "name": "PCH Fish and Chips", "price_cents": 1050, "calories": 880, "tags": ["fish", "gluten", "soy", "wheat"]  },
+        { "category": "Plates", "name": "Seared Ahi Tuna Plate", "price_cents": 1200, "calories": 618, "tags": ["dairy", "fish", "shellfish"]  },
+        { "category": "Plates", "name": "Crispy Steelhead Plate", "price_cents": 1200, "calories": 548, "tags": ["fish"]  },
+        { "category": "Salads", "name": "Field House Salad", "price_cents": 650, "calories": 570, "tags": ["dairy", "tree_nuts", "vegetarian"]  },
+        { "category": "Salads", "name": "Quinoa Nourish Bowl", "price_cents": 750, "calories": 642, "tags": ["soy", "vegan"]  },
+        { "category": "Salads", "name": "Togarashi Caesar Salad", "price_cents": 650, "calories": 262, "tags": ["dairy", "eggs", "fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Sandwiches", "name": "Central Coast Tri Tip Sandwich", "price_cents": 1200, "calories": 636, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Sandwiches", "name": "Baja Chicken Sandwich", "price_cents": 950, "calories": 698, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Sandwiches", "name": "Crispy Enoki Mushroom Sandwich", "price_cents": 950, "calories": 740, "tags": ["dairy", "gluten", "sesame", "soy", "wheat", "vegetarian"]  },
+        { "category": "Sandwiches", "name": "PCH Crispy Fish Sandwich", "price_cents": 1050, "calories": 690, "tags": ["dairy", "eggs", "fish", "gluten", "soy", "wheat"]  },
+        { "category": "Tacos", "name": "Baja Citrus Chicken Taco", "price_cents": 425, "calories": 290, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Tacos", "name": "PCH Fish Taco", "price_cents": 525, "calories": 374, "tags": ["fish", "gluten", "soy", "wheat"]  },
+        { "category": "Tacos", "name": "Tri Tip Taco", "price_cents": 525, "calories": 249, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Tacos", "name": "Crispy Enoki Mushroom Taco", "price_cents": 425, "calories": 320, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Avocado Toast", "name": "Avocado Toast", "price_cents": 625, "calories": 283, "tags": ["gluten", "sesame", "soy", "wheat", "vegan"]  },
+        { "category": "Avocado Toast", "name": "Baja Cali Avocado Toast", "price_cents": 625, "calories": 210, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Avocado Toast", "name": "Mango Mint Avocado Toast", "price_cents": 675, "calories": 427, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Sides", "name": "French Fries", "price_cents": 450, "calories": 362, "tags": ["soy", "vegan"]  },
+        { "category": "Sides", "name": "California Rice Pilaf", "price_cents": 350, "calories": 182, "tags": ["sustainability", "vegan", "wellness"]  },
+        { "category": "Sides", "name": "Roasted Potatoes", "price_cents": 350, "calories": 178, "tags": ["sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Garlic Bread", "price_cents": 250, "calories": 384, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Sides", "name": "Lemon Roasted Broccolini", "price_cents": 350, "calories": 39, "tags": ["sustainability", "vegan", "wellness"]  },
+        { "category": "Sides", "name": "Side Togarashi Caesar Salad", "price_cents": 350, "calories": 200, "tags": ["dairy", "eggs", "fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Soup", "name": "Clam Chowder Bowl", "price_cents": 800, "calories": 797, "tags": ["dairy", "fish", "gluten", "shellfish", "soy", "wheat"]  }
+      ],
+      "notes": "Possible gaps in Salads (after Quinoa Nourish Bowl) and Tacos (after Baja Citrus Chicken Taco)"
+    },
+    {
+      "id": "pines-breeze",
+      "name": "Breeze",
+      "hours": [
+        {
+          "open": "11:00",
+          "close": "21:00"
+        }
+      ],
+      "items": [
+        { "category": "Boba Milk Teas", "name": "Boba Milk Tea", "price_cents": 525, "calories": 236, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Boba Milk Teas", "name": "Matcha Boba Milk Tea", "price_cents": 600, "calories": 280, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Boba Milk Teas", "name": "Taro Boba Milk Tea", "price_cents": 600, "calories": 298, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Boba Milk Teas", "name": "Boba Oatmilk Tea", "price_cents": 575, "calories": 240, "tags": ["vegan"]  }
+      ]
+    },
+    {
+      "id": "pines-char",
+      "name": "Char",
+      "hours": [
+        {
+          "open": "10:30",
+          "close": "21:00"
+        }
+      ],
+      "items": [
+        { "category": "Featured Plates", "name": "Miso Glazed Steelhead Plate", "price_cents": 1300, "calories": 586, "tags": ["fish", "sesame", "soy", "sustainability"]  },
+        { "category": "Featured Plates", "name": "Teriyaki Beef Plate", "price_cents": 1200, "calories": 421, "tags": ["sesame", "soy"]  },
+        { "category": "Hawaiian", "name": "Huli Huli Chicken Plate", "price_cents": 925, "calories": 615, "tags": ["dairy", "eggs", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Hawaiian", "name": "Kalua Pork Plate", "price_cents": 850, "calories": 432, "tags": ["sesame", "soy"]  },
+        { "category": "Hawaiian", "name": "Huli Huli Tofu Plate", "price_cents": 900, "calories": 544, "tags": ["sesame", "soy", "vegan"]  },
+        { "category": "Hawaiian", "name": "Garlic Butter Shrimp Plate", "price_cents": 1050, "calories": 529, "tags": ["sesame", "shellfish", "soy"]  },
+        { "category": "Sides", "name": "Calrose Rice", "price_cents": 350, "calories": 294, "tags": ["sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Spring Rolls", "price_cents": 325, "calories": 81, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Sides", "name": "Kimchi Fried Rice", "price_cents": 325, "calories": 317, "tags": ["sesame", "soy", "vegan"]  },
+        { "category": "Sides", "name": "Namul Stir Fried Vegetables", "price_cents": 325, "calories": 90, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Hawaiian Mac Salad", "price_cents": 300, "calories": 349, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Sides", "name": "Japanese Kabocha Salad", "price_cents": 350, "calories": 190, "tags": ["soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Mango Coleslaw", "price_cents": 375, "calories": 79, "tags": ["vegan"]  },
+        { "category": "Dessert", "name": "Thai Mango Sticky Rice", "price_cents": 425, "calories": 398, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Dessert", "name": "Taiyaki", "price_cents": 300, "calories": 200, "tags": ["eggs", "gluten", "soy", "wheat", "vegetarian"]  }
+      ],
+      "notes": "Possible gap between end of Hawaiian (after Garlic Butter Shrimp Plate) and Sides"
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-10-30",
+    "day_of_week": "Friday",
+    "notes": "calories:null = not shown on list view."
+  }
+}

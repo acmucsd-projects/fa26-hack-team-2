@@ -1,0 +1,239 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "description": "Stores standardized food and beverage records with their nutritional information",
+    "required": [
+      "name",
+      "personal",
+      "beverage",
+      "vegan",
+      "vegetarian",
+      "wellness",
+      "sustainability",
+      "ingredients",
+      "allergens",
+      "nutrition"
+    ],
+    "properties": {
+      "nutrition": {
+        "bsonType": "object",
+        "description": "contains all nutrition data for this food",
+        "required": [
+          "macros",
+          "fat_cal",
+          "sat_fat",
+          "trans_fat",
+          "cholesterol",
+          "sodium",
+          "serving_size",
+          "fiber",
+          "sugar",
+          "calorie"
+        ],
+        "properties": {
+          "sodium": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "the total sodium in miligrams (null = unknown)",
+            "minimum": 0
+          },
+          "macros": {
+            "bsonType": "object",
+            "description": "contains the values for the amount of each macro-nutrient the food has",
+            "required": [
+              "protein",
+              "carb",
+              "fat"
+            ],
+            "properties": {
+              "carb": {
+                "bsonType": [
+                  "number",
+                  "null"
+                ],
+                "description": "the amount of carbs (grams) the food has (null = unknown)",
+                "minimum": 0
+              },
+              "protein": {
+                "bsonType": [
+                  "number",
+                  "null"
+                ],
+                "description": "the amount of protein (grams) the food has (null = unknown)",
+                "minimum": 0
+              },
+              "fat": {
+                "bsonType": [
+                  "number",
+                  "null"
+                ],
+                "description": "the amount of fat (grams) the food has (null = unknown)",
+                "minimum": 0
+              }
+            }
+          },
+          "sat_fat": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "the total saturated fat in grams (null = unknown)",
+            "minimum": 0
+          },
+          "fiber": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "the amount of fiber in grams (null = unknown)",
+            "minimum": 0
+          },
+          "serving_size": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "The serving size (oz) of the food (null = unknown)",
+            "minimum": 0
+          },
+          "calorie": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "the number of calories the food has (null = unknown)",
+            "minimum": 0
+          },
+          "fat_cal": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "multipleOf": 1,
+            "description": "the calories that come from fat (null = unknown)",
+            "minimum": 0
+          },
+          "trans_fat": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "the total trans fat in grams (null = unknown)",
+            "minimum": 0
+          },
+          "cholesterol": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "the total cholesterol in miligrams (null = unknown)",
+            "minimum": 0
+          },
+          "sugar": {
+            "bsonType": [
+              "number",
+              "null"
+            ],
+            "description": "the total sugar in grams (null = unknown)",
+            "minimum": 0
+          }
+        }
+      },
+      "beverage": {
+        "bsonType": "bool",
+        "description": "whether this food is actually a drink"
+      },
+      "wellness": {
+        "bsonType": "bool",
+        "description": "whether the food meets the HDH wellness criteria"
+      },
+      "name": {
+        "bsonType": "string",
+        "description": "the name of the food or beverage"
+      },
+      "vegetarian": {
+        "bsonType": "bool",
+        "description": "whether the food is vegetarian"
+      },
+      "ingredients": {
+        "bsonType": "array",
+        "description": "A list of all ingredients",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "personal": {
+        "bsonType": "bool",
+        "description": "whether this food was self reported or comes from HDH"
+      },
+      "vegan": {
+        "bsonType": "bool",
+        "description": "whether the food is vegan"
+      },
+      "sustainability": {
+        "bsonType": "bool",
+        "description": "whether the food meets the HDH sustainability criteria"
+      },
+      "allergens": {
+        "bsonType": "object",
+        "description": "Contains the status for each possible allergen of the food",
+        "required": [
+          "dairy",
+          "tree_nuts",
+          "soy",
+          "wheat",
+          "fish",
+          "shell_fish",
+          "peanuts",
+          "eggs",
+          "gluten",
+          "sesame"
+        ],
+        "properties": {
+          "eggs": {
+            "bsonType": "bool",
+            "description": "whether the food contains eggs"
+          },
+          "gluten": {
+            "bsonType": "bool",
+            "description": "whether the food contains gluten"
+          },
+          "tree_nuts": {
+            "bsonType": "bool",
+            "description": "whether the food contains tree nuts"
+          },
+          "fish": {
+            "bsonType": "bool",
+            "description": "whether the food contains fish"
+          },
+          "wheat": {
+            "bsonType": "bool",
+            "description": "whether the food contains wheat"
+          },
+          "sesame": {
+            "bsonType": "bool",
+            "description": "whether the food contains sesame"
+          },
+          "soy": {
+            "bsonType": "bool",
+            "description": "whether the food contains soy"
+          },
+          "peanuts": {
+            "bsonType": "bool",
+            "description": "whether the food contains peanuts"
+          },
+          "dairy": {
+            "bsonType": "bool",
+            "description": "whether the food contains dairy"
+          },
+          "shell_fish": {
+            "bsonType": "bool",
+            "description": "whether the food contains shell fish"
+          }
+        }
+      }
+    }
+  }
+}

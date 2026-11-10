@@ -151,3 +151,5 @@ vite.config.ts.timestamp-*
 # postman
 .postman/*
 .postman
+postman/
+postman/globals/workspace.globals.yaml
