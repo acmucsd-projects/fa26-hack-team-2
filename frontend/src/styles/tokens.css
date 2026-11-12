@@ -10,10 +10,16 @@
   /* buttons and rows */
   --action-primary: #3f5f9e;
   --action-secondary: #c5d3ee;
+  --action-danger: #b3294e;
+
+  /* status */
+  --status-ok: #2f9e6b;
 
   /* backgrounds */
   --bg-canvas: #dde6f5;
   --bg-surface: #eef3fb;
+  --bg-settings: #6b83b8;
+  --bg-overlay: rgba(36, 59, 107, 0.5); /* navy at 50%, behind popups */
   --white: #ffffff;
 
   /* bubble colors */
@@ -39,15 +45,36 @@
   --font-extrabold: 800;
 
   /* font sizes */
-  --font-size-xs: 12px;
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 20px;
-  --font-size-xl: 22px;
-  --font-size-2xl: 24px;
-  --font-size-3xl: 34px;
+  --font-size-3xs: 11px;     /* tiny section label in Settings */
+  --font-size-2xs: 12px;     /* day names, small notes */
+  --font-size-xs: 13px;      /* field labels, card subtitles */
+  --font-size-sm: 14px;      /* row details, tags, legend */
+  --font-size-md: 15px;      /* small headings, toggle text */
+  --font-size-base: 16px;    /* normal text */
+  --font-size-lg: 17px;      /* text in input boxes, dining hall list */
+  --font-size-xl: 18px;      /* "per day" */
+  --font-size-2xl: 20px;     /* card headings, "This week" */
+  --font-size-3xl: 22px;     /* main button text */
+  --font-size-4xl: 24px;     /* date numbers in day tiles */
+  --font-size-5xl: 28px;     /* popup titles */
+  --font-size-6xl: 34px;     /* page title */
+  --font-size-display: 64px; /* big budget amount */
 
   /* corners */
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --radius-xs: 4px;    /* thin bars */
+  --radius-sm: 10px;   /* selected toggle option */
+  --radius-md: 12px;   /* rows, input boxes */
+  --radius-lg: 14px;   /* dining hall rows, Delete button */
+  --radius-xl: 16px;   /* main buttons, day tiles */
+  --radius-2xl: 20px;  /* profile menu */
+  --radius-3xl: 22px;  /* Settings sections */
+  --radius-4xl: 24px;  /* week panel */
+  --radius-5xl: 28px;  /* popups */
+  --radius-6xl: 32px;  /* Settings card */
+  --radius-full: 999px; /* pills and circles */
+
+  /* shadows */
+  --shadow-sm: 0 3px 8px rgba(36, 59, 107, 0.2);    /* hover labels */
+  --shadow-md: 0 8px 24px rgba(36, 59, 107, 0.22);  /* profile menu */
+  --shadow-lg: 0 16px 40px rgba(36, 59, 107, 0.25); /* popups */
 }
