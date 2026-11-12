@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  /* text colors */
+  --text-navy: #243b6b;
+  --text-muted: #5b6b8c;
+  --text-on-dark: #ffffff;
+  --text-future: #8a93a6;
+
+  /* buttons and rows */
+  --action-primary: #3f5f9e;
+  --action-secondary: #c5d3ee;
+
+  /* backgrounds */
+  --bg-canvas: #dde6f5;
+  --bg-surface: #eef3fb;
+  --white: #ffffff;
+
+  /* bubble colors */
+  --bubble-yellow: #f2b94b;
+  --bubble-teal: #1fa3a8;
+  --bubble-coral: #f0795b;
+  --bubble-blue: #2f6fe4;
+  --bubble-pink: #e0457b;
+
+  /* day tiles */
+  --tile-past: #b7c7e8;
+  --tile-today: #243b6b;
+  --tile-future: #d5dae4;
+
+  /* font */
+  --font-main: "Nunito", sans-serif;
+
+  /* corners */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
