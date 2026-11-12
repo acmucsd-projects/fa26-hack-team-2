@@ -1,0 +1,113 @@
+{
+  "dining_hall": {
+    "id": "concessions",
+    "name": "Concessions",
+    "type": "dining_hall"
+  },
+  "tag_legend": {
+    "dairy": {
+      "icon": "pink milk bottle",
+      "label": "Contains Dairy",
+      "type": "allergen"
+    },
+    "tree_nuts": {
+      "icon": "brown nut",
+      "label": "Contains Tree Nuts",
+      "type": "allergen"
+    },
+    "soy": {
+      "icon": "green soybean pod",
+      "label": "Contains Soy",
+      "type": "allergen"
+    },
+    "wheat": {
+      "icon": "tan wheat stalk",
+      "label": "Contains Wheat",
+      "type": "allergen"
+    },
+    "fish": {
+      "icon": "blue fish",
+      "label": "Contains Fish",
+      "type": "allergen"
+    },
+    "shellfish": {
+      "icon": "orange crab",
+      "label": "Contains Shellfish",
+      "type": "allergen"
+    },
+    "peanuts": {
+      "icon": "purple peanut",
+      "label": "Contains Peanuts",
+      "type": "allergen"
+    },
+    "eggs": {
+      "icon": "yellow fried egg",
+      "label": "Contains Eggs",
+      "type": "allergen"
+    },
+    "sesame": {
+      "icon": "black dotted circle",
+      "label": "Contains Sesame",
+      "type": "allergen"
+    },
+    "gluten": {
+      "icon": "red C|G with wheat",
+      "label": "Contains Gluten",
+      "type": "allergen"
+    },
+    "vegan": {
+      "icon": "grey V",
+      "label": "Vegan",
+      "type": "diet"
+    },
+    "vegetarian": {
+      "icon": "green leaf",
+      "label": "Vegetarian",
+      "type": "diet"
+    },
+    "wellness": {
+      "icon": "teal W",
+      "label": "Wellness",
+      "type": "program"
+    },
+    "sustainability": {
+      "icon": "teal swirl",
+      "label": "Sustainability",
+      "type": "program"
+    }
+  },
+  "stations": [
+    {
+      "id": "concessions-main",
+      "name": "Concessions",
+      "hours": null,
+      "notes": "Hours not captured. Pulled Pork Sandwich and Santa Maria Tri Tip Sandwich are listed under both From the Grill and BBQ Station in the app; stored once under From the Grill",
+      "items": [
+        { "category": "From the Grill", "name": "Chipotle Black Bean Burger", "price_cents": 1500, "calories": 491, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "From the Grill", "name": "Triton Burger", "price_cents": 1500, "calories": 756, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "From the Grill", "name": "Pulled Pork Sandwich", "price_cents": 1400, "calories": 440, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "From the Grill", "name": "Santa Maria Tri Tip Sandwich", "price_cents": 1600, "calories": 566, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "From the Grill", "name": "Grilled Italian Sausage", "price_cents": 1400, "calories": 552, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Liontree Concessions", "name": "Aquafina 16oz Aluminum", "price_cents": 400, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Baja Blast 12oz", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Pepsi 12oz", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Diet Pepsi 12oz", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Diet Cherry Pepsi 12oz", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Lemon Lime Starry 12oz", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Orange Crush 12oz", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Manzanita Sol", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Liontree Concessions", "name": "Root Beer 12oz", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "BBQ Station", "name": "Beef Birria Empanadas", "price_cents": 1200, "calories": null, "tags": []  },
+        { "category": "BBQ Station", "name": "Loaded Nachos", "price_cents": 1500, "calories": null, "tags": []  },
+        { "category": "BBQ Station", "name": "Sweet Chili Bratwurst", "price_cents": 1400, "calories": null, "tags": []  },
+        { "category": "BBQ Station", "name": "Beyond Sausage Dog", "price_cents": 1200, "calories": null, "tags": []  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}

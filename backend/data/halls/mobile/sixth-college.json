@@ -1,0 +1,303 @@
+{
+  "dining_hall": {
+    "id": "sixth-college",
+    "name": "Sixth College",
+    "type": "dining_hall"
+  },
+  "tag_legend": {
+    "dairy": {
+      "icon": "pink milk bottle",
+      "label": "Contains Dairy",
+      "type": "allergen"
+    },
+    "tree_nuts": {
+      "icon": "brown nut",
+      "label": "Contains Tree Nuts",
+      "type": "allergen"
+    },
+    "soy": {
+      "icon": "green soybean pod",
+      "label": "Contains Soy",
+      "type": "allergen"
+    },
+    "wheat": {
+      "icon": "tan wheat stalk",
+      "label": "Contains Wheat",
+      "type": "allergen"
+    },
+    "fish": {
+      "icon": "blue fish",
+      "label": "Contains Fish",
+      "type": "allergen"
+    },
+    "shellfish": {
+      "icon": "orange crab",
+      "label": "Contains Shellfish",
+      "type": "allergen"
+    },
+    "peanuts": {
+      "icon": "purple peanut",
+      "label": "Contains Peanuts",
+      "type": "allergen"
+    },
+    "eggs": {
+      "icon": "yellow fried egg",
+      "label": "Contains Eggs",
+      "type": "allergen"
+    },
+    "sesame": {
+      "icon": "black dotted circle",
+      "label": "Contains Sesame",
+      "type": "allergen"
+    },
+    "gluten": {
+      "icon": "red C|G with wheat",
+      "label": "Contains Gluten",
+      "type": "allergen"
+    },
+    "vegan": {
+      "icon": "grey V",
+      "label": "Vegan",
+      "type": "diet"
+    },
+    "vegetarian": {
+      "icon": "green leaf",
+      "label": "Vegetarian",
+      "type": "diet"
+    },
+    "wellness": {
+      "icon": "teal W",
+      "label": "Wellness",
+      "type": "program"
+    },
+    "sustainability": {
+      "icon": "teal swirl",
+      "label": "Sustainability",
+      "type": "program"
+    }
+  },
+  "stations": [
+    {
+      "id": "sixth-college-wolftown-street",
+      "name": "Wolftown Street",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Street Food", "name": "Street Taco Sampler", "price_cents": 1000, "calories": null, "tags": []  },
+        { "category": "Street Food", "name": "Achiote Chicken Tacos (3)", "price_cents": 1100, "calories": null, "tags": []  },
+        { "category": "Street Food", "name": "Pork Carnitas Taco Plate (3)", "price_cents": 900, "calories": null, "tags": []  },
+        { "category": "Street Food", "name": "Poblano Goat Cheese Tacos (3)", "price_cents": 950, "calories": null, "tags": []  },
+        { "category": "Street Food", "name": "Birria Nachos", "price_cents": 1150, "calories": null, "tags": []  },
+        { "category": "Beverages and Whole Fruit", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Beverages and Whole Fruit", "name": "Banana", "price_cents": 75, "calories": null, "tags": []  },
+        { "category": "Beverages and Whole Fruit", "name": "Apple", "price_cents": 75, "calories": null, "tags": []  }
+      ]
+    },
+    {
+      "id": "sixth-college-makai",
+      "name": "Makai",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Signature Rice Bowls", "name": "Makai Poke Rice Bowl", "price_cents": 1175, "calories": 670, "tags": ["fish", "gluten", "sesame", "soy", "wheat", "sustainability"]  },
+        { "category": "Signature Rice Bowls", "name": "Cali Poke Rice Bowl", "price_cents": 1175, "calories": 830, "tags": ["eggs", "fish", "gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Signature Rice Bowls", "name": "Lava Poke Rice Bowl", "price_cents": 1175, "calories": 630, "tags": ["eggs", "fish", "gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Signature Rice Bowls", "name": "Lilo Poke Rice Bowl", "price_cents": 1175, "calories": 540, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Signature Greens Bowls", "name": "Makai Poke Greens Bowl", "price_cents": 1175, "calories": 400, "tags": ["fish", "gluten", "sesame", "soy", "wheat", "sustainability"]  },
+        { "category": "Signature Greens Bowls", "name": "Lava Poke Greens Bowl", "price_cents": 1175, "calories": 360, "tags": ["eggs", "fish", "gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Signature Greens Bowls", "name": "Cali Poke Greens Bowl", "price_cents": 1175, "calories": 559, "tags": ["eggs", "fish", "gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Signature Greens Bowls", "name": "Lilo Poke Greens Bowl", "price_cents": 1175, "calories": 270, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Brown Rice", "price_cents": 350, "calories": 126, "tags": ["sustainability", "vegan", "wellness"]  },
+        { "category": "Sides", "name": "Calrose Rice", "price_cents": 350, "calories": 148, "tags": ["sustainability", "vegan", "wellness"]  },
+        { "category": "Cookies", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Cookies", "name": "Oatmeal Raisin Cookie", "price_cents": 300, "calories": 350, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Cookies", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 400, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "vegetarian"]  },
+        { "category": "Beverages", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  }
+      ]
+    },
+    {
+      "id": "sixth-college-rooftop",
+      "name": "Rooftop",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Rooftop Entree Plates", "name": "Pulled Pork Plate", "price_cents": 1200, "calories": 880, "tags": []  },
+        { "category": "Rooftop Entree Plates", "name": "Ancho Rib Plate", "price_cents": 1400, "calories": 1655, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Rooftop Entree Plates", "name": "Ancho Lime Chicken Plate", "price_cents": 1400, "calories": 1145, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Rooftop Entree Plates", "name": "Smoked Brisket Plate", "price_cents": 1400, "calories": 906, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Sandwich Plates", "name": "Pulled Pork Sandwich Plate", "price_cents": 1200, "calories": 934, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Sandwich Plates", "name": "Brisket Sandwich Plate", "price_cents": 1400, "calories": 1192, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Loaded", "name": "Loaded Brisket Chili Mac and Cheese", "price_cents": 800, "calories": 795, "tags": ["dairy", "gluten", "wheat"]  },
+        { "category": "Loaded", "name": "Broccoli Cheese Loaded Baked Potato", "price_cents": 650, "calories": 496, "tags": ["dairy", "gluten", "wheat", "vegetarian"]  },
+        { "category": "Loaded", "name": "Loaded Brisket Chili Waffle Fries", "price_cents": 800, "calories": 896, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Sides", "name": "Waffle Fries", "price_cents": 450, "calories": 457, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Mac and Cheese", "price_cents": 425, "calories": 424, "tags": ["dairy", "gluten", "wheat", "vegetarian"]  },
+        { "category": "Sides", "name": "Coleslaw", "price_cents": 425, "calories": 159, "tags": ["eggs", "soy", "vegetarian"]  },
+        { "category": "Sides", "name": "Cornbread", "price_cents": 325, "calories": 250, "tags": ["dairy", "eggs", "gluten", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Sides", "name": "Sides Sampler Plate", "price_cents": 1000, "calories": 1337, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Apple Cobbler", "price_cents": 475, "calories": 267, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Desserts", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 400, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Oatmeal Raisin Cookie", "price_cents": 300, "calories": 350, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Beverages", "name": "Sweet Tea", "price_cents": 400, "calories": 39, "tags": ["vegan"]  },
+        { "category": "Beverages", "name": "Arnold Palmer", "price_cents": 400, "calories": 160, "tags": ["vegan"]  },
+        { "category": "Beverages", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Whole Fruit", "name": "Apple", "price_cents": 75, "calories": 72, "tags": ["sustainability", "vegan", "wellness"]  },
+        { "category": "Whole Fruit", "name": "Banana", "price_cents": 75, "calories": 131, "tags": ["sustainability", "vegan", "wellness"]  }
+      ]
+    },
+    {
+      "id": "sixth-college-noodles",
+      "name": "Noodles",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Hot Pot", "name": "Chicken Hot Pot", "price_cents": 1000, "calories": 382, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Hot Pot", "name": "Beef Hot Pot", "price_cents": 1275, "calories": 470, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Hot Pot", "name": "Tofu Hot Pot", "price_cents": 900, "calories": 429, "tags": ["soy", "sustainability", "vegan"]  },
+        { "category": "Cookies", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Cookies", "name": "Oatmeal Raisin Cookie", "price_cents": 300, "calories": 350, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Cookies", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 400, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "vegetarian"]  },
+        { "category": "Beverages & Whole Fruit", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Beverages & Whole Fruit", "name": "Apple", "price_cents": 75, "calories": null, "tags": []  },
+        { "category": "Beverages & Whole Fruit", "name": "Banana", "price_cents": 75, "calories": null, "tags": []  }
+      ]
+    },
+    {
+      "id": "sixth-college-crave",
+      "name": "Crave",
+      "hours": null,
+      "notes": "Hours not captured. Ahi Southwest Grain Bowl shows the vegetarian icon and Tofu Southwest Grain Wrap / Tofu Caesar Salad Wrap show both dairy and vegan icons; stored as shown",
+      "items": [
+        { "category": "Signature Chicken Bowls", "name": "Chicken Asian Chopped Bowl", "price_cents": 1100, "calories": 438, "tags": ["gluten", "sesame", "soy", "tree_nuts", "wheat"]  },
+        { "category": "Signature Chicken Bowls", "name": "Chicken Caesar Salad Bowl", "price_cents": 1050, "calories": 328, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Signature Chicken Bowls", "name": "Chicken Southwest Grain Bowl", "price_cents": 1100, "calories": 347, "tags": ["dairy", "wellness"]  },
+        { "category": "Signature Ahi Bowls", "name": "Ahi Asian Chopped Bowl", "price_cents": 1250, "calories": 438, "tags": ["fish", "gluten", "sesame", "soy", "tree_nuts", "wheat"]  },
+        { "category": "Signature Ahi Bowls", "name": "Ahi Southwest Grain Bowl", "price_cents": 1250, "calories": 475, "tags": ["dairy", "fish", "sesame", "vegetarian"]  },
+        { "category": "Signature Ahi Bowls", "name": "Ahi Caesar Salad Bowl", "price_cents": 1200, "calories": 611, "tags": ["dairy", "eggs", "fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Signature Crispy Tofu Bowls", "name": "Tofu Asian Chopped Bowl", "price_cents": 1000, "calories": 500, "tags": ["gluten", "sesame", "soy", "tree_nuts", "wheat", "sustainability", "vegan"]  },
+        { "category": "Signature Crispy Tofu Bowls", "name": "Tofu Southwest Grain Bowl", "price_cents": 800, "calories": 531, "tags": ["dairy", "soy", "sustainability", "vegetarian", "wellness"]  },
+        { "category": "Signature Crispy Tofu Bowls", "name": "Tofu Caesar Salad Bowl", "price_cents": 950, "calories": 384, "tags": ["dairy", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Chicken Wraps", "name": "Chicken Asian Chopped Wrap", "price_cents": 1150, "calories": 625, "tags": ["gluten", "sesame", "soy", "tree_nuts", "wheat"]  },
+        { "category": "Chicken Wraps", "name": "Chicken Southwest Grain Wrap", "price_cents": 1150, "calories": 766, "tags": ["dairy", "gluten", "wheat"]  },
+        { "category": "Chicken Wraps", "name": "Chicken Caesar Salad Wrap", "price_cents": 1100, "calories": 674, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Ahi Wraps", "name": "Ahi Asian Chopped Wrap", "price_cents": 1300, "calories": 624, "tags": ["fish", "gluten", "sesame", "soy", "tree_nuts", "wheat", "sustainability"]  },
+        { "category": "Ahi Wraps", "name": "Ahi Southwest Grain Wrap", "price_cents": 1300, "calories": 765, "tags": ["dairy", "fish", "gluten", "sesame", "wheat", "sustainability"]  },
+        { "category": "Ahi Wraps", "name": "Ahi Caesar Salad Wrap", "price_cents": 1250, "calories": 673, "tags": ["dairy", "fish", "gluten", "sesame", "soy", "wheat", "sustainability"]  },
+        { "category": "Crispy Tofu Wraps", "name": "Tofu Asian Chopped Wrap", "price_cents": 1050, "calories": 790, "tags": ["gluten", "sesame", "soy", "tree_nuts", "wheat", "sustainability", "vegan"]  },
+        { "category": "Crispy Tofu Wraps", "name": "Tofu Southwest Grain Wrap", "price_cents": 1050, "calories": 821, "tags": ["dairy", "gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Crispy Tofu Wraps", "name": "Tofu Caesar Salad Wrap", "price_cents": 1000, "calories": 730, "tags": ["dairy", "gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Dessert", "name": "Pumpkin Cheesecake Tart", "price_cents": 500, "calories": 428, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 400, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "Oatmeal Raisin Cookie", "price_cents": 300, "calories": 350, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Beverages & Whole Fruit", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Beverages & Whole Fruit", "name": "Apple", "price_cents": 75, "calories": 163, "tags": ["vegan", "wellness"]  },
+        { "category": "Beverages & Whole Fruit", "name": "Banana", "price_cents": 75, "calories": 177, "tags": ["vegan", "wellness"]  }
+      ]
+    },
+    {
+      "id": "sixth-college-wolftown",
+      "name": "Wolftown",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Burritos", "name": "Chicken Achiote Burrito", "price_cents": 1050, "calories": 511, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Burritos", "name": "Mushroom Fajita Burrito", "price_cents": 950, "calories": 595, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Burritos", "name": "Carne Asada Burrito", "price_cents": 1250, "calories": 756, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Burritos", "name": "Pork Adobada Burrito", "price_cents": 1150, "calories": 802, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Bowls", "name": "Carne Asada Bowl", "price_cents": 1200, "calories": 465, "tags": ["soy"]  },
+        { "category": "Bowls", "name": "Chicken Achiote Bowl", "price_cents": 1000, "calories": 399, "tags": ["soy"]  },
+        { "category": "Bowls", "name": "Mushroom Fajita Bowl", "price_cents": 900, "calories": 305, "tags": ["soy", "vegan"]  },
+        { "category": "Bowls", "name": "Pork Adobada Bowl", "price_cents": 1100, "calories": 511, "tags": ["soy"]  },
+        { "category": "Nachos", "name": "Mushroom Fajitas Nachos", "price_cents": 1000, "calories": 542, "tags": ["dairy", "soy", "vegetarian"]  },
+        { "category": "Nachos", "name": "Chicken Achiote Nachos", "price_cents": 1100, "calories": 636, "tags": ["dairy", "soy"]  },
+        { "category": "Nachos", "name": "Pork Adobada Nachos", "price_cents": 1200, "calories": 749, "tags": ["dairy", "soy"]  },
+        { "category": "Nachos", "name": "Carne Asada Nachos", "price_cents": 1300, "calories": 703, "tags": ["dairy", "soy"]  },
+        { "category": "Sides", "name": "Tortilla Chips", "price_cents": 250, "calories": 185, "tags": ["sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Cantina Beans", "price_cents": 400, "calories": 105, "tags": ["soy", "vegan"]  },
+        { "category": "Sides", "name": "Spanish Rice", "price_cents": 350, "calories": 162, "tags": ["vegan", "wellness"]  },
+        { "category": "Sides", "name": "Chips and Guacamole", "price_cents": 400, "calories": 258, "tags": ["vegan"]  },
+        { "category": "Dessert", "name": "Churro", "price_cents": 375, "calories": 225, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "Oatmeal Raisin Cookie", "price_cents": 300, "calories": 350, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 401, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "Bunuelo Rice Pudding", "price_cents": 400, "calories": 247, "tags": ["sustainability", "vegan"]  },
+        { "category": "Beverages", "name": "Almond Horchata", "price_cents": 400, "calories": 126, "tags": ["tree_nuts", "sustainability", "vegan"]  },
+        { "category": "Beverages", "name": "Agua de Sandia", "price_cents": 400, "calories": 60, "tags": ["sustainability", "vegan"]  },
+        { "category": "Beverages", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  }
+      ]
+    },
+    {
+      "id": "sixth-college-coffeehouse",
+      "name": "Sixth Coffeehouse",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Pie Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Chai Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Cold Brew Vanilla Dream Top", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Iced Pumpkin Matcha Vanilla Dream Top", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Blue Haze Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Nitro On Tap", "name": "Nitro Cold Brew", "price_cents": 625, "calories": null, "tags": []  },
+        { "category": "Kombucha On Tap", "name": "Strawberry Serenity Kombucha", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Kombucha On Tap", "name": "Trilogy Kombucha", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Kombucha On Tap", "name": "Gingerade Kombucha", "price_cents": 500, "calories": 50, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Big Bang Medium Roast Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Major Dickason Dark Roast Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Cold Brew", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Americano", "price_cents": 400, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Latte", "price_cents": 500, "calories": 133, "tags": []  },
+        { "category": "Coffeehouse", "name": "Mocha", "price_cents": 575, "calories": 270, "tags": []  },
+        { "category": "Coffeehouse", "name": "White Mocha", "price_cents": 575, "calories": 194, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Cappuccino", "price_cents": 500, "calories": 89, "tags": []  },
+        { "category": "Coffeehouse", "name": "Caramel Macchiato", "price_cents": 600, "calories": 252, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Chai Latte", "price_cents": 575, "calories": 158, "tags": []  },
+        { "category": "Coffeehouse", "name": "Peets Iced Black Tie Coffee", "price_cents": 500, "calories": 263, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Cold Brew Oat Latte", "price_cents": 500, "calories": 205, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Horchata Cold Brew Oat Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Green Tea Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "London Fog", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Double", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Single", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Hot Chocolate", "price_cents": 450, "calories": 181, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Coffee Frappe", "price_cents": 675, "calories": 382, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Blended Chai Frappe", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Green Tea Matcha Latte", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Teas & Lemonades", "name": "Mighty Leaf Hot Tea", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Tropical Green Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Summer Solstice Black Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Wild Berry Hibiscus Herbal Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Green Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Black Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Hibiscus Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Water", "price_cents": 50, "calories": null, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Summer Solstice Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Tropical Green Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Wildberry Hibiscus Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Red Bull Infusions", "name": "Sunrise Red Bull Infusion", "price_cents": 675, "calories": 280, "tags": ["vegan"]  },
+        { "category": "Red Bull Infusions", "name": "Blushing Lady Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Plain Bagel", "price_cents": 250, "calories": 350, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Bagels", "name": "Everything Bagel", "price_cents": 250, "calories": 410, "tags": ["gluten", "sesame", "soy", "wheat", "vegetarian"]  },
+        { "category": "Bagels", "name": "Jalapeno Cheese Bagel", "price_cents": 300, "calories": 440, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Bagels", "name": "Gluten Free Everything Bagel", "price_cents": 450, "calories": 410, "tags": ["sesame", "vegan"]  },
+        { "category": "Su Pan Pan Dulce", "name": "Ham Swiss & Jalapeno Croissant", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Vanilla Concha", "price_cents": 250, "calories": null, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Su Pan Pan Dulce", "name": "Chocolate Concha", "price_cents": 250, "calories": null, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Su Pan Pan Dulce", "name": "Nino Enbuelto (Strawberry Roll)", "price_cents": 375, "calories": null, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Su Pan Pan Dulce", "name": "Polvorone (Sugar Cookie)", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "Chocolate Chip Brownie", "price_cents": 300, "calories": 500, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Brookie Bar", "price_cents": 300, "calories": 470, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Chocolate Fudge Cake", "price_cents": 650, "calories": 710, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Oreo Cheesecake", "price_cents": 650, "calories": 580, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "White Choc Raspberry Cheesecake", "price_cents": 650, "calories": 590, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}

@@ -24,7 +24,7 @@ npm run db:import
 | `npm test` | Run tests. Database tests use a separate `HT2_DB_test` database (wiped each run) and are skipped if `MONGODB_URI` isn't set |
 | `npm run db:validators` | Push the `$jsonSchema` rules in `db/validators/*.json` to MongoDB |
 | `npm run db:indexes` | Create the indexes defined in `src/models` (never drops any) |
-| `npm run db:import` | Import every `data/halls/*.json` file (or pass one path). Safe to re-run |
+| `npm run db:import` | Import every `.json` file in `data/halls`, including subfolders. Pass a file or folder to import just that (`npm run db:import -- data/halls/mobile`). Safe to re-run |
 | `npm run check` | Syntax-check and load the app |
 
 ## Database (`HT2_DB`)
@@ -75,6 +75,7 @@ src/
 db/validators/        MongoDB $jsonSchema rules (source of truth)
 scripts/              validators, indexes, import
 data/halls/           dining hall menus transcribed from screenshots
+data/halls/mobile/    14 more locations (64 Degrees, Canyon Vista, markets, ...)
 test/                 node:test tests
 ```
 

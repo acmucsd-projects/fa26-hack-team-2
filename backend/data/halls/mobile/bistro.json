@@ -1,0 +1,146 @@
+{
+  "dining_hall": {
+    "id": "bistro",
+    "name": "Bistro",
+    "type": "dining_hall"
+  },
+  "tag_legend": {
+    "dairy": {
+      "icon": "pink milk bottle",
+      "label": "Contains Dairy",
+      "type": "allergen"
+    },
+    "tree_nuts": {
+      "icon": "brown nut",
+      "label": "Contains Tree Nuts",
+      "type": "allergen"
+    },
+    "soy": {
+      "icon": "green soybean pod",
+      "label": "Contains Soy",
+      "type": "allergen"
+    },
+    "wheat": {
+      "icon": "tan wheat stalk",
+      "label": "Contains Wheat",
+      "type": "allergen"
+    },
+    "fish": {
+      "icon": "blue fish",
+      "label": "Contains Fish",
+      "type": "allergen"
+    },
+    "shellfish": {
+      "icon": "orange crab",
+      "label": "Contains Shellfish",
+      "type": "allergen"
+    },
+    "peanuts": {
+      "icon": "purple peanut",
+      "label": "Contains Peanuts",
+      "type": "allergen"
+    },
+    "eggs": {
+      "icon": "yellow fried egg",
+      "label": "Contains Eggs",
+      "type": "allergen"
+    },
+    "sesame": {
+      "icon": "black dotted circle",
+      "label": "Contains Sesame",
+      "type": "allergen"
+    },
+    "gluten": {
+      "icon": "red C|G with wheat",
+      "label": "Contains Gluten",
+      "type": "allergen"
+    },
+    "vegan": {
+      "icon": "grey V",
+      "label": "Vegan",
+      "type": "diet"
+    },
+    "vegetarian": {
+      "icon": "green leaf",
+      "label": "Vegetarian",
+      "type": "diet"
+    },
+    "wellness": {
+      "icon": "teal W",
+      "label": "Wellness",
+      "type": "program"
+    },
+    "sustainability": {
+      "icon": "teal swirl",
+      "label": "Sustainability",
+      "type": "program"
+    }
+  },
+  "stations": [
+    {
+      "id": "bistro-main",
+      "name": "Bistro",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Small Plates", "name": "Edamame", "price_cents": 325, "calories": 191, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Small Plates", "name": "Chicken Pot Stickers", "price_cents": 1125, "calories": 319, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Small Plates", "name": "Pork Bun with Cucumber Salad", "price_cents": 1050, "calories": 454, "tags": ["gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Small Plates", "name": "Bistro Karaage Wings", "price_cents": 1275, "calories": 458, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Small Plates", "name": "Mt. Fuji Salad with Salmon", "price_cents": 1525, "calories": 619, "tags": ["fish", "sesame", "soy"]  },
+        { "category": "Small Plates", "name": "Mt Fuji Salad with Chicken", "price_cents": 1050, "calories": 513, "tags": ["sesame", "soy"]  },
+        { "category": "Entrees", "name": "Chicken Fried Rice with Fried Egg", "price_cents": 1150, "calories": 800, "tags": ["eggs", "soy"]  },
+        { "category": "Entrees", "name": "Shrimp Fried Rice with Fried Egg", "price_cents": 1300, "calories": 688, "tags": ["eggs", "shellfish", "soy"]  },
+        { "category": "Entrees", "name": "Sauteed Salmon", "price_cents": 1700, "calories": 913, "tags": ["fish", "sesame", "soy", "sustainability"]  },
+        { "category": "Entrees", "name": "Spicy Curry Seared Tofu", "price_cents": 1100, "calories": 750, "tags": ["sesame", "soy", "vegan"]  },
+        { "category": "Udon", "name": "Tofu Udon Stir Fry", "price_cents": 1350, "calories": 747, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Udon", "name": "Chicken Thai Curry Udon Soup", "price_cents": 1350, "calories": 627, "tags": ["gluten", "wheat"]  },
+        { "category": "Udon", "name": "Tofu Thai Curry Udon Soup", "price_cents": 1100, "calories": 659, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Udon", "name": "Chicken Udon Stir Fry", "price_cents": 1375, "calories": 629, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Sides", "name": "Cucumber Salad", "price_cents": 625, "calories": 53, "tags": ["sesame", "soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Sushi Rice", "price_cents": 350, "calories": 51, "tags": ["sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Chuka Seaweed Salad", "price_cents": 350, "calories": 90, "tags": ["sesame", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Miso Soup", "price_cents": 375, "calories": 37, "tags": ["fish", "soy", "sustainability"]  },
+        { "category": "Desserts", "name": "Smores Cheesecake", "price_cents": 575, "calories": 720, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Desserts", "name": "Green Tea Ice Cream", "price_cents": 425, "calories": 472, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Desserts", "name": "Thai Mango Sticky Rice", "price_cents": 425, "calories": 398, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Beverages", "name": "Tropical Green Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Beverages", "name": "Boba Milk Tea", "price_cents": 525, "calories": null, "tags": []  },
+        { "category": "Beverages", "name": "Boba Oatmilk Tea", "price_cents": 575, "calories": 249, "tags": ["sustainability", "vegan"]  },
+        { "category": "Beverages", "name": "Matcha Boba Milk Tea", "price_cents": 600, "calories": 294, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Beverages", "name": "Taro Boba Milk Tea", "price_cents": 600, "calories": 245, "tags": ["dairy", "soy"]  },
+        { "category": "Beverages", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  }
+      ]
+    },
+    {
+      "id": "bistro-sushi",
+      "name": "Bistro Sushi",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Rolls", "name": "California Roll", "price_cents": 825, "calories": 583, "tags": ["eggs", "fish", "gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Rolls", "name": "Crunchy Roll", "price_cents": 1125, "calories": 558, "tags": ["dairy", "gluten", "shellfish", "soy", "wheat", "sustainability"]  },
+        { "category": "Rolls", "name": "Dragon Roll", "price_cents": 1475, "calories": 735, "tags": ["dairy", "eggs", "fish", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Rolls", "name": "Rainbow Roll", "price_cents": 1375, "calories": 767, "tags": ["eggs", "fish", "gluten", "sesame", "shellfish", "soy", "wheat"]  },
+        { "category": "Rolls", "name": "Sun God Roll", "price_cents": 1500, "calories": 725, "tags": ["fish", "gluten", "sesame", "shellfish", "soy", "wheat", "sustainability"]  },
+        { "category": "Rolls", "name": "Spicy Tuna Roll", "price_cents": 1075, "calories": 488, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Rolls", "name": "Cucumber Avocado Roll", "price_cents": 925, "calories": 332, "tags": ["sesame", "sustainability", "vegan"]  },
+        { "category": "Dessert", "name": "Green Tea Ice Cream", "price_cents": 425, "calories": 472, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Dessert", "name": "Smores Cheesecake", "price_cents": 575, "calories": 720, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Dessert", "name": "Thai Mango Sticky Rice", "price_cents": 425, "calories": 398, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Beverages", "name": "Tropical Green Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Beverages", "name": "Boba Milk Tea", "price_cents": 525, "calories": null, "tags": []  },
+        { "category": "Beverages", "name": "Boba Oatmilk Tea", "price_cents": 575, "calories": 249, "tags": ["sustainability", "vegan"]  },
+        { "category": "Beverages", "name": "Taro Boba Milk Tea", "price_cents": 600, "calories": 245, "tags": ["dairy", "soy", "vegetarian"]  },
+        { "category": "Beverages", "name": "Matcha Boba Milk Tea", "price_cents": 600, "calories": 294, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Beverages", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}

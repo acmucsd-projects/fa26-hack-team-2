@@ -1,0 +1,148 @@
+{
+  "dining_hall": {
+    "id": "rogers-market",
+    "name": "Rogers Market",
+    "type": "dining_hall"
+  },
+  "tag_legend": {
+    "dairy": {
+      "icon": "pink milk bottle",
+      "label": "Contains Dairy",
+      "type": "allergen"
+    },
+    "tree_nuts": {
+      "icon": "brown nut",
+      "label": "Contains Tree Nuts",
+      "type": "allergen"
+    },
+    "soy": {
+      "icon": "green soybean pod",
+      "label": "Contains Soy",
+      "type": "allergen"
+    },
+    "wheat": {
+      "icon": "tan wheat stalk",
+      "label": "Contains Wheat",
+      "type": "allergen"
+    },
+    "fish": {
+      "icon": "blue fish",
+      "label": "Contains Fish",
+      "type": "allergen"
+    },
+    "shellfish": {
+      "icon": "orange crab",
+      "label": "Contains Shellfish",
+      "type": "allergen"
+    },
+    "peanuts": {
+      "icon": "purple peanut",
+      "label": "Contains Peanuts",
+      "type": "allergen"
+    },
+    "eggs": {
+      "icon": "yellow fried egg",
+      "label": "Contains Eggs",
+      "type": "allergen"
+    },
+    "sesame": {
+      "icon": "black dotted circle",
+      "label": "Contains Sesame",
+      "type": "allergen"
+    },
+    "gluten": {
+      "icon": "red C|G with wheat",
+      "label": "Contains Gluten",
+      "type": "allergen"
+    },
+    "vegan": {
+      "icon": "grey V",
+      "label": "Vegan",
+      "type": "diet"
+    },
+    "vegetarian": {
+      "icon": "green leaf",
+      "label": "Vegetarian",
+      "type": "diet"
+    },
+    "wellness": {
+      "icon": "teal W",
+      "label": "Wellness",
+      "type": "program"
+    },
+    "sustainability": {
+      "icon": "teal swirl",
+      "label": "Sustainability",
+      "type": "program"
+    }
+  },
+  "stations": [
+    {
+      "id": "rogers-market-rogers-coffeehouse",
+      "name": "Rogers Coffeehouse",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Pie Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Chai Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Cold Brew Vanilla Dream Top", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Iced Pumpkin Matcha Vanilla Dream Top", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Blue Haze Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Big Bang Medium Roast Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Major Dickason Dark Roast Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Cold Brew", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Americano", "price_cents": 400, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Cappuccino", "price_cents": 500, "calories": 89, "tags": []  },
+        { "category": "Coffeehouse", "name": "Latte", "price_cents": 500, "calories": 133, "tags": []  },
+        { "category": "Coffeehouse", "name": "Mocha", "price_cents": 575, "calories": 270, "tags": []  },
+        { "category": "Coffeehouse", "name": "White Mocha", "price_cents": 575, "calories": 194, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Cold Brew Oat Latte", "price_cents": 500, "calories": 205, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Caramel Macchiato", "price_cents": 600, "calories": 252, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Chai Latte", "price_cents": 575, "calories": 158, "tags": []  },
+        { "category": "Coffeehouse", "name": "Green Tea Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "London Fog", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Peets Iced Black Tie Coffee", "price_cents": 500, "calories": 263, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Horchata Cold Brew Oat Latte", "price_cents": 500, "calories": 209, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Blended Coffee Frappe", "price_cents": 675, "calories": 382, "tags": ["dairy"]  },
+        { "category": "Coffeehouse", "name": "Blended Green Tea Matcha Latte", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Chai Frappe", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Double", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Single", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Hot Chocolate", "price_cents": 450, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonade", "name": "Mighty Leaf Hot Tea", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Summer Solstice Black Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Tropical Green Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Wild Berry Hibiscus Herbal Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Black Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Green Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Hibiscus Iced Tea Lemonade", "price_cents": 350, "calories": 36, "tags": ["vegan"]  },
+        { "category": "Tea & Lemonade", "name": "Water", "price_cents": 50, "calories": null, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Summer Solstice Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Tropical Green Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Wildberry Hibiscus Tea Shaker", "price_cents": 475, "calories": 101, "tags": ["vegan"]  },
+        { "category": "Red Bull Infusions", "name": "Sunrise Red Bull Infusion", "price_cents": 675, "calories": 280, "tags": ["vegan"]  },
+        { "category": "Red Bull Infusions", "name": "Blushing Lady Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Plain Bagel", "price_cents": 250, "calories": 350, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Bagels", "name": "Everything Bagel", "price_cents": 250, "calories": 410, "tags": ["gluten", "sesame", "soy", "wheat", "vegan"]  },
+        { "category": "Bagels", "name": "Jalapeno Cheese Bagel", "price_cents": 300, "calories": 440, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Bagels", "name": "Gluten Free Everything Bagel", "price_cents": 450, "calories": 410, "tags": ["sesame", "vegan"]  },
+        { "category": "Su Pan Pan Dulce", "name": "Ham Swiss & Jalapeno Croissant", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Vanilla Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Chocolate Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Nino Enbuelto (Strawberry Roll)", "price_cents": 375, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Polvorone (Sugar Cookie)", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Dessert", "name": "Chocolate Chip Brownie", "price_cents": 300, "calories": 500, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "Brookie Bar", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Dessert", "name": "Chocolate Fudge Cake", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Dessert", "name": "Oreo Cheesecake", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Dessert", "name": "White Choc Raspberry Cheesecake", "price_cents": 650, "calories": null, "tags": []  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}

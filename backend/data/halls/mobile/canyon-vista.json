@@ -1,0 +1,232 @@
+{
+  "dining_hall": {
+    "id": "canyon-vista",
+    "name": "Canyon Vista",
+    "type": "dining_hall"
+  },
+  "tag_legend": {
+    "dairy": {
+      "icon": "pink milk bottle",
+      "label": "Contains Dairy",
+      "type": "allergen"
+    },
+    "tree_nuts": {
+      "icon": "brown nut",
+      "label": "Contains Tree Nuts",
+      "type": "allergen"
+    },
+    "soy": {
+      "icon": "green soybean pod",
+      "label": "Contains Soy",
+      "type": "allergen"
+    },
+    "wheat": {
+      "icon": "tan wheat stalk",
+      "label": "Contains Wheat",
+      "type": "allergen"
+    },
+    "fish": {
+      "icon": "blue fish",
+      "label": "Contains Fish",
+      "type": "allergen"
+    },
+    "shellfish": {
+      "icon": "orange crab",
+      "label": "Contains Shellfish",
+      "type": "allergen"
+    },
+    "peanuts": {
+      "icon": "purple peanut",
+      "label": "Contains Peanuts",
+      "type": "allergen"
+    },
+    "eggs": {
+      "icon": "yellow fried egg",
+      "label": "Contains Eggs",
+      "type": "allergen"
+    },
+    "sesame": {
+      "icon": "black dotted circle",
+      "label": "Contains Sesame",
+      "type": "allergen"
+    },
+    "gluten": {
+      "icon": "red C|G with wheat",
+      "label": "Contains Gluten",
+      "type": "allergen"
+    },
+    "vegan": {
+      "icon": "grey V",
+      "label": "Vegan",
+      "type": "diet"
+    },
+    "vegetarian": {
+      "icon": "green leaf",
+      "label": "Vegetarian",
+      "type": "diet"
+    },
+    "wellness": {
+      "icon": "teal W",
+      "label": "Wellness",
+      "type": "program"
+    },
+    "sustainability": {
+      "icon": "teal swirl",
+      "label": "Sustainability",
+      "type": "program"
+    }
+  },
+  "stations": [
+    {
+      "id": "canyon-vista-fusion",
+      "name": "Fusion",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Meal Deals", "name": "CV Single Smash Burger Combo", "price_cents": 1500, "calories": 1262, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Meal Deals", "name": "CV Plant Based Burger Combo", "price_cents": 1500, "calories": 894, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Meal Deals", "name": "CV Chicken Tenders Combo", "price_cents": 1300, "calories": 901, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Meal Deals", "name": "Crispy Chicken Sandwich Combo", "price_cents": 1500, "calories": 1283, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Burgers", "name": "Breakfast Smashburger", "price_cents": 1000, "calories": 804, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Burgers", "name": "CV Single Smashburger", "price_cents": 1100, "calories": 784, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Burgers", "name": "Korean BBQ Smashburger", "price_cents": 1000, "calories": 762, "tags": ["eggs", "fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Burgers", "name": "CV Plant Based Burger", "price_cents": 1000, "calories": 515, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Burgers", "name": "Poblano Rajas Smash Burger", "price_cents": 1000, "calories": 892, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Crispy Chicken", "name": "Buffalo Wings and Fries", "price_cents": 1225, "calories": 1208, "tags": ["dairy", "eggs", "soy"]  },
+        { "category": "Crispy Chicken", "name": "Crispy Chicken Sandwich", "price_cents": 950, "calories": 866, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Crispy Chicken", "name": "Chicken Tenders Halal", "price_cents": 950, "calories": 440, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "Crispy Chicken", "name": "Buffalo Chicken Sandwich", "price_cents": 950, "calories": 1238, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Crispy Chicken", "name": "Sweet Lemongrass Wings Basket", "price_cents": 1200, "calories": 1638, "tags": ["dairy", "eggs", "fish", "sesame", "soy"]  },
+        { "category": "Alternative Sandwiches", "name": "Salmon Sandwich", "price_cents": 1400, "calories": 836, "tags": ["fish", "gluten", "soy", "wheat"]  },
+        { "category": "Alternative Sandwiches", "name": "Grilled Cheese", "price_cents": 800, "calories": 699, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Loaded Fries", "name": "Loaded Chicken Fries", "price_cents": 1200, "calories": 825, "tags": ["dairy", "eggs", "soy"]  },
+        { "category": "Loaded Fries", "name": "Plant Based Loaded Fries", "price_cents": 1100, "calories": 865, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "French Fries", "price_cents": 450, "calories": 382, "tags": ["soy", "sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Lemon Roasted Broccolini", "price_cents": 325, "calories": 39, "tags": ["sustainability", "vegan"]  },
+        { "category": "Sides", "name": "Grilled Chicken Breast Only", "price_cents": 700, "calories": 159, "tags": ["wellness"]  },
+        { "category": "Desserts", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Desserts", "name": "Oatmeal Raisin Cookie", "price_cents": 300, "calories": 350, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Desserts", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 400, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "sustainability"]  }
+      ]
+    },
+    {
+      "id": "canyon-vista-earls-coffeehouse",
+      "name": "Earl's Coffeehouse",
+      "hours": null,
+      "notes": "Hours not captured. Possible gap in Tea & Lemonades between Hibiscus Iced Tea Lemonade and Water",
+      "items": [
+        { "category": "Boba Teas", "name": "Boba Milk Tea", "price_cents": 525, "calories": null, "tags": []  },
+        { "category": "Boba Teas", "name": "Boba Oatmilk Tea", "price_cents": 575, "calories": 259, "tags": ["sustainability", "vegan"]  },
+        { "category": "Boba Teas", "name": "Matcha Boba Milk Tea", "price_cents": 600, "calories": 343, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Boba Teas", "name": "Taro Boba Milk Tea", "price_cents": 600, "calories": 245, "tags": ["dairy", "soy", "vegetarian"]  },
+        { "category": "Seasonal Drink Specials", "name": "Blue Haze Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Chai Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Pie Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Iced Pumpkin Matcha Vanilla Dream Top", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drink Specials", "name": "Pumpkin Cold Brew Vanilla Dream Top", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Big Bang Medium Roast Coffee", "price_cents": 325, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Major Dickason Dark Roast Coffee", "price_cents": 325, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Cold Brew", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Americano", "price_cents": 400, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Cappuccino", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Mocha", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Caramel Macchiato", "price_cents": 600, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "White Mocha", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Peets Iced Black Tie Coffee", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Chai Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "London Fog", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Green Tea Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Cold Brew Oat Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Horchata Cold Brew Oat Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Coffee Frappe", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Green Tea Matcha Latte", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Blended Chai Frappe", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Double", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Single", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Hot Chocolate", "price_cents": 450, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Mighty Leaf Hot Tea", "price_cents": 325, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Summer Solstice Black Iced Tea", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Tropical Green Iced Tea", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Wild Berry Hibiscus Herbal Iced Tea", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Black Iced Tea Lemonade", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Green Iced Tea Lemonade", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Hibiscus Iced Tea Lemonade", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Tea & Lemonades", "name": "Water", "price_cents": 50, "calories": null, "tags": []  },
+        { "category": "Fruit Shakers", "name": "Strawberry Summer Solstice Tea Shaker", "price_cents": 475, "calories": null, "tags": []  },
+        { "category": "Fruit Shakers", "name": "Strawberry Tropical Green Tea Shaker", "price_cents": 475, "calories": null, "tags": []  },
+        { "category": "Fruit Shakers", "name": "Strawberry Wildberry Hibiscus Tea Shaker", "price_cents": 475, "calories": null, "tags": []  },
+        { "category": "Red Bull Infusions", "name": "Blushing Lady Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Red Bull Infusions", "name": "Sunrise Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Everything Bagel", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Plain Bagel", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Jalapeno Cheese Bagel", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Bagels", "name": "Gluten Free Everything Bagel", "price_cents": 450, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Ham Swiss & Jalapeno Croissant", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Vanilla Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Chocolate Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Nino Enbuelto (Strawberry Roll)", "price_cents": 375, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Polvorone (Sugar Cookie)", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "Chocolate Chip Brownie", "price_cents": 300, "calories": 500, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Brookie Bar", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "Chocolate Fudge Cake", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "Oreo Cheesecake", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "White Choc Raspberry Cheesecake", "price_cents": 650, "calories": null, "tags": []  }
+      ]
+    },
+    {
+      "id": "canyon-vista-360",
+      "name": "360",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "360 Bowls", "name": "Chicken Bowl", "price_cents": 1000, "calories": 821, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "360 Bowls", "name": "Tofu Bowl", "price_cents": 950, "calories": 712, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "360 Bowls", "name": "Beef Bowl", "price_cents": 1100, "calories": 703, "tags": ["gluten", "soy", "wheat"]  },
+        { "category": "360 Bowls", "name": "Vegetable Bowl", "price_cents": 850, "calories": 628, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Desserts", "name": "Milk Tea Pudding", "price_cents": 425, "calories": 447, "tags": ["dairy", "eggs", "vegetarian"]  }
+      ]
+    },
+    {
+      "id": "canyon-vista-360-quick-service",
+      "name": "360 Quick Service",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Hawaiian", "name": "Huli Huli Chicken Plate", "price_cents": 900, "calories": 699, "tags": ["eggs", "gluten", "sesame", "soy", "wheat", "wellness"]  },
+        { "category": "Hawaiian", "name": "Huli Huli Tofu Plate", "price_cents": 850, "calories": 623, "tags": ["eggs", "gluten", "sesame", "soy", "wheat", "vegetarian", "wellness"]  },
+        { "category": "Hawaiian", "name": "Hawaiian Mac Salad", "price_cents": 350, "calories": 311, "tags": ["eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Hawaiian", "name": "Jasmine Rice", "price_cents": 350, "calories": 181, "tags": ["sustainability", "vegan"]  },
+        { "category": "Hawaiian", "name": "Haupia (Coconut Pudding)", "price_cents": 400, "calories": 254, "tags": ["sustainability", "vegan"]  }
+      ]
+    },
+    {
+      "id": "canyon-vista-fresh",
+      "name": "Fresh",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Acai & Smoothies", "name": "Acai Bowl", "price_cents": 1075, "calories": 475, "tags": ["vegetarian"]  },
+        { "category": "Acai & Smoothies", "name": "Matcha Mango Smoothie", "price_cents": 825, "calories": 384, "tags": ["vegan"]  },
+        { "category": "Acai & Smoothies", "name": "Acai Banana Smoothie", "price_cents": 825, "calories": 469, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Sandwiches", "name": "BBQ Beef Sandwich", "price_cents": 950, "calories": 532, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Sandwiches", "name": "Greek Pesto Vegetable Sandwich", "price_cents": 950, "calories": 641, "tags": ["dairy", "gluten", "sesame", "soy", "wheat", "vegetarian"]  },
+        { "category": "Sandwiches", "name": "Lemon Tarragon Chicken Salad Sandwich", "price_cents": 800, "calories": 449, "tags": ["eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Salads and Poke", "name": "BYO Poke Bowl", "price_cents": 1325, "calories": null, "tags": []  },
+        { "category": "Salads and Poke", "name": "Kale Caesar Salad", "price_cents": 900, "calories": 572, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Salads and Poke", "name": "Mandarin Chicken Salad", "price_cents": 1000, "calories": 508, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Salads and Poke", "name": "Salmon Chop Salad", "price_cents": 1350, "calories": 574, "tags": ["dairy", "eggs", "fish", "soy"]  },
+        { "category": "Salads and Poke", "name": "Honey Ginger Soba Noodle Salad", "price_cents": 600, "calories": 718, "tags": ["gluten", "sesame", "soy", "wheat", "vegetarian"]  },
+        { "category": "Soup", "name": "Tomato Bisque", "price_cents": 550, "calories": 350, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Desserts", "name": "Strawberry Cheesecake", "price_cents": 500, "calories": 465, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Smores Pie", "price_cents": 400, "calories": 432, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}
