@@ -74,8 +74,7 @@ src/
   middleware/         error → { error: { code, message } }
 db/validators/        MongoDB $jsonSchema rules (source of truth)
 scripts/              validators, indexes, import
-data/halls/           dining hall menus transcribed from screenshots
-data/halls/mobile/    14 more locations (64 Degrees, Canyon Vista, markets, ...)
+data/halls/mobile/    menus for 15 locations (Pines, 64 Degrees, Canyon Vista, markets, ...) transcribed from mobile ordering app screenshots
 test/                 node:test tests
 ```
 

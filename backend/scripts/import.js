@@ -2,7 +2,7 @@
 //
 //   npm run db:import                         # every file in data/halls, including subfolders
 //   npm run db:import -- data/halls/mobile    # every file in one folder
-//   npm run db:import -- data/halls/pines.json
+//   npm run db:import -- data/halls/mobile/pines.json
 //
 // Safe to re-run: existing locations, stations and menu items are updated in
 // place, so counts and ids stay the same. See src/importers/hallImporter.js.
