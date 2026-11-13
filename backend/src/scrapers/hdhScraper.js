@@ -1,24 +1,29 @@
-const { parseNutrition } = require("./nutritionParser");
-
 const fs = require("node:fs");
 const path = require("node:path");
 const cheerio = require("cheerio");
 
-// Step 1: Read the downloaded HTML
-const filePath = path.join(
-  __dirname,
-  "../../data/web/pines-day0.html"
-);
+const { parseNutrition } = require("./nutritionParser");
 
-const html = fs.readFileSync(filePath, "utf8");
+// --------------------------------------------------
+// 1. Read the downloaded menu HTML
+// --------------------------------------------------
 
-// Step 2: Load HTML into Cheerio
+const dataDir = path.join(__dirname, "../../data/web");
+
+const menuPath = path.join(dataDir, "pines-day0.html");
+
+const html = fs.readFileSync(menuPath, "utf8");
+
 const $ = cheerio.load(html);
 
-// Step 3: Store unique foods
+
+// --------------------------------------------------
+// 2. Extract food information
+// --------------------------------------------------
+
 const foods = new Map();
 
-// Step 4: Select desktop food entries
+// Select desktop food listings only
 const foodRows = $(
   ".meal-category .menu-category-section .accordion1 .station-list > .d-none.d-lg-block > .menU-item-row"
 );
@@ -27,24 +32,30 @@ foodRows.each((index, element) => {
 
   const row = $(element);
 
-  // Extract food name
+  // Food name
   const link = row.find("a.sublocsitem").first();
+
   const name = link.text().trim();
 
-  // Extract nutrition URL
   const href = link.attr("href");
 
   if (!name || !href || href === "#") {
     return;
   }
 
-  // Extract food ID
-  const sourceItemId = new URL(
+  // HDH food identifier
+  const nutritionUrl = new URL(
     href,
     "https://hdh-web.ucsd.edu"
-  ).searchParams.get("id");
+  );
 
-  // Extract station
+  const sourceItemId = nutritionUrl.searchParams.get("id");
+
+  if (!sourceItemId) {
+    return;
+  }
+
+  // Station name
   const station = row
     .closest(".menu-category-section")
     .find("> .accordion-header h3")
@@ -52,7 +63,7 @@ foodRows.each((index, element) => {
     .text()
     .trim();
 
-  // Extract category
+  // Food category
   const category = row
     .closest(".station-list")
     .prev(".panel-heading")
@@ -61,106 +72,175 @@ foodRows.each((index, element) => {
     .text()
     .trim();
 
-  // Extract price
+  // Meal period
+  const mealPeriod = row
+    .closest(".meal-category")
+    .attr("id")
+    ?.toLowerCase() ?? "unknown";
+
+  // Price
   const priceText = row
     .find(".item-price")
     .first()
     .text()
     .trim();
 
-  const priceCents = priceText
-    ? Math.round(parseFloat(priceText.replace("$", "")) * 100)
+  const priceValue = priceText
+    ? parseFloat(priceText.replace("$", ""))
     : null;
 
-  // Extract calories
+  const priceCents = Number.isFinite(priceValue)
+    ? Math.round(priceValue * 100)
+    : null;
+
+  // Calories
   const calorieText = row
     .find(".cals")
     .first()
     .text()
     .trim();
 
-  const calories = calorieText
+  const calorieValue = calorieText
     ? parseFloat(calorieText)
     : null;
 
-  // Extract allergens and dietary tags
-  const tags = row.find("img[title]")
+  const calories = Number.isFinite(calorieValue)
+    ? calorieValue
+    : null;
+
+  // Allergen and dietary tags
+  const tags = row
+    .find("img[title]")
     .map((index, img) => {
+
       return $(img)
         .attr("title")
         .replace(/^Contains /, "")
         .toLowerCase()
         .replace(/\s+/g, "_");
+
     })
     .get();
 
-  // Identify duplicates
+  // Unique identifier for this food at this station
   const key = `${station}|${sourceItemId}|${name}`;
 
+  // If the food already exists, preserve its meal period
   if (foods.has(key)) {
+
+    const existingFood = foods.get(key);
+
+    if (!existingFood.meal_periods.includes(mealPeriod)) {
+      existingFood.meal_periods.push(mealPeriod);
+    }
+
     return;
   }
 
   // Save the food
   foods.set(key, {
+
     name,
     station,
     category,
+
     price_cents: priceCents,
     calories,
     tags,
+
     source_item_id: sourceItemId,
-    nutrition_url: new URL(
-      href,
-      "https://hdh-web.ucsd.edu"
-    ).href
+    nutrition_url: nutritionUrl.href,
+
+    meal_periods: [mealPeriod]
+
   });
 
 });
 
-// Step 5: Display results
 console.log("Desktop food entries:", foodRows.length);
 console.log("Unique foods:", foods.size);
 
-// Display one example
-const koreanChicken = [...foods.values()].find(
-  food => food.name === "Korean Fried Chicken Sandwich"
-);
 
-// Read the saved nutrition HTML
-const nutritionPath = path.join(
-  __dirname,
-  "../../data/web/pines-nutrition-6352.html"
-);
+// --------------------------------------------------
+// 3. Add detailed nutrition information
+// --------------------------------------------------
 
-const nutritionHtml = fs.readFileSync(
-  nutritionPath,
-  "utf8"
-);
+const nutritionDir = path.join(dataDir, "nutrition");
 
-// Extract the nutrition information
-const nutrition = parseNutrition(nutritionHtml);
+let enrichedCount = 0;
 
-// Attach nutrition to the matching food
-if (koreanChicken) {
+// Check every unique food
+for (const food of foods.values()) {
 
-  koreanChicken.nutrition = nutrition;
+  // Find its saved nutrition HTML file
+  const nutritionPath = path.join(
+    nutritionDir,
+    `${food.source_item_id}.html`
+  );
 
-  console.log("Updated food:");
-  console.log(koreanChicken);
+  // Skip foods without a saved nutrition page
+  if (!fs.existsSync(nutritionPath)) {
+    continue;
+  }
 
-} else {
+  // Read the nutrition HTML
+  const nutritionHtml = fs.readFileSync(
+    nutritionPath,
+    "utf8"
+  );
 
-  console.log("Korean Fried Chicken Sandwich not found");
+  // Parse the nutrition information
+  const nutrition = parseNutrition(nutritionHtml);
+
+  // Check that the page contained useful nutrition data
+  const hasNutrition =
+    nutrition.calorie !== null ||
+    Object.values(nutrition.macros).some(
+      value => value !== null
+    );
+
+  if (!hasNutrition) {
+
+    console.warn(
+      `Nutrition unavailable for ${food.name}`
+    );
+
+    continue;
+  }
+
+  // Attach nutrition to the food
+  food.nutrition = nutrition;
+
+  enrichedCount++;
+
+  // Warn if menu calories and nutrition calories differ
+  if (
+    food.calories !== null &&
+    nutrition.calorie !== null &&
+    food.calories !== nutrition.calorie
+  ) {
+
+    console.warn(
+      `Calorie mismatch for ${food.name}`
+    );
+
+  }
 
 }
 
-// Group foods by station
+console.log(
+  `Foods with detailed nutrition: ${enrichedCount}/${foods.size}`
+);
+
+
+// --------------------------------------------------
+// 4. Organize foods by station
+// --------------------------------------------------
+
 const stationsByName = new Map();
 
 for (const food of foods.values()) {
 
-  // Create a station if it doesn't exist
   if (!stationsByName.has(food.station)) {
 
     const stationId = "pines-" + food.station
@@ -169,37 +249,52 @@ for (const food of foods.values()) {
       .replace(/^-|-$/g, "");
 
     stationsByName.set(food.station, {
+
       id: stationId,
       name: food.station,
       hours: null,
       items: []
+
     });
+
   }
 
-  // Separate station from food information
+  // Remove station from the individual food object
   const { station, ...foodData } = food;
 
   // Add food to its station
   stationsByName.get(station).items.push(foodData);
+
 }
 
-// Create JSON matching Victor's structure
+
+// --------------------------------------------------
+// 5. Create JSON in Victor's format
+// --------------------------------------------------
+
 const result = {
 
   dining_hall: {
+
     id: "pines",
     name: "Pines",
     type: "dining_hall",
     area: "Muir College"
+
   },
 
   stations: [...stationsByName.values()]
+
 };
 
-// Save the JSON file
+
+// --------------------------------------------------
+// 6. Save JSON to data/web
+// --------------------------------------------------
+
 const outputPath = path.join(
-  __dirname,
-  "../../data/web/pines-preview.json"
+  dataDir,
+  "pines-preview.json"
 );
 
 fs.writeFileSync(
