@@ -4,53 +4,30 @@ const path = require("node:path");
 const { parseMenuHtml } = require("./menuParser");
 const { parseNutrition } = require("./nutritionParser");
 
-// --------------------------------------------------
-// 1. Configure dining halls
-// --------------------------------------------------
-
-const HALLS = {
-
-  pines: {
-    id: "pines",
-    name: "Pines",
-    area: "Muir College"
-  },
-
-  "64-degrees": {
-    id: "64-degrees",
-    name: "64 Degrees",
-    area: "Revelle College"
-  }
-
+// Known dining hall locations.
+const KNOWN_AREAS = {
+  pines: "Muir College",
+  "64-degrees": "Revelle College"
 };
 
-// --------------------------------------------------
-// 2. Read command-line arguments
-// --------------------------------------------------
-
+// Read the dining hall and day from the terminal command.
 const [hallId, dayInput] = process.argv.slice(2);
 
 const dayNumber = Number(dayInput);
 
+// Validate the command arguments.
 if (
-  !HALLS[hallId] ||
-  !Number.isInteger(dayNumber) ||
-  dayNumber < 0 ||
-  dayNumber > 6
+  !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(hallId || "") ||
+  !/^[0-6]$/.test(dayInput || "")
 ) {
-
   console.error(
-    "Usage: node src/scrapers/hdhScraper.js <pines|64-degrees> <day 0-6>"
+    "Usage: node src/scrapers/hdhScraper.js <hall-id> <day 0-6>"
   );
 
   process.exit(1);
-
 }
 
-// --------------------------------------------------
-// 3. Read the saved HTML
-// --------------------------------------------------
-
+// Find the saved HTML file.
 const dataDir = path.join(__dirname, "../../data/web");
 
 const inputPath = path.join(
@@ -59,41 +36,34 @@ const inputPath = path.join(
   `${hallId}-day${dayNumber}.html`
 );
 
+// Make sure the HTML file exists.
 if (!fs.existsSync(inputPath)) {
-
   console.error(`Missing saved HTML: ${inputPath}`);
-
   process.exit(1);
-
 }
 
+// Read the HTML.
 const html = fs.readFileSync(inputPath, "utf8");
 
-// --------------------------------------------------
-// 4. Parse the menu
-// --------------------------------------------------
+// Create dining hall information.
+const hall = {
+  id: hallId,
+  name: hallId,
+  area: KNOWN_AREAS[hallId] || "unknown"
+};
 
-const menu = parseMenuHtml(
-  html,
-  HALLS[hallId],
-  dayNumber
-);
+// Extract food information using Cheerio.
+const menu = parseMenuHtml(html, hall, dayNumber);
 
-// --------------------------------------------------
-// 5. Add detailed nutrition
-// --------------------------------------------------
-
+// Add detailed nutrition when a saved nutrition page exists.
 let enrichedCount = 0;
 
 for (const station of menu.stations) {
-
   for (const food of station.items) {
-
     const nutritionUrl = new URL(food.nutrition_url);
 
     const recId = nutritionUrl.searchParams.get("recId");
 
-    // Create the filename for the saved nutrition page
     const cacheName = recId
       ? `${food.source_item_id}-${recId}.html`
       : `${food.source_item_id}.html`;
@@ -104,12 +74,12 @@ for (const station of menu.stations) {
       cacheName
     );
 
-    // Skip foods without a saved nutrition file
+    // Skip foods without saved nutrition HTML.
     if (!fs.existsSync(nutritionPath)) {
       continue;
     }
 
-    // Read and parse nutrition
+    // Parse nutrition information.
     const nutritionHtml = fs.readFileSync(
       nutritionPath,
       "utf8"
@@ -120,49 +90,41 @@ for (const station of menu.stations) {
     const hasData =
       nutrition.calorie !== null ||
       Object.values(nutrition.macros).some(
-        value => value !== null
+        (value) => value !== null
       );
 
     if (!hasData) {
-
       console.warn(
         `No detailed nutrition found for ${food.name}`
       );
 
       continue;
-
     }
 
-    // Attach nutrition
+    // Attach detailed nutrition to the food.
     food.nutrition = nutrition;
 
     enrichedCount++;
 
-    // Check for calorie inconsistencies
+    // Check for differences in calorie information.
     if (
       food.calories !== null &&
       nutrition.calorie !== null &&
       food.calories !== nutrition.calorie
     ) {
-
       console.warn(
         `Calorie mismatch for ${station.name} / ${food.name}`
       );
-
     }
-
   }
-
 }
 
-// --------------------------------------------------
-// 6. Save the JSON
-// --------------------------------------------------
-
+// Create the output folder if necessary.
 const outputDir = path.join(dataDir, "output");
 
 fs.mkdirSync(outputDir, { recursive: true });
 
+// Save the JSON file.
 const outputPath = path.join(
   outputDir,
   `${hallId}-day${dayNumber}.json`
@@ -173,15 +135,13 @@ fs.writeFileSync(
   JSON.stringify(menu, null, 2)
 );
 
-// --------------------------------------------------
-// 7. Print results
-// --------------------------------------------------
-
+// Count foods across all stations.
 const foodCount = menu.stations.reduce(
   (count, station) => count + station.items.length,
   0
 );
 
+// Print results.
 console.log(
   `${menu.dining_hall.name}, day ${dayNumber} (${menu.menu_date_label ?? "date unknown"})`
 );
