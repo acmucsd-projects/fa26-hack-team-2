@@ -1,0 +1,66 @@
+{
+  "dining_hall": {
+    "id": "foodworx",
+    "name": "Foodworx",
+    "type": "dining_hall"
+  },
+  "stations": [
+    {
+      "id": "foodworx-impinger",
+      "name": "Foodworx Impinger",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Grill Pub Specials", "name": "Cheeseburger", "price_cents": 1000, "calories": 724, "tags": ["dairy", "eggs", "gluten", "wheat"]  },
+        { "category": "Grill Pub Specials", "name": "Chimichurri Grilled Chicken Sandwich", "price_cents": 950, "calories": 543, "tags": ["dairy", "eggs", "gluten", "wheat"]  },
+        { "category": "Grill Pub Specials", "name": "Black Bean Burger", "price_cents": 975, "calories": 461, "tags": ["gluten", "soy", "wheat", "vegan"]  },
+        { "category": "Grill Pub Specials", "name": "Hot Dog", "price_cents": 525, "calories": 448, "tags": ["gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "City Slicker Sandwich", "price_cents": 1075, "calories": 722, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "Turkey Pesto Sandwich", "price_cents": 1000, "calories": 776, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "Chicken Club Sandwich", "price_cents": 1100, "calories": 1227, "tags": ["dairy", "eggs", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "California Caprese Sandwich", "price_cents": 925, "calories": 562, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Hot Sandwiches", "name": "Italian Panini Sub", "price_cents": 950, "calories": 767, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Pizza", "name": "Pepperoni Personal Pizza", "price_cents": 875, "calories": 781, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Pizza", "name": "Cheese Personal Pizza", "price_cents": 800, "calories": 640, "tags": ["dairy", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Pizza", "name": "Meat Lovers Pizza", "price_cents": 925, "calories": 816, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Pizza", "name": "Margherita Pizza", "price_cents": 800, "calories": 596, "tags": ["dairy", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Pizza", "name": "Pesto Chicken Pizza", "price_cents": 975, "calories": 981, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Soup", "name": "New England Clam Chowder", "price_cents": 550, "calories": 440, "tags": ["dairy", "fish", "gluten", "shellfish", "wheat"]  },
+        { "category": "Cookies", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Cookies", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 401, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "vegetarian"]  },
+        { "category": "Whole Fruit", "name": "Apple", "price_cents": 75, "calories": 72, "tags": ["sustainability", "vegan", "wellness"]  },
+        { "category": "Whole Fruit", "name": "Banana", "price_cents": 75, "calories": 131, "tags": ["sustainability", "vegan", "wellness"]  },
+        { "category": "Whole Fruit", "name": "Orange", "price_cents": 75, "calories": 54, "tags": ["sustainability", "vegan", "wellness"]  }
+      ]
+    },
+    {
+      "id": "foodworx-deli-salad",
+      "name": "Foodworx Deli & Salad",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Poke Rice Bowls", "name": "Spicy Tuna Poke Rice Bowl", "price_cents": 975, "calories": 487, "tags": ["fish", "sesame", "soy", "sustainability"]  },
+        { "category": "Poke Rice Bowls", "name": "Tofu Lava Poke Rice Bowl", "price_cents": 825, "calories": 514, "tags": ["soy", "vegan"]  },
+        { "category": "Poke Rice Bowls", "name": "Salmon Poke Rice Bowl", "price_cents": 1125, "calories": 513, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Poke Greens Bowls", "name": "Spicy Tuna Poke Greens Bowl", "price_cents": 975, "calories": 251, "tags": ["fish", "sesame", "soy", "sustainability"]  },
+        { "category": "Poke Greens Bowls", "name": "Lava Tofu Poke Greens Bowl", "price_cents": 825, "calories": 294, "tags": ["soy", "vegan"]  },
+        { "category": "Poke Greens Bowls", "name": "Salmon Poke Greens Bowl", "price_cents": 1100, "calories": 290, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Salads", "name": "Build Your Own Salad", "price_cents": 1050, "calories": 81, "tags": []  },
+        { "category": "Salads", "name": "Caesar Salad", "price_cents": 900, "calories": 516, "tags": ["dairy", "eggs", "fish", "gluten", "soy", "wheat"]  },
+        { "category": "Salads", "name": "Chicken Chop Salad", "price_cents": 1200, "calories": 701, "tags": ["dairy", "eggs", "soy"]  },
+        { "category": "Deli Sandwich", "name": "BYO Sandwich", "price_cents": 850, "calories": null, "tags": []  },
+        { "category": "Cookies", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Cookies", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 400, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "sustainability"]  },
+        { "category": "Whole Fruit", "name": "Apple", "price_cents": 75, "calories": 119, "tags": ["sustainability", "vegan"]  },
+        { "category": "Whole Fruit", "name": "Banana", "price_cents": 75, "calories": 161, "tags": ["sustainability", "vegan"]  },
+        { "category": "Whole Fruit", "name": "Orange", "price_cents": 75, "calories": 67, "tags": ["sustainability", "vegan"]  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}

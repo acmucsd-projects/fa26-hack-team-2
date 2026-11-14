@@ -1,0 +1,39 @@
+{
+  "dining_hall": {
+    "id": "goodys",
+    "name": "Goodys",
+    "type": "dining_hall"
+  },
+  "stations": [
+    {
+      "id": "goodys-marketplace",
+      "name": "Goodys Marketplace",
+      "hours": null,
+      "notes": "Hours not captured. 'Plant Based Damn! Spicy Chickn Sandwich' was truncated in the app; full name assumed",
+      "items": [
+        { "category": "Sandwiches", "name": "Goodys Chicken Sandwich", "price_cents": 950, "calories": 473, "tags": ["dairy", "eggs", "gluten", "wheat"]  },
+        { "category": "Sandwiches", "name": "Damn! Spicy Chicken Sandwich", "price_cents": 950, "calories": 639, "tags": ["dairy", "eggs", "gluten", "wheat"]  },
+        { "category": "Sandwiches", "name": "Grilled Chicken Sandwich", "price_cents": 1000, "calories": 433, "tags": ["dairy", "eggs", "gluten", "wheat"]  },
+        { "category": "Sandwiches", "name": "Plant Based Chickn Sandwich", "price_cents": 950, "calories": 423, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Sandwiches", "name": "Plant Based Damn! Spicy Chickn Sandwich", "price_cents": 950, "calories": 559, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Tenders", "name": "Goodys Chicken Tenders", "price_cents": 900, "calories": 624, "tags": ["eggs", "gluten", "wheat"]  },
+        { "category": "Tenders", "name": "Damn! Spicy Chicken Tenders", "price_cents": 900, "calories": 782, "tags": ["eggs", "gluten", "wheat"]  },
+        { "category": "Tenders", "name": "Grilled Chicken Tenders", "price_cents": 900, "calories": 566, "tags": []  },
+        { "category": "Tenders", "name": "Plant Based Tenders", "price_cents": 900, "calories": 523, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Tenders", "name": "Plant Based Damn! Spicy Tenders", "price_cents": 900, "calories": 585, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Global Feature", "name": "Cheesy Chicken Sandwich", "price_cents": 950, "calories": 596, "tags": ["dairy", "eggs", "gluten", "wheat"]  },
+        { "category": "Breakfast All Day", "name": "Egg Breakfast Burrito", "price_cents": 750, "calories": 930, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Breakfast All Day", "name": "Chicken Breakfast Burrito", "price_cents": 975, "calories": 1141, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Breakfast All Day", "name": "Goodys Egg Breakfast Bowl", "price_cents": 700, "calories": 691, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Breakfast All Day", "name": "Goodys Chicken Breakfast Bowl", "price_cents": 1025, "calories": 1007, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Sides", "name": "Sidewinder Fries", "price_cents": 450, "calories": 299, "tags": ["soy", "vegan"]  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}

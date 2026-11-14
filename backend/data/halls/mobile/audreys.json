@@ -1,0 +1,68 @@
+{
+  "dining_hall": {
+    "id": "audreys",
+    "name": "Audrey's",
+    "type": "dining_hall"
+  },
+  "stations": [
+    {
+      "id": "audreys-cafe",
+      "name": "Audrey's Cafe",
+      "hours": null,
+      "notes": "Hours not captured",
+      "items": [
+        { "category": "Audreys Signature Drinks", "name": "Iced Banana Latte", "price_cents": 625, "calories": null, "tags": []  },
+        { "category": "Audreys Signature Drinks", "name": "Iced Lavender Latte", "price_cents": 625, "calories": null, "tags": []  },
+        { "category": "Audreys Signature Drinks", "name": "Mango Smoothie", "price_cents": 600, "calories": null, "tags": []  },
+        { "category": "Audreys Signature Drinks", "name": "Mixed Berry Smoothie", "price_cents": 600, "calories": null, "tags": []  },
+        { "category": "Seasonal Drinks", "name": "Blue Haze Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Seasonal Drinks", "name": "Pumpkin Chai Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Seasonal Drinks", "name": "Pumpkin Pie Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Brewed Peruvian Blend Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Cold Brew", "price_cents": 500, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Americano", "price_cents": 400, "calories": null, "tags": ["vegan"]  },
+        { "category": "Coffeehouse", "name": "Latte", "price_cents": 500, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Mocha", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "White Mocha", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Cappuccino", "price_cents": 500, "calories": 89, "tags": []  },
+        { "category": "Coffeehouse", "name": "Caramel Macchiato", "price_cents": 600, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Chai Latte", "price_cents": 575, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "London Fog", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Green Tea Latte", "price_cents": 575, "calories": 198, "tags": []  },
+        { "category": "Coffeehouse", "name": "Vietnamese Iced Coffee", "price_cents": 625, "calories": 360, "tags": ["dairy", "vegetarian"]  },
+        { "category": "Coffeehouse", "name": "Espresso Single", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Espresso Double", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Coffeehouse", "name": "Hot Chocolate", "price_cents": 450, "calories": null, "tags": []  },
+        { "category": "Teas & Lemonades", "name": "Mighty Leaf Hot Tea", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Tropical Green Iced Tea", "price_cents": 350, "calories": null, "tags": ["vegan"]  },
+        { "category": "Teas & Lemonades", "name": "Summer Solstice Black Iced Tea", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Teas & Lemonades", "name": "Wild Berry Hibiscus Herbal Iced Tea", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Teas & Lemonades", "name": "Green Iced Tea Lemonade", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Teas & Lemonades", "name": "Black Iced Tea Lemonade", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Teas & Lemonades", "name": "Hibiscus Iced Tea Lemonade", "price_cents": 350, "calories": null, "tags": []  },
+        { "category": "Teas & Lemonades", "name": "Water", "price_cents": 50, "calories": null, "tags": ["vegan"]  },
+        { "category": "Fruit Shakers", "name": "Strawberry Summer Solstice Tea Shaker", "price_cents": 475, "calories": null, "tags": []  },
+        { "category": "Fruit Shakers", "name": "Strawberry Tropical Green Tea Shaker", "price_cents": 475, "calories": null, "tags": []  },
+        { "category": "Fruit Shakers", "name": "Strawberry Wildberry Hibiscus Tea Shaker", "price_cents": 475, "calories": null, "tags": []  },
+        { "category": "Red Bull Infusions", "name": "Sunrise Red Bull Infusion", "price_cents": 675, "calories": 280, "tags": ["vegan"]  },
+        { "category": "Red Bull Infusions", "name": "Blushing Lady Red Bull Infusion", "price_cents": 675, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Ham Swiss & Jalapeno Croissant", "price_cents": 550, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Vanilla Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Chocolate Concha", "price_cents": 250, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Nino Enbuelto (Strawberry Roll)", "price_cents": 375, "calories": null, "tags": []  },
+        { "category": "Su Pan Pan Dulce", "name": "Polvorone (Sugar Cookie)", "price_cents": 300, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "Chocolate Chip Brownie", "price_cents": 300, "calories": 500, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Brookie Bar", "price_cents": 300, "calories": 470, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Desserts", "name": "Chocolate Fudge Cake", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "Oreo Cheesecake", "price_cents": 650, "calories": null, "tags": []  },
+        { "category": "Desserts", "name": "White Choc Raspberry Cheesecake", "price_cents": 650, "calories": null, "tags": []  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}

@@ -24,7 +24,7 @@ npm run db:import
 | `npm test` | Run tests. Database tests use a separate `HT2_DB_test` database (wiped each run) and are skipped if `MONGODB_URI` isn't set |
 | `npm run db:validators` | Push the `$jsonSchema` rules in `db/validators/*.json` to MongoDB |
 | `npm run db:indexes` | Create the indexes defined in `src/models` (never drops any) |
-| `npm run db:import` | Import every `data/halls/*.json` file (or pass one path). Safe to re-run |
+| `npm run db:import` | Import every `.json` file in `data/halls`, including subfolders. Pass a file or folder to import just that (`npm run db:import -- data/halls/mobile`). Safe to re-run |
 | `npm run check` | Syntax-check and load the app |
 
 ## Database (`HT2_DB`)
@@ -74,13 +74,15 @@ src/
   middleware/         error → { error: { code, message } }
 db/validators/        MongoDB $jsonSchema rules (source of truth)
 scripts/              validators, indexes, import
-data/halls/           dining hall menus transcribed from screenshots
+data/halls/mobile/    menus for 15 locations (Pines, 64 Degrees, Canyon Vista, markets, ...) transcribed from mobile ordering app screenshots
+data/tag-legend.json  which HDH icon each tag stands for (shared by all hall files)
 test/                 node:test tests
 ```
 
 ## Import notes
 
 - A location is matched by name, a station by name within the location, and a menu item by station + food name. Re-running updates them in place, so ids don't change.
+- Item `tags` use the keys in `data/tag-legend.json` (e.g. the pink milk bottle icon is `"dairy"`). Hall files don't repeat the legend. To add a tag, add it to `tag-legend.json` and `src/constants/tags.js`; `npm test` fails if they disagree or a hall file uses an unknown tag.
 - Same-named items at different stations are separate foods (Calrose Rice is 49 cal at Heat, 294 cal at Char).
 - Fields the screenshots don't have (macros, ingredients, meal period) are only set when a document is first created, so values added later aren't overwritten.
 - `beverage` comes from the menu category (Coffeehouse, Tea & Lemonade, ...). Vegan items are also marked vegetarian.
