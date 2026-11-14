@@ -110,17 +110,18 @@ foodRows.each((index, element) => {
 
   // Allergen and dietary tags
   const tags = row
-    .find("img[title]")
-    .map((index, img) => {
+  .find("img[title]")
+  .map((index, img) => {
 
-      return $(img)
-        .attr("title")
-        .replace(/^Contains /, "")
-        .toLowerCase()
-        .replace(/\s+/g, "_");
+    return $(img)
+      .attr("title")
+      .replace(/^Contains /, "")
+      .replace(/TreeNuts/i, "Tree Nuts")
+      .toLowerCase()
+      .replace(/\s+/g, "_");
 
-    })
-    .get();
+  })
+  .get();
 
   // Unique identifier for this food at this station
   const key = `${station}|${sourceItemId}|${name}`;
