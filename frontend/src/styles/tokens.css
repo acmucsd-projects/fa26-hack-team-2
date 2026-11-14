@@ -57,7 +57,8 @@
   --font-size-3xl: 22px;     /* main button text */
   --font-size-4xl: 24px;     /* date numbers in day tiles */
   --font-size-5xl: 28px;     /* popup titles */
-  --font-size-6xl: 34px;     /* page title */
+  --font-size-6xl: 32px;     /* big number in hover popups */
+  --font-size-7xl: 34px;     /* page title */
   --font-size-display: 64px; /* big budget amount */
 
   /* corners */
