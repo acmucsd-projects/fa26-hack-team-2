@@ -1,0 +1,60 @@
+{
+  "dining_hall": {
+    "id": "club-med",
+    "name": "Club Med",
+    "type": "dining_hall"
+  },
+  "stations": [
+    {
+      "id": "club-med-main",
+      "name": "Club Med",
+      "hours": null,
+      "notes": "Hours not captured. The app shows two separate 'Hot Sandwiches' sections; both are stored under one Hot Sandwiches category",
+      "items": [
+        { "category": "Hot Sandwiches", "name": "City Slicker Sandwich", "price_cents": 1075, "calories": 722, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "Chicken Club Sandwich", "price_cents": 1125, "calories": 1227, "tags": ["dairy", "eggs", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "Turkey Pesto Sandwich", "price_cents": 1000, "calories": 931, "tags": ["dairy", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "Sante Fe Sandwich", "price_cents": 1050, "calories": 793, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "Meds BLT", "price_cents": 900, "calories": 660, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "Toasted Cheese Sandwich", "price_cents": 700, "calories": 775, "tags": ["dairy", "eggs", "gluten", "soy", "wheat"]  },
+        { "category": "Hot Sandwiches", "name": "California Caprese Sandwich", "price_cents": 975, "calories": 565, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Hot Sandwiches", "name": "Meatball Sub", "price_cents": 900, "calories": 552, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Poke Rice Bowls", "name": "Ahi Tuna Poke Rice Bowl", "price_cents": 975, "calories": 555, "tags": ["fish", "gluten", "sesame", "soy", "wheat", "sustainability"]  },
+        { "category": "Poke Rice Bowls", "name": "Spicy Tuna Poke Rice Bowl", "price_cents": 975, "calories": 512, "tags": ["fish", "sesame", "soy"]  },
+        { "category": "Poke Rice Bowls", "name": "Salmon Poke Rice Bowl", "price_cents": 1125, "calories": 482, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Poke Rice Bowls", "name": "Lilo Poke Rice Bowl", "price_cents": 925, "calories": 613, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Poke Greens Bowls", "name": "Ahi Poke Greens Bowl", "price_cents": 975, "calories": 319, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Poke Greens Bowls", "name": "Salmon Poke Greens Bowl", "price_cents": 1125, "calories": 290, "tags": ["fish", "gluten", "sesame", "soy", "wheat"]  },
+        { "category": "Poke Greens Bowls", "name": "Spicy Tuna Poke Greens Bowl", "price_cents": 975, "calories": 294, "tags": ["fish", "sesame", "soy"]  },
+        { "category": "Poke Greens Bowls", "name": "Lilo Poke Greens Bowl", "price_cents": 925, "calories": 325, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Pizza", "name": "Margherita Pizza", "price_cents": 800, "calories": 567, "tags": ["dairy", "gluten", "soy", "wheat", "sustainability", "vegetarian"]  },
+        { "category": "Pizza", "name": "Pepperoni Personal Pizza", "price_cents": 875, "calories": 665, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Pizza", "name": "Sausage and Mushroom Pizza", "price_cents": 875, "calories": 689, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Pizza", "name": "Spinach and Mushroom Pesto Pizza", "price_cents": 875, "calories": 926, "tags": ["dairy", "gluten", "wheat", "vegetarian"]  },
+        { "category": "Bagels", "name": "Plain Bagel", "price_cents": 250, "calories": 279, "tags": ["gluten", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Bagels", "name": "Everything Bagel", "price_cents": 250, "calories": 328, "tags": ["gluten", "sesame", "soy", "wheat", "sustainability", "vegan"]  },
+        { "category": "Bagels", "name": "Jalapeno Cheese Bagel", "price_cents": 300, "calories": 352, "tags": ["dairy", "gluten", "soy", "wheat"]  },
+        { "category": "Bagels", "name": "Gluten Free Bagel", "price_cents": 450, "calories": 411, "tags": ["sesame", "sustainability", "vegan"]  },
+        { "category": "Soup", "name": "Tomato Red Pepper Bisque", "price_cents": 550, "calories": 371, "tags": ["dairy", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Soup", "name": "Chicken Noodle Soup", "price_cents": 550, "calories": 147, "tags": ["eggs", "gluten", "wheat"]  },
+        { "category": "Dessert", "name": "Chocolate Chunk Cookie", "price_cents": 300, "calories": 370, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "White Chocolate Macadamia Cookie", "price_cents": 300, "calories": 400, "tags": ["dairy", "eggs", "gluten", "soy", "tree_nuts", "wheat", "sustainability"]  },
+        { "category": "Dessert", "name": "Brookie Bar", "price_cents": 300, "calories": 460, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Dessert", "name": "Chocolate Chip Brownie", "price_cents": 300, "calories": 500, "tags": ["dairy", "eggs", "gluten", "soy", "wheat", "vegetarian"]  },
+        { "category": "Whole Fruit", "name": "Apple", "price_cents": 75, "calories": 163, "tags": ["vegan", "wellness"]  },
+        { "category": "Whole Fruit", "name": "Banana", "price_cents": 75, "calories": 177, "tags": ["vegan", "wellness"]  },
+        { "category": "Whole Fruit", "name": "Orange", "price_cents": 75, "calories": 54, "tags": ["vegan", "wellness"]  },
+        { "category": "Beverages", "name": "Mighty Leaf Hot Tea", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Beverages", "name": "Major Dickasons Dark Roast Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Beverages", "name": "Big Bang Medium Roast Coffee", "price_cents": 325, "calories": null, "tags": ["vegan"]  },
+        { "category": "Beverages", "name": "Fountain Drink", "price_cents": 300, "calories": null, "tags": []  }
+      ]
+    }
+  ],
+  "source": {
+    "type": "screenshot",
+    "captured": "2026-11-09",
+    "day_of_week": "Monday",
+    "notes": "calories:null = not shown on list view. Station hours were not in the screenshots."
+  }
+}
