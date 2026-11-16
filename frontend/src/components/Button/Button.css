@@ -1,11 +1,36 @@
 .button {
-  background: var(--action-primary);
-  color: var(--text-on-dark);
   font-family: var(--font-main);
   font-weight: var(--font-bold);
-  font-size: var(--font-size-3xl);
-  padding: 20px 28px;
   border: none;
-  border-radius: var(--radius-xl);
   cursor: pointer;
+}
+
+.button-primary {
+  padding: 20px 28px;
+  background: var(--action-primary);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-3xl);
+  color: var(--text-on-dark);
+}
+
+.button-secondary {
+  padding: 13px 20px;
+  background: var(--action-secondary);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  color: var(--text-navy);
+}
+
+.button-danger {
+  padding: 14px 22px;
+  background: none;
+  border: 2px solid var(--action-danger);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-lg);
+  color: var(--action-danger);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
