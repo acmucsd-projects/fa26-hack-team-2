@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Bubble from '../Bubble/Bubble'
+import DetailsPopup from '../DetailsPopup/DetailsPopup'
 import titleCalories from '../../assets/title-calories.svg'
 import titleBudget from '../../assets/title-budget.svg'
 import titleMacros from '../../assets/title-macros.svg'
@@ -9,7 +10,7 @@ function percent(item) {
   return (item.current / item.goal) * 100
 }
 
-function StatBubbles({ calories, budget, macros }) {
+function StatBubbles({ calories, budget, macros, details }) {
   const [hovered, setHovered] = useState(null)
 
   const bubbles = [
@@ -55,7 +56,12 @@ function StatBubbles({ calories, budget, macros }) {
         >
           <Bubble size={bubble.size} color={bubble.color} circles={bubble.circles} />
           {hovered === bubble.key && (
-            <span className="stat-bubbles-label">{bubble.label}</span>
+            <>
+              <span className="stat-bubbles-label">{bubble.label}</span>
+              <div className={`stat-bubbles-popup stat-bubbles-popup-${bubble.key}`}>
+                <DetailsPopup {...details[bubble.key]} />
+              </div>
+            </>
           )}
         </div>
       ))}

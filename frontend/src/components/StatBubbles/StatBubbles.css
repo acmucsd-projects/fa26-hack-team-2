@@ -51,6 +51,27 @@
   white-space: nowrap;
 }
 
+.stat-bubbles-popup {
+  position: absolute;
+  z-index: 4;
+}
+
+.stat-bubbles-popup-calories {
+  left: calc(100% + 24px);
+  top: -20px;
+}
+
+.stat-bubbles-popup-budget {
+  right: -110px;
+  bottom: calc(100% + 24px);
+}
+
+.stat-bubbles-popup-macros {
+  left: calc(100% + 24px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .stat-bubbles-title {
   position: absolute;
   pointer-events: none;
