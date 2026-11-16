@@ -1,0 +1,69 @@
+.day-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  padding: 10px 12px 12px;
+  border: none;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-main);
+  cursor: pointer;
+}
+
+.day-tile-name {
+  font-weight: var(--font-bold);
+  font-size: var(--font-size-2xs);
+}
+
+.day-tile-date {
+  font-weight: var(--font-extrabold);
+  font-size: var(--font-size-4xl);
+}
+
+.day-tile-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding-top: 4px;
+}
+
+.day-tile-bar {
+  position: relative;
+  height: 8px;
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.day-tile-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.day-tile-bar-calories { background: var(--bubble-yellow); }
+.day-tile-bar-calories .day-tile-fill { background: var(--bubble-teal); }
+
+.day-tile-bar-budget { background: var(--bubble-coral); }
+.day-tile-bar-budget .day-tile-fill { background: var(--bubble-blue); }
+
+.day-tile-past {
+  background: var(--tile-past);
+  color: var(--text-navy);
+}
+
+.day-tile-today {
+  background: var(--tile-today);
+  color: var(--text-on-dark);
+}
+
+.day-tile-future {
+  background: var(--tile-future);
+  color: var(--text-future);
+}
+
+.day-tile-future .day-tile-bar {
+  background: var(--white);
+}

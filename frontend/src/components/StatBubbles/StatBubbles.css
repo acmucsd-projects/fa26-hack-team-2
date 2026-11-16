@@ -1,0 +1,98 @@
+.stat-bubbles {
+  position: relative;
+  width: 492px;
+  height: 493px;
+}
+
+.stat-bubbles-item {
+  position: absolute;
+  border-radius: var(--radius-full);
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.stat-bubbles-calories {
+  left: 22px;
+  top: 0;
+}
+
+.stat-bubbles-budget {
+  left: 253px;
+  top: 130px;
+}
+
+.stat-bubbles-macros {
+  left: 0;
+  top: 213px;
+}
+
+.stat-bubbles-hovering .stat-bubbles-item {
+  opacity: 0.5;
+}
+
+.stat-bubbles-hovering .stat-bubbles-item-active {
+  opacity: 1;
+  z-index: 3;
+  box-shadow: 0 0 0 4px var(--white), var(--shadow-lg);
+}
+
+.stat-bubbles-label {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 14px;
+  background: var(--white);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-main);
+  font-weight: var(--font-extrabold);
+  font-size: var(--font-size-md);
+  color: var(--text-navy);
+  white-space: nowrap;
+}
+
+.stat-bubbles-popup {
+  position: absolute;
+  z-index: 4;
+}
+
+.stat-bubbles-popup-calories {
+  left: calc(100% + 24px);
+  top: -20px;
+}
+
+.stat-bubbles-popup-budget {
+  right: -125px;
+  bottom: calc(100% + 24px);
+}
+
+.stat-bubbles-popup-macros {
+  left: calc(100% + 24px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stat-bubbles-title {
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.stat-bubbles-hovering .stat-bubbles-title {
+  opacity: 0;
+}
+
+.stat-bubbles-title-calories {
+  left: -2px;
+  top: 24px;
+}
+
+.stat-bubbles-title-budget {
+  left: 313px;
+  top: 96px;
+}
+
+.stat-bubbles-title-macros {
+  left: -26px;
+  top: 233px;
+}

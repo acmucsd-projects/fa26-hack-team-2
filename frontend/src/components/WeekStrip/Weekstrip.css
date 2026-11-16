@@ -1,0 +1,87 @@
+.week-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-4xl);
+  font-family: var(--font-main);
+  box-sizing: border-box;
+}
+
+.week-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.week-strip-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.week-strip-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: var(--action-secondary);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.week-strip-arrow img {
+  width: 16px;
+  height: 16px;
+}
+
+.week-strip-title {
+  font-weight: var(--font-extrabold);
+  font-size: var(--font-size-2xl);
+  color: var(--text-navy);
+}
+
+.week-strip-range {
+  font-weight: var(--font-medium);
+  font-size: var(--font-size-base);
+  color: var(--text-muted);
+}
+
+.week-strip-legend {
+  display: flex;
+  gap: 20px;
+}
+
+.week-strip-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.week-strip-swatch {
+  width: 26px;
+  height: 10px;
+  border-radius: var(--radius-full);
+}
+
+.week-strip-swatch-calories {
+  background: linear-gradient(to right, var(--bubble-teal) 50%, var(--bubble-yellow) 50%);
+}
+
+.week-strip-swatch-budget {
+  background: linear-gradient(to right, var(--bubble-blue) 50%, var(--bubble-coral) 50%);
+}
+
+.week-strip-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
