@@ -16,7 +16,7 @@
 }
 
 .stat-bubbles-budget {
-  left: 268px;
+  left: 253px;
   top: 130px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .stat-bubbles-popup-budget {
-  right: -110px;
+  right: -125px;
   bottom: calc(100% + 24px);
 }
 
@@ -83,16 +83,16 @@
 }
 
 .stat-bubbles-title-calories {
-  left: 12px;
-  top: 9px;
+  left: -2px;
+  top: 24px;
 }
 
 .stat-bubbles-title-budget {
-  left: 317px;
-  top: 92px;
+  left: 313px;
+  top: 96px;
 }
 
 .stat-bubbles-title-macros {
-  left: -11px;
+  left: -26px;
   top: 233px;
 }
