@@ -8,7 +8,7 @@ export default function Dashboard() {
       <h1>Dashboard</h1>
       <p>this board is so fast. its a *dash*board</p>
       <Button children={<p>settings</p>} onClick={() => navigate('/settings')} />
-      <Button children={<p>login</p>} onClick={() => navigate('/settings')} />
+      <Button children={<p>login</p>} onClick={() => navigate('/login')} />
     </div>
   );
 }
