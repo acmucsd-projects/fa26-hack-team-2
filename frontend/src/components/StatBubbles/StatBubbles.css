@@ -1,0 +1,43 @@
+.stat-bubbles {
+  position: relative;
+  width: 492px;
+  height: 493px;
+}
+
+.stat-bubbles-item {
+  position: absolute;
+}
+
+.stat-bubbles-calories {
+  left: 22px;
+  top: 0;
+}
+
+.stat-bubbles-budget {
+  left: 268px;
+  top: 130px;
+}
+
+.stat-bubbles-macros {
+  left: 0;
+  top: 213px;
+}
+
+.stat-bubbles-title {
+  position: absolute;
+}
+
+.stat-bubbles-title-calories {
+  left: 12px;
+  top: 9px;
+}
+
+.stat-bubbles-title-budget {
+  left: 317px;
+  top: 92px;
+}
+
+.stat-bubbles-title-macros {
+  left: -11px;
+  top: 233px;
+}

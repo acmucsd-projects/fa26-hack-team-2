@@ -1,0 +1,10 @@
+.bubble {
+  position: relative;
+  border-radius: var(--radius-full);
+}
+
+.bubble-inner {
+  position: absolute;
+  border-radius: var(--radius-full);
+  transform: translate(-50%, -50%);
+}
