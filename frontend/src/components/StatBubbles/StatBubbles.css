@@ -6,6 +6,8 @@
 
 .stat-bubbles-item {
   position: absolute;
+  border-radius: var(--radius-full);
+  transition: opacity 0.2s, box-shadow 0.2s;
 }
 
 .stat-bubbles-calories {
@@ -23,8 +25,40 @@
   top: 213px;
 }
 
+.stat-bubbles-hovering .stat-bubbles-item {
+  opacity: 0.5;
+}
+
+.stat-bubbles-hovering .stat-bubbles-item-active {
+  opacity: 1;
+  z-index: 3;
+  box-shadow: 0 0 0 4px var(--white), var(--shadow-lg);
+}
+
+.stat-bubbles-label {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 14px;
+  background: var(--white);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-main);
+  font-weight: var(--font-extrabold);
+  font-size: var(--font-size-md);
+  color: var(--text-navy);
+  white-space: nowrap;
+}
+
 .stat-bubbles-title {
   position: absolute;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.stat-bubbles-hovering .stat-bubbles-title {
+  opacity: 0;
 }
 
 .stat-bubbles-title-calories {
