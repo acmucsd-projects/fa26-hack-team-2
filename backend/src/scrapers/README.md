@@ -44,14 +44,13 @@ output/
   mongodb/YYYY-MM-DD/       Foods, Locations, Menu_Items and provenance JSON
 reports/                    Validation, nutrition-cache and current-output manifests
 exports/                    Current shareable ZIP
-archive/                    Prior outputs, old reports/previews, unused HTML and code backups
 ```
 
 **Inputs:** `inputs/ucsdRestaurants.zip`, `inputs/Updated_Schema_Doc.pdf`, `raw/`,
 and `nutrition/`. All originals are preserved. ZIP extraction rejects unsafe
 paths, symlinks, oversized files and overwrites of differing HTML; Apple metadata
 is skipped. It writes under `raw/ucsdRestaurants/` without duplicating an existing
-identical extraction. The scraper scans only `raw/`, never `archive/`.
+identical extraction. The scraper scans only `raw/`.
 
 Name new restaurant captures `<location-id>-day0.html` through `day6.html`.
 Use subfolders to keep distinct captures with the same filename. The displayed
@@ -62,9 +61,36 @@ Nutrition files use `<id>.html` or `<id>-<URL-encoded-recId>.html`;
 **Generated files:** everything in `output/`, `reports/` and `exports/`.
 `reports/output-manifest.json` lists the files from the current build; older JSON
 files are never used as build inputs. Share only a successful build's ZIP.
-Originals, old previews, the old ZIP export and the old code ZIP are preserved in
-`archive/`; `archive/inventory.json` records moved paths, reasons and SHA-256 hashes.
+Historical outputs, old previews, unused HTML and code backups are preserved outside
+the active data directory in `backend/data/web-backups/hdh-scraper-before-final-cleanup/`.
+That folder is Git-ignored and never read by the build. Its existing `inventory.json`
+retains the historical move paths and hashes; entries under `backend/data/web/archive/`
+now live under that backup folder. No original backup contents were deleted or changed.
 The duplicate Ventanas HTML stays active so both source paths remain traceable.
+
+## Reproduce after cloning
+
+Offline inputs are intentionally not in Git. Obtain an input bundle from the branch
+maintainer through the team's file-sharing service and copy these files into
+`backend/data/web/`, preserving their paths:
+
+```text
+inputs/ucsdRestaurants.zip
+inputs/Updated_Schema_Doc.pdf
+raw/64-degrees-day0.html
+raw/pines-day0.html
+raw/pines-day1.html
+raw/ventanas-day0.html
+nutrition/6352.html
+```
+
+Then run `npm ci`, `npm run scrape:web`, `npm run test:scrapers` and `npm run check`
+from `backend/`. The build regenerates `raw/ucsdRestaurants/` from the ZIP; those
+10 extracted files need not be distributed separately. Keep the original ZIP as
+the rebuilding source and the extraction as active parser input. The four other
+HTML files preserve earlier captures and duplicate provenance; the ZIP alone does
+not reproduce all 13 menus. The generated dataset ZIP excludes source inputs, so
+request the input bundle separately when rebuilding. No historical backup is needed.
 
 ## Calories and nutrition conflicts
 
