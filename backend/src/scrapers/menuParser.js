@@ -41,16 +41,16 @@ function parseMenuHtml(html, hall, dayNumber) {
     try { if (link.attr('href') && link.attr('href') !== '#') url = new URL(link.attr('href'), 'https://hdh-web.ucsd.edu'); } catch { /* validation reports missing URL */ }
     const price = parseNumber(row.find('.item-price').first().text());
     const item = {
-      category, name, price_cents: price === null ? null : Math.round(price * 100),
+      category, name, description: clean(row.find('.proI').first().text()) || null,
+      price_cents: price === null ? null : Math.round(price * 100),
       calories: parseNumber(row.find('.cals').first().text()),
       tags: [...new Set(row.find('img[title]').map((_, image) => clean($(image).attr('title')).replace(/^Contains /i,'').replace(/TreeNuts/i,'Tree Nuts').toLowerCase().replace(/\s+/g,'_')).get())].sort(),
       source_item_id: url?.searchParams.get('id') || null, nutrition_url: url?.href || null,
-      meal_periods: [period], prices_by_meal_period: { [period]: price === null ? null : Math.round(price * 100) },
-      nutrition_status: 'missing', nutrition: null
+      meal_periods: [period], prices_by_meal_period: { [period]: price === null ? null : Math.round(price * 100) }
     };
     // Include category and nutritional/price variants: the same source ID can
     // describe distinct portions. Merge only equivalent offerings across meals.
-    const key = JSON.stringify([hall.id,date,station,category,name,item.nutrition_url,item.price_cents,item.calories,item.tags]);
+    const key = JSON.stringify([hall.id,date,station,category,name,item.nutrition_url,item.price_cents,item.calories,item.tags,item.description]);
     const existing = foods.get(key);
     if (existing) {
       diagnostics.merged_occurrences++;
