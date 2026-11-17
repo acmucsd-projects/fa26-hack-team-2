@@ -1,227 +1,55 @@
-const fs = require("node:fs");
-const path = require("node:path");
-const { TAGS } = require("../constants/tags");
-
-const outputDir = path.join(__dirname, "../../data/web/output");
-
-const allowedTags = new Set(TAGS);
-
-const args = process.argv.slice(2);
-
-// Check command-line arguments.
-if (
-  args.length !== 0 &&
-  (args.length !== 2 || !/^[0-6]$/.test(args[1]))
-) {
-  console.error(
-    "Usage: node src/scrapers/validateMenu.js [<hall-id> <day 0-6>]"
-  );
-  process.exit(1);
+const { TAGS } = require('../constants/tags');
+const { nutritionCacheFileName } = require('./nutritionParser');
+const validAmount = n => typeof n === 'number' && Number.isFinite(n) && n >= 0;
+function validDate(date) {
+  return typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0,10) === date;
 }
-
-// Check whether the output folder exists.
-if (!fs.existsSync(outputDir)) {
-  console.error(`Output folder not found: ${outputDir}`);
-  process.exit(1);
-}
-
-// Validate one specified file, or every JSON file.
-const fileNames =
-  args.length === 2
-    ? [`${args[0]}-day${args[1]}.json`]
-    : fs
-        .readdirSync(outputDir)
-        .filter((name) => name.endsWith(".json"))
-        .sort();
-
-if (fileNames.length === 0) {
-  console.error("No JSON menus found. Run hdhScraper.js first.");
-  process.exit(1);
-}
-
-let totalErrors = 0;
-
-for (const fileName of fileNames) {
-  const filePath = path.join(outputDir, fileName);
-
-  if (!fs.existsSync(filePath)) {
-    console.error(`Missing output file: ${filePath}`);
-    totalErrors++;
-    continue;
+function validateMenu(menu) {
+  const errors = [], warnings = [], seen = new Set();
+  const counts = { foods: 0, missing_prices: 0, missing_calories: 0, missing_nutrition: 0, detailed_nutrition: 0, duplicates: 0, merged_occurrences: menu.diagnostics?.merged_occurrences || 0 };
+  if (!menu.dining_hall?.id || !menu.dining_hall?.name) errors.push('Missing restaurant identity');
+  if (!validDate(menu.menu_date)) errors.push('Missing or invalid calendar date');
+  if (!Number.isInteger(menu.menu_day) || menu.menu_day < 0 || menu.menu_day > 6) errors.push('Invalid menu day');
+  if (validDate(menu.menu_date) && menu.menu_date_heading) {
+    const weekday = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][new Date(menu.menu_date+'T12:00:00Z').getUTCDay()];
+    if (!menu.menu_date_heading.startsWith(weekday+',')) errors.push('Heading weekday does not match calendar date');
   }
-
-  let menu;
-
-  try {
-    menu = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  } catch (error) {
-    console.error(`Could not read ${fileName}: ${error.message}`);
-    totalErrors++;
-    continue;
-  }
-
-  const stats = {
-    foods: 0,
-    missingNames: 0,
-    missingPrices: 0,
-    missingCalories: 0,
-    detailedNutrition: 0,
-    invalidTags: 0,
-    invalidValues: 0,
-    duplicates: 0
-  };
-
-  if (!menu.dining_hall?.name || !Array.isArray(menu.stations)) {
-    console.error(`${fileName}: invalid dining hall or stations`);
-    totalErrors++;
-    continue;
-  }
-
+  if (!menu.hours) warnings.push('Missing/unrecognized location hours; database location will be withheld');
+  if (!Array.isArray(menu.stations)) return { errors: [...errors,'Missing stations array'], warnings, counts };
+  if (!menu.stations.length) warnings.push('Explicitly empty/closed menu');
   for (const station of menu.stations) {
-    if (!station.name || !Array.isArray(station.items)) {
-      console.error(`${fileName}: invalid station`);
-      totalErrors++;
-      continue;
-    }
-
-    const seen = new Set();
-
+    if (!station.id || !station.name || !Array.isArray(station.items)) { errors.push('Missing station identity/items'); continue; }
     for (const food of station.items) {
-      stats.foods++;
-
-      const foodName = food?.name || "(unnamed food)";
-
-      // Check food name.
-      if (!food?.name?.trim()) {
-        stats.missingNames++;
-      }
-
-      // Check price.
-      if (food?.price_cents == null) {
-        stats.missingPrices++;
-      } else if (
-        !Number.isInteger(food.price_cents) ||
-        food.price_cents < 0
-      ) {
-        console.error(`Invalid price: ${foodName}`);
-        stats.invalidValues++;
-      }
-
-      // Check calories.
-      if (food?.calories == null) {
-        stats.missingCalories++;
-      } else if (
-        typeof food.calories !== "number" ||
-        !Number.isFinite(food.calories) ||
-        food.calories < 0
-      ) {
-        console.error(`Invalid calories: ${foodName}`);
-        stats.invalidValues++;
-      }
-
-      // Check allergen and dietary tags.
-      if (!Array.isArray(food?.tags)) {
-        console.error(`Missing tags array: ${foodName}`);
-        stats.invalidTags++;
-      } else {
-        const invalid = food.tags.filter(
-          (tag) => !allowedTags.has(tag)
-        );
-
-        if (invalid.length > 0) {
-          console.error(
-            `Invalid tags for ${foodName}: ${invalid.join(", ")}`
-          );
-
-          stats.invalidTags += invalid.length;
-        }
-      }
-
-      // Check source information.
-      if (!food?.source_item_id || !food?.nutrition_url) {
-        console.error(`Missing source information: ${foodName}`);
-        stats.invalidValues++;
-      }
-
-      // Check for duplicate foods in the same station.
-      const key = `${food?.source_item_id}|${food?.name}|${food?.nutrition_url}`;
-
-      if (seen.has(key)) {
-        console.error(`Duplicate food: ${foodName}`);
-        stats.duplicates++;
-      }
-
+      counts.foods++;
+      const label = `${station.name} / ${food.name || '(unnamed)'}`;
+      if (!food.name?.trim()) errors.push(`${label}: missing name`);
+      if (!food.category) warnings.push(`${label}: missing category`);
+      if (food.price_cents == null) counts.missing_prices++;
+      else if (!Number.isInteger(food.price_cents) || food.price_cents < 0) errors.push(`${label}: invalid price`);
+      if (food.calories == null) counts.missing_calories++;
+      else if (!validAmount(food.calories)) errors.push(`${label}: invalid calories`);
+      if (!Array.isArray(food.tags) || food.tags.some(t => !TAGS.includes(t))) errors.push(`${label}: invalid tags`);
+      try {
+        nutritionCacheFileName(food.nutrition_url);
+        if (new URL(food.nutrition_url).searchParams.get('id') !== food.source_item_id) throw new Error('ID mismatch');
+      } catch { errors.push(`${label}: invalid nutrition URL or source item ID`); }
+      if (!/^\d+$/.test(food.source_item_id || '')) errors.push(`${label}: missing/invalid source item ID`);
+      if (!Array.isArray(food.meal_periods) || !food.meal_periods.length) errors.push(`${label}: missing meal periods`);
+      for (const value of Object.values(food.prices_by_meal_period || {})) if (value !== null && (!Number.isInteger(value) || value < 0)) errors.push(`${label}: invalid meal price`);
+      const key = JSON.stringify([menu.dining_hall.id,menu.menu_date,station.id,food.category,food.name,food.nutrition_url,food.price_cents,food.calories,food.tags]);
+      if (seen.has(key)) { counts.duplicates++; errors.push(`${label}: duplicate offering`); }
       seen.add(key);
-
-      // Check detailed nutrition.
-      if (food?.nutrition) {
-        const nutrition = food.nutrition;
-
-        const values = [
-          nutrition.calorie,
-          nutrition.fat_cal,
-          nutrition.macros?.protein,
-          nutrition.macros?.carb,
-          nutrition.macros?.fat,
-          nutrition.sat_fat,
-          nutrition.trans_fat,
-          nutrition.cholesterol,
-          nutrition.sodium,
-          nutrition.serving_size,
-          nutrition.fiber,
-          nutrition.sugar
-        ];
-
-        const invalidNutrition = values.some(
-          (value) =>
-            value != null &&
-            (
-              typeof value !== "number" ||
-              !Number.isFinite(value) ||
-              value < 0
-            )
-        );
-
-        if (invalidNutrition) {
-          console.error(`Invalid nutrition: ${foodName}`);
-          stats.invalidValues++;
-        }
-
-        stats.detailedNutrition++;
+      if (!food.nutrition) counts.missing_nutrition++;
+      else {
+        counts.detailed_nutrition++;
+        const { macros, ingredients, serving_size_text, ...amounts } = food.nutrition;
+        if (Object.values({ ...amounts, ...macros }).some(n => n !== null && !validAmount(n))) errors.push(`${label}: invalid detailed nutrition`);
+        if (food.calories !== null && food.nutrition.calorie !== null && food.calories !== food.nutrition.calorie) warnings.push(`${label}: menu/detail calorie mismatch`);
       }
+      if (food.nutrition_status === 'invalid') warnings.push(`${label}: saved nutrition has no usable data`);
     }
   }
-
-  const errors =
-    stats.missingNames +
-    stats.invalidTags +
-    stats.invalidValues +
-    stats.duplicates;
-
-  totalErrors += errors;
-
-  console.log(`\n${fileName}`);
-  console.log("-----------------------");
-  console.log(`Dining hall: ${menu.dining_hall.name}`);
-  console.log(`Menu day: ${menu.menu_day}`);
-  console.log(`Stations: ${menu.stations.length}`);
-  console.log(`Total foods: ${stats.foods}`);
-  console.log(`Missing names: ${stats.missingNames}`);
-  console.log(`Missing prices: ${stats.missingPrices}`);
-  console.log(`Missing calories: ${stats.missingCalories}`);
-  console.log(
-    `Foods with detailed nutrition: ${stats.detailedNutrition}`
-  );
-  console.log(`Invalid tags: ${stats.invalidTags}`);
-  console.log(`Invalid values: ${stats.invalidValues}`);
-  console.log(`Duplicate foods: ${stats.duplicates}`);
-  console.log(`Errors: ${errors}`);
+  for (const field of ['missing_prices','missing_calories','missing_nutrition']) if (counts[field]) warnings.push(`${field}: ${counts[field]}`);
+  return { errors, warnings, counts };
 }
-
-console.log(
-  `\nValidated ${fileNames.length} menu file(s); total errors: ${totalErrors}`
-);
-
-if (totalErrors > 0) {
-  process.exitCode = 1;
-}
+module.exports = { validateMenu, validDate };

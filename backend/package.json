@@ -11,7 +11,9 @@
     "test": "node --test",
     "db:validators": "node scripts/apply-validators.js",
     "db:indexes": "node scripts/create-indexes.js",
-    "db:import": "node scripts/import.js"
+    "db:import": "node scripts/import.js",
+    "scrape:web": "node src/scrapers/buildWebDataset.js",
+    "test:scrapers": "node --test test/scrapers.test.js"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,5 @@
 const cheerio = require("cheerio");
+const { parseNumber } = require("./menuParser");
 
 function parseNutrition(html) {
 
@@ -7,9 +8,7 @@ function parseNutrition(html) {
 
   // Extract the first number from some text
   function numberFrom(text) {
-    const match = text.match(/\d+(?:\.\d+)?/);
-
-    return match ? Number(match[0]) : null;
+    return parseNumber(text);
   }
 
   // Extract calories from the first table
@@ -69,10 +68,41 @@ function parseNutrition(html) {
     trans_fat: getNutrient("Trans Fat"),
     cholesterol: getNutrient("Cholesterol"),
     sodium: getNutrient("Sodium"),
-    serving_size: numberFrom(servingText),
+    serving_size: /\boz\b/i.test(servingText) ? numberFrom(servingText) : null,
+    serving_size_text: servingText.trim() || null,
+    ingredients: $("h2").filter((_, e) => $(e).text().trim() === "Ingredients").first().next("p").text().trim() || null,
     fiber: getNutrient("Dietary Fiber"),
     sugar: getNutrient("Sugars")
   };
 }
 
-module.exports = { parseNutrition };
+function nutritionCacheFileName(nutritionUrl) {
+  const url = new URL(nutritionUrl);
+
+  // Only accept URLs from HDH's nutrition website.
+  if (
+    url.protocol !== "https:" ||
+    url.hostname !== "hdh-web.ucsd.edu" ||
+    !/^\/dining\/apps\/diningservices\/Nutrition\/Nutritionfacts2$/i.test(url.pathname) || url.username || url.password || url.port
+  ) {
+    throw new Error(
+      `Unexpected nutrition website: ${nutritionUrl}`
+    );
+  }
+
+  const itemId = url.searchParams.get("id");
+  const recId = url.searchParams.get("recId");
+
+  if (!/^\d+$/.test(itemId || "")) {
+    throw new Error(
+      `Invalid nutrition item ID: ${nutritionUrl}`
+    );
+  }
+
+  // Encode special characters so filenames are safe.
+  return recId
+    ? `${itemId}-${encodeURIComponent(recId)}.html`
+    : `${itemId}.html`;
+}
+
+module.exports = { parseNutrition, nutritionCacheFileName };
