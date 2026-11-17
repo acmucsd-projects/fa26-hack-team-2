@@ -37,4 +37,26 @@ function htmlFiles(dir) {
     return e.isDirectory() ? htmlFiles(file) : /\.html?$/i.test(e.name) ? [file] : [];
   });
 }
-module.exports = { extractArchive, htmlFiles };
+
+// Package only current generated files plus the README, never raw inputs,
+// archives, credentials or a stale ZIP. The caller supplies an explicit allowlist.
+function packageDataset(dataDir, relativeFiles) {
+  const destination = path.join(dataDir, 'exports/hdh-web-validated.zip');
+  const result = spawnSync('python3', ['-c', `
+import sys, json, pathlib, zipfile
+root = pathlib.Path(sys.argv[1]).resolve()
+destination = pathlib.Path(sys.argv[2])
+files = json.loads(sys.argv[3])
+destination.parent.mkdir(parents=True, exist_ok=True)
+with zipfile.ZipFile(destination, 'w', zipfile.ZIP_DEFLATED) as z:
+    for name in files:
+        source = root / name
+        if not source.resolve().is_relative_to(root): raise ValueError('Export path escapes data folder')
+        if not name.startswith(('output/', 'reports/')) or not name.endswith('.json'): raise ValueError('Unexpected export file')
+        z.write(source, name)
+    z.write(sys.argv[4], 'README.md')
+`, dataDir, destination, JSON.stringify(relativeFiles), path.join(__dirname, 'README.md')], { encoding: 'utf8' });
+  if (result.error || result.status !== 0) throw new Error(`Cannot package dataset: ${result.error?.message || result.stderr}`);
+  return destination;
+}
+module.exports = { extractArchive, htmlFiles, packageDataset };

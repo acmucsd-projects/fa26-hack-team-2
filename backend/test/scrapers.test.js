@@ -7,10 +7,10 @@ const { spawnSync } = require('node:child_process');
 const cheerio = require('cheerio');
 const { buildDataset, LOCATIONS } = require('../src/scrapers/buildWebDataset');
 const { parseMenuHtml } = require('../src/scrapers/menuParser');
-const { parseNutrition, nutritionCacheFileName } = require('../src/scrapers/nutritionParser');
+const { parseNutrition, nutritionCacheFileName, nutritionConflict } = require('../src/scrapers/nutritionParser');
 const { validateMenu } = require('../src/scrapers/validateMenu');
 const { transformMenus, convertNutrition, validateDatabase } = require('../src/scrapers/databaseTransform');
-const { extractArchive } = require('../src/scrapers/inputArchive');
+const { extractArchive } = require('../src/scrapers/localFiles');
 const dataDir = path.join(__dirname,'../data/web');
 const haveInputs = fs.existsSync(path.join(dataDir,'inputs/ucsdRestaurants.zip'));
 let dir, result;
@@ -46,6 +46,10 @@ test('every supplied capture parses; preserves older dates and covers ten restau
   assert.equal(result.dataset.summary.menus,13);
   assert.equal(result.dataset.summary.food_entries,1757);
   assert.equal(result.report.summary.duplicate_captures,1);
+  assert.equal(result.report.summary.original_food_occurrences,2990);
+  assert.equal(result.report.summary.merged_occurrences,1233);
+  assert.equal(result.report.summary.duplicate_capture_rows,209);
+  assert.equal(result.report.summary.unverified_nutrition,1);
   assert.deepEqual(result.report.database_errors,[]);
   for (const m of result.dataset.locations.flatMap(l=>l.menus)) assert.deepEqual(validateMenu(m).errors,[]);
   assert.deepEqual(result.dataset.locations.find(l=>l.id==='pines').menus.map(m=>m.menu_date),['2026-11-13','2026-11-14','2026-11-16']);
@@ -165,4 +169,71 @@ test('ZIP cannot overwrite a differing saved capture',()=>{
   const made=spawnSync('python3',['-c',"import zipfile,sys; z=zipfile.ZipFile(sys.argv[1],'w'); z.writestr('pines-day0.html','changed'); z.close()",archive]);
   assert.equal(made.status,0);assert.throws(()=>extractArchive(archive,target),/Existing capture differs/);
   assert.equal(fs.readFileSync(path.join(target,'pines-day0.html'),'utf8'),'original');
+});
+
+test('date-specific calorie policy preserves historical snapshots and quarantines all conflicting nutrients',integration,()=>{
+  const pines=result.dataset.locations.find(l=>l.id==='pines');
+  for (const menu of pines.menus) {
+    const item=entries(menu).find(i=>i.source_item_id==='6352');
+    const conflict=menu.menu_date==='2026-11-16';
+    assert.equal(item.calories,conflict ? 875:984);
+    assert.equal(item.nutrition.calorie,984); // Original snapshot retained in full.
+    assert.equal(item.nutrition.macros.protein,38.6);
+    assert.equal(item.nutrition_status,conflict ? 'unverified':'available');
+    const snap=result.database.snapshots[menu.menu_date];
+    const provenance=snap.provenance.filter(p=>p.source_item_id==='6352');
+    assert.equal(provenance.length,2);
+    for (const p of provenance) {
+      const menuItem=snap.Menu_Items.find(m=>m._id.$oid===p.menu_item_id.$oid);
+      const food=snap.Foods.find(f=>f._id.$oid===menuItem.food_id.$oid);
+      assert.equal(menuItem.price,950);
+      assert.equal(food.nutrition.calorie,conflict ? 8750:9840);
+      if (conflict) {
+        assert.deepEqual(food.nutrition,{macros:{},calorie:8750});
+        assert.deepEqual(food.ingredients,[]);
+        assert.equal(p.nutrition_status,'unverified');
+        assert.equal(p.nutrition_audit.menu_calories,875);
+        assert.equal(p.nutrition_audit.snapshot_calories,984);
+        assert.equal(p.nutrition_audit.snapshot_file,'nutrition/6352.html');
+      } else {
+        assert.equal(food.nutrition.macros.protein,38600);
+        assert.ok(food.ingredients.length);
+      }
+    }
+  }
+});
+test('conflict policy works for any food, without status annotations or a particular date/ID',()=>{
+  const item={name:'Unrelated food',calories:123,source_item_id:'99999',nutrition_status:'available',
+    nutrition:{calorie:456,macros:{protein:12},sodium:50,ingredients:'unverified recipe'}};
+  assert.deepEqual(nutritionConflict(item),{reason:'calorie_mismatch',menu_calories:123,snapshot_calories:456});
+  assert.deepEqual(convertNutrition(item),{macros:{},calorie:1230});
+  assert.equal(item.nutrition.calorie,456);
+  item.calories=null;
+  assert.equal(convertNutrition(item).calorie,4560); // No menu value to overwrite.
+  item.calories=456;
+  assert.equal(convertNutrition(item).macros.protein,12000);
+  item.nutrition_status='unverified';
+  assert.deepEqual(convertNutrition(item),{macros:{},calorie:4560});
+});
+test('new layout packages only current generated files and ignores archived captures',integration,()=>{
+  assert.ok(fs.existsSync(path.join(dir,'output/web-dataset.json')));
+  assert.equal(fs.existsSync(path.join(dir,'web-dataset.json')),false);
+  const archive=path.join(dir,'archive/raw');fs.mkdirSync(archive,{recursive:true});
+  fs.writeFileSync(path.join(archive,'pines-day0.html'),'invalid archived capture');
+  const again=buildDataset(dir);
+  assert.deepEqual(again.report.summary,result.report.summary);
+  const checked=spawnSync('python3',['-c',`
+import sys,zipfile,json
+with zipfile.ZipFile(sys.argv[1]) as z:
+    names=z.namelist()
+    assert 'output/web-dataset.json' in names
+    assert 'README.md' in names
+    assert all(n=='README.md' or (n.startswith(('output/','reports/')) and n.endswith('.json')) for n in names)
+    data=json.loads(z.read('output/web-dataset.json'))
+    assert data['summary']['food_entries']==1757
+    foods=json.loads(z.read('output/mongodb/2026-11-16/Foods.json'))
+    sandwich=next(f for f in foods if f['name']=='Korean Fried Chicken Sandwich')
+    assert sandwich['nutrition']=={'macros':{},'calorie':8750}
+`,path.join(dir,'exports/hdh-web-validated.zip')],{encoding:'utf8'});
+  assert.equal(checked.status,0,checked.stderr);
 });

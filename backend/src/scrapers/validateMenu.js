@@ -1,12 +1,12 @@
 const { TAGS } = require('../constants/tags');
-const { nutritionCacheFileName } = require('./nutritionParser');
+const { nutritionCacheFileName, nutritionConflict } = require('./nutritionParser');
 const validAmount = n => typeof n === 'number' && Number.isFinite(n) && n >= 0;
 function validDate(date) {
   return typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0,10) === date;
 }
 function validateMenu(menu) {
   const errors = [], warnings = [], seen = new Set();
-  const counts = { foods: 0, missing_prices: 0, missing_calories: 0, missing_nutrition: 0, detailed_nutrition: 0, duplicates: 0, merged_occurrences: menu.diagnostics?.merged_occurrences || 0 };
+  const counts = { foods: 0, missing_prices: 0, missing_calories: 0, missing_nutrition: 0, detailed_nutrition: 0, unverified_nutrition: 0, duplicates: 0, merged_occurrences: menu.diagnostics?.merged_occurrences || 0 };
   if (!menu.dining_hall?.id || !menu.dining_hall?.name) errors.push('Missing restaurant identity');
   if (!validDate(menu.menu_date)) errors.push('Missing or invalid calendar date');
   if (!Number.isInteger(menu.menu_day) || menu.menu_day < 0 || menu.menu_day > 6) errors.push('Invalid menu day');
@@ -41,10 +41,11 @@ function validateMenu(menu) {
       seen.add(key);
       if (!food.nutrition) counts.missing_nutrition++;
       else {
-        counts.detailed_nutrition++;
+        if (nutritionConflict(food) || food.nutrition_status === 'unverified') counts.unverified_nutrition++;
+        else counts.detailed_nutrition++;
         const { macros, ingredients, serving_size_text, ...amounts } = food.nutrition;
         if (Object.values({ ...amounts, ...macros }).some(n => n !== null && !validAmount(n))) errors.push(`${label}: invalid detailed nutrition`);
-        if (food.calories !== null && food.nutrition.calorie !== null && food.calories !== food.nutrition.calorie) warnings.push(`${label}: menu/detail calorie mismatch`);
+        if (nutritionConflict(food)) warnings.push(`${label}: menu/detail calorie mismatch; menu calories retained, snapshot unverified and excluded from database nutrition`);
       }
       if (food.nutrition_status === 'invalid') warnings.push(`${label}: saved nutrition has no usable data`);
     }

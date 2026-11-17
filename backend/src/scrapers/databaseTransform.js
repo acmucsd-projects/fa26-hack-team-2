@@ -2,15 +2,16 @@
 // This export deliberately does not use the legacy Mongoose models (older units).
 const { createHash } = require('node:crypto');
 const { DB_ALLERGEN } = require('../constants/tags');
+const { usableNutrition, nutritionConflict } = require('./nutritionParser');
 // All drink entries in the supplied web captures use this category.
 const BEVERAGE_CATEGORIES = new Set(['Beverages']);
 const oid = value => ({ $oid: createHash('sha256').update(JSON.stringify(['hdh-web-v1',value])).digest('hex').slice(0,24) });
 const periods = { breakfast:'breakfast', lunch:'lunch', dinner:'dinner', lunch_dinner:'lunch/dinner', late_night:'late-night', all:'all', unknown:'unknown' };
 function convertNutrition(item) {
-  const n = item.nutrition || {};
+  const n = usableNutrition(item) || {};
   const result = { macros: {} };
   const add = (target, key, value, scale) => { if (value != null) target[key] = Math.round(value * scale); };
-  add(result,'calorie', n.calorie ?? item.calories,10);
+  add(result,'calorie', item.calories ?? n.calorie,10);
   add(result,'fat_cal',n.fat_cal,10);
   add(result,'serving_size',n.serving_size,10);
   for (const field of ['sat_fat','trans_fat','fiber','sugar']) add(result,field,n[field],1000);
@@ -33,7 +34,7 @@ function transformMenus(menus) {
       const food = { version:1, name:item.name, personal:false, beverage:BEVERAGE_CATEGORIES.has(item.category),
         wellness:tags.has('wellness') ? true:null, vegetarian:tags.has('vegetarian') || tags.has('vegan') ? true:null,
         vegan:tags.has('vegan') ? true:null, sustainability:tags.has('sustainability') ? true:null,
-        ingredients:item.nutrition?.ingredients ? [item.nutrition.ingredients]:[],
+        ingredients:usableNutrition(item)?.ingredients ? [item.nutrition.ingredients]:[],
         allergens:Object.fromEntries(item.tags.filter(t=>DB_ALLERGEN[t]).map(t=>[DB_ALLERGEN[t],true])), nutrition:convertNutrition(item) };
       // ID includes source recipe + observed attributes, so differing portions
       // or nutrition never overwrite one another; identical foods can share IDs.
@@ -47,7 +48,7 @@ function transformMenus(menus) {
         const price = item.prices_by_meal_period[rawPeriod];
         if (price != null) doc.price = price;
         snap.Menu_Items.push(doc);
-        snap.provenance.push({menu_item_id:doc._id,menu_date:date,menu_day:menu.menu_day,category:item.category,raw_meal_period:rawPeriod,source_item_id:item.source_item_id,nutrition_url:item.nutrition_url,nutrition_status:item.nutrition_status,source_files:menu.source_files});
+        snap.provenance.push({menu_item_id:doc._id,menu_date:date,menu_day:menu.menu_day,category:item.category,raw_meal_period:rawPeriod,source_item_id:item.source_item_id,nutrition_url:item.nutrition_url,nutrition_status: nutritionConflict(item) ? 'unverified' : item.nutrition_status,nutrition_audit:item.nutrition_audit || nutritionConflict(item),source_files:menu.source_files});
       }
     }
   }

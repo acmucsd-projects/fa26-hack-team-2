@@ -105,4 +105,22 @@ function nutritionCacheFileName(nutritionUrl) {
     : `${itemId}.html`;
 }
 
-module.exports = { parseNutrition, nutritionCacheFileName };
+// A URL/item ID does not prove a saved snapshot matches a particular menu date.
+function nutritionConflict(item) {
+  const menuCalories = item.calories;
+  const snapshotCalories = item.nutrition?.calorie;
+  if (menuCalories == null || snapshotCalories == null || menuCalories === snapshotCalories) return null;
+  return {
+    reason: 'calorie_mismatch',
+    menu_calories: menuCalories,
+    snapshot_calories: snapshotCalories
+  };
+}
+
+// Recheck the values here as well as the status so callers cannot accidentally
+// export a conflicting snapshot just because it has not been annotated yet.
+function usableNutrition(item) {
+  return item.nutrition_status === 'unverified' || nutritionConflict(item) ? null : item.nutrition;
+}
+
+module.exports = { parseNutrition, nutritionCacheFileName, nutritionConflict, usableNutrition };
