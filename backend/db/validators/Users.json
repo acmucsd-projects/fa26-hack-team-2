@@ -1,0 +1,178 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "description": "Stores information users. Each document is one user.",
+    "required": [
+      "version",
+      "name",
+      "password",
+      "contact",
+      "nutrition_goals",
+      "finances"
+    ],
+    "properties": {
+      "version": {
+        "bsonType": "number",
+        "multipleOf": 1,
+        "minimum": 1,
+        "description": "tracks which version of this collection this document is from"
+      },
+      "name": {
+        "bsonType": "string",
+        "description": "The user's name"
+      },
+      "password": {
+        "bsonType": "string",
+        "description": "the user's hashed password"
+      },
+      "contact": {
+        "bsonType": "object",
+        "description": "The user's contact information",
+        "required": [
+          "email"
+        ],
+        "properties": {
+          "phone": {
+            "bsonType": "string",
+            "pattern": "^\\+[1-9]\\d{0,2} \\(\\d{3}\\) \\d{3}-\\d{4}$",
+            "description": "the user's phone number, formatted to: +XXX (XXX) XXX-XXXX"
+          },
+          "email": {
+            "bsonType": "string",
+            "pattern": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*\\.[A-Za-z]{2,}$",
+            "description": "the user's email, formatted to email regex"
+          }
+        }
+      },
+      "nutrition_goals": {
+        "bsonType": "object",
+        "description": "Contains the data for the user's nutritional goals",
+        "required": [
+          "calorie",
+          "protein",
+          "carb",
+          "fat"
+        ],
+        "properties": {
+          "carb": {
+            "bsonType": "object",
+            "description": "the user's desired daily carbohydrates (milligrams)",
+            "properties": {
+              "min": {
+                "bsonType": "number",
+                "description": "the amount of carbohydrates (milligrams) the user wants to get at minimum in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              },
+              "max": {
+                "bsonType": "number",
+                "description": "the amount of carbohydrates (milligrams) the user wants to get at most in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              }
+            }
+          },
+          "protein": {
+            "bsonType": "object",
+            "description": "the user's daily desired protein (milligrams)",
+            "properties": {
+              "min": {
+                "bsonType": "number",
+                "description": "the amount of protein (milligrams) the user wants to get at minimum in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              },
+              "max": {
+                "bsonType": "number",
+                "description": "the amount of protein (milligrams) the user wants to get at most in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              }
+            }
+          },
+          "calorie": {
+            "bsonType": "object",
+            "description": "the user's desired daily calories (in tenths of a calorie)",
+            "properties": {
+              "min": {
+                "bsonType": "number",
+                "description": "the amount of calories (in tenths of a calorie) the user wants to get at minimum in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              },
+              "max": {
+                "bsonType": "number",
+                "description": "the amount of calories (in tenths of a calorie) the user wants to get at most in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              }
+            }
+          },
+          "fat": {
+            "bsonType": "object",
+            "description": "the user's daily desired fat (milligrams)",
+            "properties": {
+              "min": {
+                "bsonType": "number",
+                "description": "the amount of fat (milligrams) the user wants to get at minimum in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              },
+              "max": {
+                "bsonType": "number",
+                "description": "the amount of fat (milligrams) the user wants to get at most in a day",
+                "multipleOf": 1,
+                "minimum": 0
+              }
+            }
+          }
+        }
+      },
+      "finances": {
+        "bsonType": "object",
+        "description": "information on the user's finances including available budget and finance goals",
+        "required": [
+          "goals"
+        ],
+        "properties": {
+          "balance": {
+            "bsonType": "number",
+            "description": "the user's balance of dining dollars in cents",
+            "multipleOf": 1,
+            "minimum": 0
+          },
+          "goals": {
+            "bsonType": "object",
+            "description": "The user's finance goals, including daily, weekly, monthly, or yearly spend",
+            "properties": {
+              "daily": {
+                "bsonType": "number",
+                "description": "the most the user wants to spend in a day in cents",
+                "multipleOf": 1,
+                "minimum": 0
+              },
+              "weekly": {
+                "bsonType": "number",
+                "description": "the most the user wants to spend in a week in cents",
+                "multipleOf": 1,
+                "minimum": 0
+              },
+              "monthly": {
+                "bsonType": "number",
+                "description": "the most the user wants to spend in a month in cents",
+                "multipleOf": 1,
+                "minimum": 0
+              },
+              "yearly": {
+                "bsonType": "number",
+                "description": "the most the user wants to spend in a year in cents",
+                "multipleOf": 1,
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
