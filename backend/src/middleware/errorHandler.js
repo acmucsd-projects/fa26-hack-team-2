@@ -19,6 +19,10 @@ function errorHandler(err, req, res, next) {
     if (err instanceof mongoose.Error.ValidationError || err instanceof mongoose.Error.CastError) {
         return sendError(res, 400, "invalid_input", err.message);
     }
+    // A unique index said no, e.g. an email that's already registered.
+    if (err.code === 11000) {
+        return sendError(res, 409, "conflict", "That already exists");
+    }
     if (err.type === "entity.parse.failed") {
         return sendError(res, 400, "invalid_json", "Request body is not valid JSON");
     }

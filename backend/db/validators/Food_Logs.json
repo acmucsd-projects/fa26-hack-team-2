@@ -1,0 +1,109 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "description": "The logs for each user of everything they ate",
+    "required": [
+      "version",
+      "user_id",
+      "days"
+    ],
+    "properties": {
+      "version": {
+        "bsonType": "number",
+        "multipleOf": 1,
+        "minimum": 1,
+        "description": "tracks which version of this collection this document is from"
+      },
+      "user_id": {
+        "bsonType": "objectId",
+        "description": "connects the log to a specific user"
+      },
+      "days": {
+        "bsonType": "object",
+        "description": "a dict of all meals the user has ever logged, keyed by date (YYYY-MM-DD)",
+        "patternProperties": {
+          "^\\d{4}-\\d{2}-\\d{2}$": {
+            "bsonType": "object",
+            "description": "Contains all meals eaten by a user for that day",
+            "required": [
+              "meals",
+              "totals"
+            ],
+            "properties": {
+              "totals": {
+                "bsonType": "object",
+                "description": "the total macros for this day",
+                "required": [
+                  "calorie",
+                  "protein",
+                  "carb",
+                  "fat"
+                ],
+                "properties": {
+                  "carb": {
+                    "bsonType": "number",
+                    "description": "the amount of carbohydrates (milligrams) the user consumed for this day",
+                    "multipleOf": 1,
+                    "minimum": 0
+                  },
+                  "protein": {
+                    "bsonType": "number",
+                    "description": "the amount of protein (milligrams) the user consumed for this day",
+                    "multipleOf": 1,
+                    "minimum": 0
+                  },
+                  "calorie": {
+                    "bsonType": "number",
+                    "description": "the number of calories (in tenths of a calorie) the user consumed for this day",
+                    "multipleOf": 1,
+                    "minimum": 0
+                  },
+                  "fat": {
+                    "bsonType": "number",
+                    "description": "the amount of fat (milligrams) the user consumed for this day",
+                    "multipleOf": 1,
+                    "minimum": 0
+                  }
+                }
+              },
+              "meals": {
+                "bsonType": "array",
+                "description": "all meals logged within a given day",
+                "items": {
+                  "bsonType": "object",
+                  "description": "one logged meal",
+                  "required": [
+                    "food_id",
+                    "menu_item_id",
+                    "servings",
+                    "log_ts"
+                  ],
+                  "properties": {
+                    "menu_item_id": {
+                      "bsonType": "objectId",
+                      "description": "links each meal in a meal log to a specific menu item in Menu_Items"
+                    },
+                    "servings": {
+                      "bsonType": "number",
+                      "description": "the number of servings the user had for this meal",
+                      "minimum": 0
+                    },
+                    "food_id": {
+                      "bsonType": "objectId",
+                      "description": "the id of the food eaten in Foods"
+                    },
+                    "log_ts": {
+                      "bsonType": "date",
+                      "description": "the date and time this meal was logged"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

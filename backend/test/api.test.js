@@ -26,6 +26,13 @@ test("invalid menu query returns 400 in the shared error shape", async () => {
     assert.match(body.error.message, /bacon/);
 });
 
+test("invalid search query returns 400", async () => {
+    const { status, body } = await get("/api/menus/search?q=rice&limit=lots");
+    assert.equal(status, 400);
+    assert.equal(body.error.code, "invalid_input");
+    assert.match(body.error.message, /limit/);
+});
+
 test("unknown /api route returns JSON 404", async () => {
     const { status, body } = await get("/api/nope");
     assert.equal(status, 404);
