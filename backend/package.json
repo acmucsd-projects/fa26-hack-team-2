@@ -13,7 +13,9 @@
     "db:indexes": "node scripts/create-indexes.js",
     "db:import": "node scripts/import.js",
     "scrape:web": "node src/scrapers/buildWebDataset.js",
-    "test:scrapers": "node --test test/scrapers.test.js"
+    "test:scrapers": "node --test test/scrapers.test.js test/nutrition.test.js",
+    "scrape:nutrition": "node src/scrapers/nutritionDownloader.js",
+    "test:nutrition": "node --test test/nutrition.test.js"
   },
   "keywords": [],
   "author": "",

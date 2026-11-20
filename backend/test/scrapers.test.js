@@ -8,7 +8,7 @@ const { buildDataset, LOCATIONS } = require('../src/scrapers/buildWebDataset');
 const { parseMenuHtml } = require('../src/scrapers/menuParser');
 const { validateMenu } = require('../src/scrapers/validateMenu');
 
-const raw = path.join(__dirname, '../data/web/raw/ucsdRestaurants');
+const raw = process.env.HDH_TEST_RAW_DIR || path.join(__dirname, '../data/web/raw/ucsdRestaurants');
 const haveInputs = fs.existsSync(raw) && fs.readdirSync(raw).filter(f => f.endsWith('.html')).length === 10;
 const integration = { skip: !haveInputs && 'The 10 local restaurant HTML files are not supplied' };
 const hall = { id: 'pines', name: 'Pines', area: 'Muir College' };
@@ -169,15 +169,18 @@ test('rebuilds are deterministic, remove stale dated menu outputs and create no 
   assert.deepEqual(next, prior);
   assert.deepEqual(again.validation.summary, result.validation.summary);
   assert.equal(fs.readdirSync(path.join(dir, 'output/menus')).length, 10);
-  for (const folder of ['reports', 'inputs', 'exports', 'nutrition', 'archive', 'output/mongodb']) assert.equal(fs.existsSync(path.join(dir, folder)), false);
+  for (const folder of ['reports', 'inputs', 'exports', 'nutrition', 'archive']) assert.equal(fs.existsSync(path.join(dir, folder)), false);
 });
 
 test('menu calories remain authoritative and no detailed nutrition is fabricated', integration, () => {
   const pines = result.dataset.locations.find(l => l.id === 'pines').menus[0];
-  const sandwich = entries(pines).find(i => i.source_item_id === '6352');
-  assert.equal(sandwich.calories, 875);
+  const sample = entries(pines).find(i => i.calories !== null);
+  const $ = cheerio.load(fs.readFileSync(path.join(dir, pines.source_files[0]), 'utf8'));
+  const source = $('a.sublocsitem').filter((_, e) => new URL($(e).attr('href'), 'https://hdh-web.ucsd.edu').href === sample.nutrition_url).first().closest('.menU-item-row');
+  assert.equal(sample.calories, Number(source.find('.cals').first().text().match(/\d+(?:\.\d+)?/)[0]));
   for (const item of result.dataset.locations.flatMap(l => l.menus.flatMap(entries))) {
-    assert.equal('nutrition' in item, false);
+    assert.equal(item.nutrition.data, null);
+    assert.equal(item.nutrition.collection_status, 'not_attempted');
     assert.equal('nutrition_audit' in item, false);
   }
 });
@@ -238,4 +241,69 @@ test('all 1199 food descriptions survive both combined and individual JSON outpu
   }
   assert.equal(withDescription, 1199);
   assert.equal(missingDescription, 0);
+});
+
+test('all 879 completed caches produce zero requests and preserve all 1199 source records', integration, async t => {
+  const { nutritionUrl } = require('../src/scrapers/nutritionParser');
+  const { discoverNutritionUrls, writeNutritionCache, downloadNutrition } = require('../src/scrapers/nutritionDownloader');
+  const isolated = fs.mkdtempSync(path.join(os.tmpdir(), 'hdh-all-caches-'));
+  t.after(() => fs.rmSync(isolated, { recursive: true, force: true }));
+  fs.mkdirSync(path.join(isolated, 'raw'));
+  fs.cpSync(raw, path.join(isolated, 'raw/ucsdRestaurants'), { recursive: true });
+  const original = buildDataset(isolated, { write: false, enrich: false }).dataset;
+  const pages = discoverNutritionUrls(original).pages;
+  assert.equal(pages.length, 879);
+  const samples = new Map();
+  // Synthetic nutrition is confined to this temporary test cache; these values
+  // are not published nutrition and never enter the real project's dataset.
+  pages.forEach((page, index) => {
+    const title = `Fixture recipe ${index}`;
+    const html = `<h1>${title}</h1><p>Serving Size 1 oz</p><table><tr><th>Calories</th><td>10</td></tr><tr><td>Protein ${index + 1} g</td></tr><tr><td>Total Carbohydrate 2 g</td></tr><tr><td>Total Fat 3 g</td></tr><tr><td>Sodium 0 mg</td></tr></table>`;
+    writeNutritionCache(isolated, page.url, html);
+    samples.set(page.url, { title, protein: index + 1 });
+  });
+  let calls = 0;
+  const networkBlocked = () => { calls++; throw new Error('Completed caches must cause zero requests'); };
+  const reused = await downloadNutrition(isolated, { fetchImpl: networkBlocked });
+  assert.equal(reused.summary.already_cached, 879);
+  assert.equal(reused.summary.downloaded, 0);
+  const previousFetch = globalThis.fetch;
+  globalThis.fetch = networkBlocked;
+  let enriched;
+  try { enriched = buildDataset(isolated); }
+  finally { globalThis.fetch = previousFetch; }
+  assert.equal(calls, 0);
+  assert.equal(enriched.validation.summary.errors, 0);
+  assert.equal(enriched.validation.summary.original_food_occurrences, 2037);
+  assert.equal(enriched.validation.summary.merged_occurrences, 838);
+  assert.equal(enriched.coverage.summary.pages_cached, 879);
+  assert.equal(enriched.coverage.summary.foods_with_complete_macros, 1199);
+  assert.equal(enriched.database.records_valid_for_export,1199);
+  assert.deepEqual(enriched.database.withheld,[]);
+  const classification=enriched.coverage.beverage_classification;
+  assert.equal(classification.summary.total,1199);
+  assert.equal(classification.summary.true+classification.summary.false,1199);
+  assert.equal(classification.summary.explicit_category+classification.summary.high_confidence_inference+classification.summary.default,1199);
+  assert.equal(classification.review.length,classification.summary.manual_review);
+  assert.equal(classification.summary.default,classification.review.length);
+  for(const snapshot of Object.values(enriched.database.snapshots)){
+    for(const food of snapshot.Foods){
+      assert.equal(typeof food.beverage,'boolean');
+      assert.equal('beverage_classification' in food,false);
+    }
+    for(const provenance of snapshot.provenance){
+      assert.equal(typeof provenance.beverage_classification.value,'boolean');
+      assert.ok(provenance.beverage_classification.rule);
+    }
+  }
+  const core = structuredClone(enriched.dataset);
+  for (const location of core.locations) for (const menu of location.menus) for (const station of menu.stations) for (const food of station.items) {
+    const expected = samples.get(nutritionUrl(food.nutrition_url));
+    assert.equal(food.nutrition.data.title, expected.title);
+    assert.equal(food.nutrition.data.nutrients.protein.value, expected.protein);
+    delete food.nutrition;
+  }
+  delete original.generated_at;
+  delete core.generated_at;
+  assert.deepEqual(core, original);
 });

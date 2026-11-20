@@ -2,6 +2,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { parseMenuHtml } = require('./menuParser');
 const { validateMenu } = require('./validateMenu');
+const { enrichMenus, nutritionCoverage } = require('./nutritionParser');
+const { transformMenus, validateDatabase } = require('./databaseTransform');
 
 const LOCATIONS = [
   ['64-degrees', '64degrees', '64 Degrees', 'Revelle College'],
@@ -32,7 +34,7 @@ function writeJson(file, value) {
   fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n');
 }
 
-function buildDataset(dataDir = path.join(__dirname, '../../data/web')) {
+function buildDataset(dataDir = path.join(__dirname, '../../data/web'), { write = true, enrich = true } = {}) {
   const files = htmlFiles(path.join(dataDir, 'raw'));
   const failures = [], checks = [];
   const byMenu = new Map();
@@ -96,8 +98,18 @@ function buildDataset(dataDir = path.join(__dirname, '../../data/web')) {
     failures, menus: checks, missing_locations: missingLocations
   };
 
+  let database = null, coverage = null;
+  if (enrich) {
+    enrichMenus(menus, dataDir);
+    database = transformMenus(menus);
+    const schemaErrors = validateDatabase(database);
+    validation.schema_errors = schemaErrors;
+    validation.summary.errors += schemaErrors.length;
+    coverage = nutritionCoverage(menus, database, dataDir);
+  }
+
   // Do not replace a successful output with partial data after a parse failure.
-  if (!validation.summary.errors) {
+  if (write && !validation.summary.errors) {
     const menuDir = path.join(dataDir, 'output/menus');
     const expected = new Set(menus.map(m => `${m.dining_hall.id}-${m.menu_date}.json`));
     if (fs.existsSync(menuDir)) {
@@ -109,19 +121,31 @@ function buildDataset(dataDir = path.join(__dirname, '../../data/web')) {
     }
     for (const menu of menus) writeJson(path.join(menuDir, `${menu.dining_hall.id}-${menu.menu_date}.json`), menu);
     writeJson(path.join(dataDir, 'output/web-dataset.json'), dataset);
+    if (database) {
+      for (const [date, snapshot] of Object.entries(database.snapshots)) {
+        for (const collection of ['Locations', 'Foods', 'Menu_Items', 'provenance']) {
+          writeJson(path.join(dataDir, 'output/mongodb', date, collection + '.json'), snapshot[collection]);
+        }
+      }
+      writeJson(path.join(dataDir, 'output/nutrition-coverage.json'), coverage);
+    }
   }
-  return { dataset, validation };
+  return { dataset, validation, database, coverage };
 }
 
 if (require.main === module) {
   try {
-    const { validation } = buildDataset();
+    const { validation, coverage } = buildDataset();
     console.log(JSON.stringify(validation.summary, null, 2));
+    for (const error of validation.schema_errors || []) console.error(`Schema export: ${error}`);
     for (const failure of validation.failures) console.error(`${failure.file || 'Inputs'}: ${failure.error}`);
     for (const check of validation.menus) for (const warning of check.warnings) console.warn(`${check.file}: ${warning}`);
     if (validation.missing_locations.length) console.warn(`Missing locations: ${validation.missing_locations.join(', ')}`);
     if (validation.summary.errors) process.exitCode = 1;
-    else console.log('Saved data/web/output/web-dataset.json and individual menu JSON. No HTTP requests or database writes.');
+    else {
+      console.log('Saved data/web/output/web-dataset.json and individual menu JSON. No HTTP requests or database writes.');
+      if (coverage) console.log(`Nutrition coverage: data/web/output/nutrition-coverage.json (${coverage.summary.pages_cached}/${coverage.summary.total_unique_nutrition_urls} pages cached; ${coverage.summary.records_withheld_from_database_export} records withheld from database export).`);
+    }
   } catch (error) {
     console.error(`Build failed: ${error.message}`);
     process.exitCode = 1;
