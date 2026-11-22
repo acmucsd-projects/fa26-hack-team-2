@@ -15,3 +15,7 @@ export function getLog(from, to) {
 export function getWeek(start) {
   return request(start ? `/me/week?start=${start}` : '/me/week')
 }
+
+export function addMeal(date, menuItemId, servings = 1) {
+  return request(`/me/log/${date}/meals`, { method: 'POST', body: { menuItemId, servings } })
+}
