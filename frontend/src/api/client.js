@@ -5,10 +5,15 @@ export async function request(path, options = {}) {
     body: options.body ? JSON.stringify(options.body) : undefined,
   })
 
-  const json = await response.json()
+  let json = {}
+  try {
+    json = await response.json()
+  } catch {
+    json = {}
+  }
 
   if (!response.ok) {
-    const error = new Error(json.error?.message ?? 'Something went wrong')
+    const error = new Error(json.error?.message ?? `Couldn't reach the server (status ${response.status})`)
     error.status = response.status
     throw error
   }
