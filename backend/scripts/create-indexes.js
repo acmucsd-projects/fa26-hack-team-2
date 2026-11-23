@@ -5,7 +5,13 @@
 require("dotenv").config({ quiet: true });
 
 const { connectDB, disconnectDB } = require("../src/config/db");
-const models = [require("../src/models/Location"), require("../src/models/Food"), require("../src/models/MenuItem")];
+const models = [
+    require("../src/models/Location"),
+    require("../src/models/Food"),
+    require("../src/models/MenuItem"),
+    require("../src/models/User"),
+    require("../src/models/FoodLog")
+];
 
 async function main() {
     const connection = await connectDB();

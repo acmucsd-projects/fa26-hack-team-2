@@ -31,15 +31,21 @@ async function main() {
 
     const connection = await connectDB();
     console.log(`Importing into database "${connection.name}"`);
+    const unknownHours = [];
     try {
         for (const file of files) {
             const r = await importHall(JSON.parse(fs.readFileSync(file, "utf8")));
             console.log(`${r.name} (${r.locationId}): ${r.stations} stations, ${r.items} items in file ` +
                 `(${r.inserted} new, ${r.updated} updated). ${r.total} menu items in database.`);
+            if (!r.hoursKnown) unknownHours.push(r.name);
             if (r.total !== r.items) {
                 console.warn(`  Warning: the database has ${r.total} menu items for ${r.name} but the file has ${r.items}. ` +
                     "Items removed from the file are not deleted automatically.");
             }
+        }
+        if (unknownHours.length) {
+            console.log(`Hours are unknown for ${unknownHours.length} location(s): ${unknownHours.join(", ")}. ` +
+                'Add "hours": { "days": [...], "open": "HH:MM", "close": "HH:MM" } under "dining_hall" in the file to set them.');
         }
     } finally {
         await disconnectDB();

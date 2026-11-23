@@ -8,5 +8,7 @@ const router = Router();
 router.get("/health", health);
 router.use("/locations", require("./locations"));
 router.use("/menus", require("./menus"));
+router.use("/auth", require("./auth"));
+router.use("/me", require("./me"));
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const { test } = require("node:test");
 const assert = require("node:assert/strict");
-const { campusNow, isOpenNow } = require("../src/services/hours");
+const { campusNow, isOpenNow, UNKNOWN_HOURS } = require("../src/services/hours");
 
 test("campusNow converts UTC to campus time, across daylight saving", () => {
     // Fri Oct 30 2026, 19:00 UTC = 12:00 PDT
@@ -11,30 +11,31 @@ test("campusNow converts UTC to campus time, across daylight saving", () => {
     assert.deepEqual(campusNow(new Date("2026-11-10T08:05:00Z")), { day: "tue", time: "00:05" });
 });
 
-// Street Eats closes 10:45–11:15 AM
-const streetEats = [
-    { day: "fri", open: "07:00", close: "10:45" },
-    { day: "fri", open: "11:15", close: "21:00" }
-];
+const weekdays = { days: ["mon", "tue", "wed", "thu", "fri"], open: "07:00", close: "21:00" };
 
-test("isOpenNow handles several windows in one day", () => {
-    assert.equal(isOpenNow(streetEats, { day: "fri", time: "06:59" }), false);
-    assert.equal(isOpenNow(streetEats, { day: "fri", time: "07:00" }), true);
-    assert.equal(isOpenNow(streetEats, { day: "fri", time: "10:45" }), false);
-    assert.equal(isOpenNow(streetEats, { day: "fri", time: "11:00" }), false);
-    assert.equal(isOpenNow(streetEats, { day: "fri", time: "11:15" }), true);
-    assert.equal(isOpenNow(streetEats, { day: "fri", time: "21:00" }), false);
+test("isOpenNow is true from opening up to (not including) closing", () => {
+    assert.equal(isOpenNow(weekdays, { day: "fri", time: "06:59" }), false);
+    assert.equal(isOpenNow(weekdays, { day: "fri", time: "07:00" }), true);
+    assert.equal(isOpenNow(weekdays, { day: "fri", time: "20:59" }), true);
+    assert.equal(isOpenNow(weekdays, { day: "fri", time: "21:00" }), false);
 });
 
-test("isOpenNow is false on a day with no hours listed", () => {
-    assert.equal(isOpenNow(streetEats, { day: "sat", time: "12:00" }), false);
+test("isOpenNow is false on a day that isn't listed", () => {
+    assert.equal(isOpenNow(weekdays, { day: "sat", time: "12:00" }), false);
 });
 
-test("isOpenNow returns null when it can't tell", () => {
-    // Current: hours unknown
+test("isOpenNow returns null when the hours are unknown", () => {
+    assert.equal(isOpenNow(UNKNOWN_HOURS, { day: "fri", time: "12:00" }), null);
     assert.equal(isOpenNow(null, { day: "fri", time: "12:00" }), null);
-    // Heat: opens at 5 PM, closing time unknown
-    const heat = [{ day: "fri", open: "17:00", close: null }];
-    assert.equal(isOpenNow(heat, { day: "fri", time: "16:00" }), false);
-    assert.equal(isOpenNow(heat, { day: "fri", time: "18:00" }), null);
+    assert.equal(isOpenNow(undefined, { day: "fri", time: "12:00" }), null);
+});
+
+test("isOpenNow handles closing after midnight", () => {
+    const lateNight = { days: ["fri", "sat"], open: "18:00", close: "01:00" };
+    assert.equal(isOpenNow(lateNight, { day: "fri", time: "23:30" }), true);
+    assert.equal(isOpenNow(lateNight, { day: "sat", time: "00:30" }), true); // still Friday's night
+    assert.equal(isOpenNow(lateNight, { day: "sun", time: "00:30" }), true); // still Saturday's night
+    assert.equal(isOpenNow(lateNight, { day: "sun", time: "19:00" }), false);
+    assert.equal(isOpenNow(lateNight, { day: "fri", time: "00:30" }), false); // Thursday isn't listed
+    assert.equal(isOpenNow(lateNight, { day: "sat", time: "12:00" }), false);
 });
