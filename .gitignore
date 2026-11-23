@@ -156,3 +156,9 @@ vite.config.ts.timestamp-*
 .postman
 postman/
 postman/globals/workspace.globals.yaml
+
+# macOS files
+.DS_Store
+
+# Local HDH scraped data
+backend/data/web/
