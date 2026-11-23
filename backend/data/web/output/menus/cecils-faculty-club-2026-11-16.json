@@ -1,0 +1,3854 @@
+{
+  "dining_hall": {
+    "id": "cecils-faculty-club",
+    "name": "Cecil's at Faculty Club",
+    "type": "dining_hall",
+    "area": "unknown"
+  },
+  "source": "hdh-web",
+  "menu_day": 0,
+  "menu_date": "2026-11-16",
+  "menu_date_heading": "Monday, November 16 2026",
+  "menu_date_label": "Mon Nov 16",
+  "hours": {
+    "days": [
+      "mon"
+    ],
+    "open": "08:00",
+    "close": "15:00"
+  },
+  "hours_text": "8:00 AM - 3:00 PM",
+  "stations": [
+    {
+      "id": "cecils-faculty-club-cecil-s-at-faculty-club",
+      "name": "Cecil's at Faculty Club",
+      "hours": null,
+      "items": [
+        {
+          "category": "Pizza",
+          "name": "Chicken Artichoke Pesto",
+          "description": "Pesto sauce, mozzarella, chicken, sliced tomatoes, basil, artichoke, oil, and herbs.",
+          "price_cents": 1200,
+          "calories": 1948,
+          "tags": [
+            "dairy",
+            "gluten",
+            "wheat"
+          ],
+          "source_item_id": "7032",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7032&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1200
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7032&recId=",
+            "cache_file": "nutrition-cache/2257b1e1bc4e567b2bce320b8843090b2da6f90ffa93b0c788b0eab68f8821b0.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:26.800Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Chicken Artichoke Pesto",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1948,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1948"
+                },
+                "fat_cal": {
+                  "value": 319,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "319"
+                },
+                "fat": {
+                  "value": 35.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "35.5 g"
+                },
+                "carb": {
+                  "value": 318,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "318.0 g"
+                },
+                "sat_fat": {
+                  "value": 10.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "10.2 g"
+                },
+                "fiber": {
+                  "value": 16.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "16.6 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 4.1,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "4.1 g"
+                },
+                "cholesterol": {
+                  "value": 84,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "84.0 mg"
+                },
+                "protein": {
+                  "value": 75,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "75.0 g"
+                },
+                "sodium": {
+                  "value": 1151.9,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "1151.9 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1948,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1948"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 319,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "319"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 35.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "35.5 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 318,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "318.0 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 10.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "10.2 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 16.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "16.6 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 4.1,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "4.1 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 84,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "84.0 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 75,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "75.0 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 1151.9,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "1151.9 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 15.4,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "15.4 oz"
+              },
+              "serving_size_text": "Serving Size 15.4 oz",
+              "ingredients_text": "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Chicken, White Meat Cooked Diced 1/2in (Boneless, Skinless Diced White Chicken, Water, Vinegar, Rice Starch, Salt.), Tomato, Beefsteak (Tomato), Artichoke, Hearts Quartered (Artichoke Hearts, Water, Salt, Citric Acid.), Sauce, Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.) (Milk), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Cheese, Parmesan Grated (Made From Pasteurized Cow''s Milk, Culture, Salt, And Enzymes. Corn Starch And Cellulose Added to Prevent Caking. Potassium Sorbate (Added To Protect Flavor).) (Milk), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Juice, Lemon, Herb, Basil Fresh, Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Spice, Crushed Red Pepper, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried, Spice, Pepper Black Ground (Black Pepper)",
+              "ingredients": [
+                "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Chicken, White Meat Cooked Diced 1/2in (Boneless, Skinless Diced White Chicken, Water, Vinegar, Rice Starch, Salt.), Tomato, Beefsteak (Tomato), Artichoke, Hearts Quartered (Artichoke Hearts, Water, Salt, Citric Acid.), Sauce, Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.) (Milk), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Cheese, Parmesan Grated (Made From Pasteurized Cow''s Milk, Culture, Salt, And Enzymes. Corn Starch And Cellulose Added to Prevent Caking. Potassium Sorbate (Added To Protect Flavor).) (Milk), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Juice, Lemon, Herb, Basil Fresh, Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Spice, Crushed Red Pepper, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried, Spice, Pepper Black Ground (Black Pepper)"
+              ],
+              "tags": [
+                "dairy",
+                "gluten",
+                "wheat"
+              ],
+              "flags": {},
+              "labels": [
+                "Contains Dairy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Pizza",
+          "name": "Four Cheese",
+          "description": "Tomato sauce, ricotta, mozzarella, provolone, parmesan, oil and herbs",
+          "price_cents": 1100,
+          "calories": 1947,
+          "tags": [
+            "dairy",
+            "gluten",
+            "vegetarian",
+            "wheat"
+          ],
+          "source_item_id": "7029",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7029&recId=071063",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1100
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7029&recId=071063",
+            "cache_file": "nutrition-cache/93a2d6a6010e577a36415816dd5cb7ee99b2e87d71207310a375cc7b2a40524e.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:28.829Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Four Cheese",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1947,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1947"
+                },
+                "fat_cal": {
+                  "value": 332,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "332"
+                },
+                "fat": {
+                  "value": 36.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "36.9 g"
+                },
+                "carb": {
+                  "value": 316.8,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "316.8 g"
+                },
+                "sat_fat": {
+                  "value": 22.7,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "22.7 g"
+                },
+                "fiber": {
+                  "value": 15.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "15.5 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 4.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "4.6 g"
+                },
+                "cholesterol": {
+                  "value": 85.1,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "85.1 mg"
+                },
+                "protein": {
+                  "value": 75.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "75.2 g"
+                },
+                "sodium": {
+                  "value": 1504.3,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "1504.3 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1947,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1947"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 332,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "332"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 36.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "36.9 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 316.8,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "316.8 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 22.7,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "22.7 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 15.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "15.5 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 4.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "4.6 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 85.1,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "85.1 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 75.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "75.2 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 1504.3,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "1504.3 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 13.6,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "13.6 oz"
+              },
+              "serving_size_text": "Serving Size 13.6 oz",
+              "ingredients_text": "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Cheese, Provolone Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes.) (Milk), Cheese, Ricotta (Milk, Vinegar, And Salt.) (Milk), Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Cheese, Parmesan Shredded (Parmesan Cheese: (Pasteurized Part-Skim Cow''S Milk, Cheese Cultures, Salt, Enzymes), Potato Starch And Powdered Cellulose Added To Prevent Caking, Natamycin (A Natural Mold Inhibitor).) (Milk), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried",
+              "ingredients": [
+                "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Cheese, Provolone Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes.) (Milk), Cheese, Ricotta (Milk, Vinegar, And Salt.) (Milk), Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Cheese, Parmesan Shredded (Parmesan Cheese: (Pasteurized Part-Skim Cow''S Milk, Cheese Cultures, Salt, Enzymes), Potato Starch And Powdered Cellulose Added To Prevent Caking, Natamycin (A Natural Mold Inhibitor).) (Milk), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried"
+              ],
+              "tags": [
+                "dairy",
+                "gluten",
+                "vegetarian",
+                "wheat"
+              ],
+              "flags": {
+                "vegetarian": true
+              },
+              "labels": [
+                "Vegetarian",
+                "Contains Dairy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Pizza",
+          "name": "Meat Lovers",
+          "description": "Tomato sauce, mozzarella, spicy Italian sausage, pepperoni, oil and herbs.",
+          "price_cents": 1200,
+          "calories": 1977,
+          "tags": [
+            "dairy",
+            "gluten",
+            "wheat"
+          ],
+          "source_item_id": "7033",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7033&recId=070005",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1200
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7033&recId=070005",
+            "cache_file": "nutrition-cache/3b9575eb557d5af0ce45037d667f9891115bc8f619bb8eb1e211325de88db20f.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:30.870Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Meat Lovers",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1977,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1977"
+                },
+                "fat_cal": {
+                  "value": 381,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "381"
+                },
+                "fat": {
+                  "value": 42.4,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "42.4 g"
+                },
+                "carb": {
+                  "value": 316.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "316.5 g"
+                },
+                "sat_fat": {
+                  "value": 15.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "15.2 g"
+                },
+                "fiber": {
+                  "value": 16,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "16.0 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 3.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "3.3 g"
+                },
+                "cholesterol": {
+                  "value": 86.6,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "86.6 mg"
+                },
+                "protein": {
+                  "value": 68.1,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "68.1 g"
+                },
+                "sodium": {
+                  "value": 1783.5,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "1783.5 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1977,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1977"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 381,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "381"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 42.4,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "42.4 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 316.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "316.5 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 15.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "15.2 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 16,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "16.0 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 3.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "3.3 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 86.6,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "86.6 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 68.1,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "68.1 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 1783.5,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "1783.5 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 13.1,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "13.1 oz"
+              },
+              "serving_size_text": "Serving Size 13.1 oz",
+              "ingredients_text": "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Pepperoni, Pork & Beef Sliced (Pork and Beef, Salt, Contains 2% or less of Water, Dextrose, Spices, Lactic Acid Starter Culture, Oleoresin of Paprika, Garlic Powder, Sodium Nitrite, Citric Acid, BHA, BHT.BHA, BHT WITH CITRIC ACID ADDED TO HELP PROTECT FLAVOR.), Pork, Sausage Italian Crumbled Cooked (Pork, Spices, Water, Salt, Corn Syrup Solids, Flavorings, Paprika, Sodium Phosphates.), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried",
+              "ingredients": [
+                "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Pepperoni, Pork & Beef Sliced (Pork and Beef, Salt, Contains 2% or less of Water, Dextrose, Spices, Lactic Acid Starter Culture, Oleoresin of Paprika, Garlic Powder, Sodium Nitrite, Citric Acid, BHA, BHT.BHA, BHT WITH CITRIC ACID ADDED TO HELP PROTECT FLAVOR.), Pork, Sausage Italian Crumbled Cooked (Pork, Spices, Water, Salt, Corn Syrup Solids, Flavorings, Paprika, Sodium Phosphates.), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried"
+              ],
+              "tags": [
+                "dairy",
+                "gluten",
+                "wheat"
+              ],
+              "flags": {},
+              "labels": [
+                "Contains Dairy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Pizza",
+          "name": "Pepperoni",
+          "description": "Tomato sauce, mozzarella, pepperoni, oil and herbs",
+          "price_cents": 1200,
+          "calories": 1953,
+          "tags": [
+            "dairy",
+            "gluten",
+            "wheat"
+          ],
+          "source_item_id": "7030",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7030&recId=071088",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1200
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7030&recId=071088",
+            "cache_file": "nutrition-cache/51f9bca89eaecc08ae20c67db2f55156572601e99bdf02e236e4e7e494dc641d.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:32.908Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Pepperoni",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1953,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1953"
+                },
+                "fat_cal": {
+                  "value": 398,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "398"
+                },
+                "fat": {
+                  "value": 44.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "44.2 g"
+                },
+                "carb": {
+                  "value": 304.4,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "304.4 g"
+                },
+                "sat_fat": {
+                  "value": 17.4,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "17.4 g"
+                },
+                "fiber": {
+                  "value": 15.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "15.9 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 3.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "3.2 g"
+                },
+                "cholesterol": {
+                  "value": 99.5,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "99.5 mg"
+                },
+                "protein": {
+                  "value": 69.8,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "69.8 g"
+                },
+                "sodium": {
+                  "value": 1875.4,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "1875.4 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1953,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1953"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 398,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "398"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 44.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "44.2 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 304.4,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "304.4 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 17.4,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "17.4 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 15.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "15.9 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 3.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "3.2 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 99.5,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "99.5 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 69.8,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "69.8 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 1875.4,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "1875.4 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 13.1,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "13.1 oz"
+              },
+              "serving_size_text": "Serving Size 13.1 oz",
+              "ingredients_text": "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Water, Tap, Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Pepperoni, Pork & Beef Sliced (Pork and Beef, Salt, Contains 2% or less of Water, Dextrose, Spices, Lactic Acid Starter Culture, Oleoresin of Paprika, Garlic Powder, Sodium Nitrite, Citric Acid, BHA, BHT.BHA, BHT WITH CITRIC ACID ADDED TO HELP PROTECT FLAVOR.), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried",
+              "ingredients": [
+                "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Cheese, Mozzarella Shredded (Low Moisture Part Skim Mozzarella Cheese (Pasteurized Milk, Skim Milk, Salt, Cheese Cultures, Enzymes), Powdered Cellulose (Added To Prevent Caking), Natamycin (A Natural Perservative).) (Milk), Water, Tap, Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Pepperoni, Pork & Beef Sliced (Pork and Beef, Salt, Contains 2% or less of Water, Dextrose, Spices, Lactic Acid Starter Culture, Oleoresin of Paprika, Garlic Powder, Sodium Nitrite, Citric Acid, BHA, BHT.BHA, BHT WITH CITRIC ACID ADDED TO HELP PROTECT FLAVOR.), Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried"
+              ],
+              "tags": [
+                "dairy",
+                "gluten",
+                "wheat"
+              ],
+              "flags": {},
+              "labels": [
+                "Contains Dairy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Pizza",
+          "name": "Ricotta Margherita",
+          "description": "Tomato sauce, fresh ricotta and mozzarella, sliced tomatoes, basil, oil and herbs.",
+          "price_cents": 1200,
+          "calories": 1664,
+          "tags": [
+            "dairy",
+            "gluten",
+            "vegetarian",
+            "wheat"
+          ],
+          "source_item_id": "7031",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7031&recId=071076",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1200
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7031&recId=071076",
+            "cache_file": "nutrition-cache/4ababb30dfbd78768f5843d500d50608e0880a5657fe5e11dcca6d5abfc9987f.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:34.946Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Ricotta Margherita",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1664,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1664"
+                },
+                "fat_cal": {
+                  "value": 120,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "120"
+                },
+                "fat": {
+                  "value": 13.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "13.3 g"
+                },
+                "carb": {
+                  "value": 318.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "318.5 g"
+                },
+                "sat_fat": {
+                  "value": 3.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "3.5 g"
+                },
+                "fiber": {
+                  "value": 14.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "14.5 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 7.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "7.9 g"
+                },
+                "cholesterol": {
+                  "value": 18.3,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "18.3 mg"
+                },
+                "protein": {
+                  "value": 52.7,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "52.7 g"
+                },
+                "sodium": {
+                  "value": 600.1,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "600.1 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1664,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1664"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 120,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "120"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 13.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "13.3 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 318.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "318.5 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 3.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "3.5 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 14.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "14.5 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 7.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "7.9 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 18.3,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "18.3 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 52.7,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "52.7 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 600.1,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "600.1 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 13.3,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "13.3 oz"
+              },
+              "serving_size_text": "Serving Size 13.3 oz",
+              "ingredients_text": "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Cheese, Ricotta (Milk, Vinegar, And Salt.) (Milk), Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Tomato, Beefsteak (Tomato), Herb, Basil Fresh, Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried",
+              "ingredients": [
+                "Flour, Wheat Type 00 (WHEAT FLOUR) (Gluten, Wheat), Water, Tap, Cheese, Ricotta (Milk, Vinegar, And Salt.) (Milk), Sauce, Pizza Tomato (Diced Tomatoes, tomato concentrate (water and tomato paste), Contains 2% or less of the following: sea salt, garlic powder, extra virgin olive oil, spices, and citric acid.), Tomato, Beefsteak (Tomato), Herb, Basil Fresh, Malt, Diastatic (Malted Barley Flour, Wheat Flour, Dextrose.) (Gluten, Wheat), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Yeast, Active Dry (Yeast, Sorbitan Monostearate, Ascorbic Acid), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Oregano Leaves Dried"
+              ],
+              "tags": [
+                "dairy",
+                "gluten",
+                "vegetarian",
+                "wheat"
+              ],
+              "flags": {
+                "vegetarian": true
+              },
+              "labels": [
+                "Vegetarian",
+                "Contains Dairy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Proteins",
+          "name": "Grilled Chicken Breast",
+          "description": "Cooked chicken marinated in oil with garlic, salt and pepper.",
+          "price_cents": 700,
+          "calories": 269,
+          "tags": [],
+          "source_item_id": "2666",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=2666&recId=131050",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 700
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=2666&recId=131050",
+            "cache_file": "nutrition-cache/660d52ea68b508689d7db666d4968f09c58e378f9bf74586a5c2761e4f7619a1.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:22:52.190Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Grilled Chicken Breast",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 269,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "269"
+                },
+                "fat_cal": {
+                  "value": 160,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "160"
+                },
+                "fat": {
+                  "value": 17.7,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "17.7 g"
+                },
+                "carb": {
+                  "value": 1.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "1.5 g"
+                },
+                "sat_fat": {
+                  "value": 2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "2.0 g"
+                },
+                "fiber": {
+                  "value": 0.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.2 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "cholesterol": {
+                  "value": 70.8,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "70.8 mg"
+                },
+                "protein": {
+                  "value": 26.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "26.6 g"
+                },
+                "sodium": {
+                  "value": 587.1,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "587.1 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 269,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "269"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 160,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "160"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 17.7,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "17.7 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 1.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "1.5 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "2.0 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 0.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.2 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 70.8,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "70.8 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 26.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "26.6 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 587.1,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "587.1 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 4.3,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "4.3 oz"
+              },
+              "serving_size_text": "Serving Size 4.3 oz",
+              "ingredients_text": "Chicken, Breast 5oz (Boneless, Skinless Chicken Breast Containing Up To 15% Of A Solution Of Water and Sea Salt), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Garlic, Peeled, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Spice, Pepper White Ground",
+              "ingredients": [
+                "Chicken, Breast 5oz (Boneless, Skinless Chicken Breast Containing Up To 15% Of A Solution Of Water and Sea Salt), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Garlic, Peeled, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Spice, Pepper White Ground"
+              ],
+              "tags": [],
+              "flags": {},
+              "labels": [
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Proteins",
+          "name": "Grilled Salmon",
+          "description": "Fish, Grilled Salmon 3oz",
+          "price_cents": 200,
+          "calories": 190,
+          "tags": [
+            "fish",
+            "sustainability",
+            "wellness"
+          ],
+          "source_item_id": "1003",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=1003&recId=373023",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 200
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=1003&recId=373023",
+            "cache_file": "nutrition-cache/f06ac88dbb58ab5637cf51f08c4a2b006d48eeb20855e52f91d38970ddf8e372.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:36.999Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Grilled Salmon",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 190,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "190"
+                },
+                "fat_cal": {
+                  "value": 117,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "117"
+                },
+                "fat": {
+                  "value": 13,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "13.0 g"
+                },
+                "carb": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sat_fat": {
+                  "value": 2.7,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "2.7 g"
+                },
+                "fiber": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "cholesterol": {
+                  "value": 46.8,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "46.8 mg"
+                },
+                "protein": {
+                  "value": 17.4,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "17.4 g"
+                },
+                "sodium": {
+                  "value": 260,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "260.0 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 190,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "190"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 117,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "117"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 13,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "13.0 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 2.7,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "2.7 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 46.8,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "46.8 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 17.4,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "17.4 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 260,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "260.0 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 2.6,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "2.6 oz"
+              },
+              "serving_size_text": "Serving Size 2.6 oz",
+              "ingredients_text": "Salmon, Fillet Skin Off (Fish), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Spice, Pepper Black Ground (Black Pepper)",
+              "ingredients": [
+                "Salmon, Fillet Skin Off (Fish), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Spice, Pepper Black Ground (Black Pepper)"
+              ],
+              "tags": [
+                "fish",
+                "sustainability",
+                "wellness"
+              ],
+              "flags": {
+                "wellness": true,
+                "sustainability": true
+              },
+              "labels": [
+                "Wellness",
+                "Contains Fish",
+                "Sustainability",
+                "Sustainably Sourced",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Salads",
+          "name": "Asian Chopped",
+          "description": "Red and green cabbage tossed with red bell pepper, carrot, snap peas, edamame, and sesame ginger vinaigrette topped with crispy yakisoba and scallions",
+          "price_cents": 1000,
+          "calories": 294,
+          "tags": [
+            "gluten",
+            "sesame",
+            "soy",
+            "vegetarian",
+            "wheat"
+          ],
+          "source_item_id": "7043",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7043&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1000
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7043&recId=",
+            "cache_file": "nutrition-cache/b5132b9f104b7fab408b36490a7c6eb28c665e13b472cb5b503ab081d75110c2.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:39.042Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Asian Chopped",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 294,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "294"
+                },
+                "fat_cal": {
+                  "value": 138,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "138"
+                },
+                "fat": {
+                  "value": 15.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "15.3 g"
+                },
+                "carb": {
+                  "value": 33.8,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "33.8 g"
+                },
+                "sat_fat": {
+                  "value": 2.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "2.3 g"
+                },
+                "fiber": {
+                  "value": 8.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "8.6 g"
+                },
+                "trans_fat": {
+                  "value": 0.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.6 g"
+                },
+                "sugar": {
+                  "value": 18.8,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "18.8 g"
+                },
+                "cholesterol": {
+                  "value": 0.7,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "0.7 mg"
+                },
+                "protein": {
+                  "value": 10.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "10.5 g"
+                },
+                "sodium": {
+                  "value": 603.6,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "603.6 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 294,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "294"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 138,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "138"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 15.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "15.3 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 33.8,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "33.8 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 2.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "2.3 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 8.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "8.6 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.6 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 18.8,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "18.8 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 0.7,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "0.7 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 10.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "10.5 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 603.6,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "603.6 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 10.8,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "10.8 oz"
+              },
+              "serving_size_text": "Serving Size 10.8 oz",
+              "ingredients_text": "Cabbage, Green Shredded, Cabbage, Red Shredded, Edamame, Shell Off (Shelled Soybeans) (Soy), Pepper, Red Bell Whole (0.00 mg), Onion, Green Whole, Peas, Snap (Green beans), Carrot, Matchsticks, Ginger, Minced, Syrup, Agave Light (Organic Blue Agave), Oil, Sesame Seed Blend (Soybean Oil, Sesame Oil.) (Sesame, Soy), Sauce, Soy Gluten Free (Water, Soybeans, Salt, Sugar, Corn Starch.) (Soy), Noodle, Yakisoba (Enriched Wheat Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Highly Refined Soybean Oil, Potassium Sorbate (To Retard Spoilage), Sodium Benzoate (To Retard Spoilage), Salt, Potassium Carbonate, Sodium Carbonate, Yellow 5, Yellow 6.) (Gluten, Soy, Wheat), Paste, Chili Sambal Oelek (Chili, Salt, Distilled Vinegar (Acetic Acid), Potassium Sorbate And Sodium Bisulfite As Preservatives, Xanthan Gum. Contains Sulphite (Sodium Bisulfite).), Vinegar, Seasoned Rice (Rice vinegar (made from real rice), water, invert sugar, salt, brown sugar.Diluted with water to 4% acidity (40 grain)..), Garlic, Peeled, Seeds, Sesame Toasted Black (Sesame Seeds.) (Sesame), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).)",
+              "ingredients": [
+                "Cabbage, Green Shredded, Cabbage, Red Shredded, Edamame, Shell Off (Shelled Soybeans) (Soy), Pepper, Red Bell Whole (0.00 mg), Onion, Green Whole, Peas, Snap (Green beans), Carrot, Matchsticks, Ginger, Minced, Syrup, Agave Light (Organic Blue Agave), Oil, Sesame Seed Blend (Soybean Oil, Sesame Oil.) (Sesame, Soy), Sauce, Soy Gluten Free (Water, Soybeans, Salt, Sugar, Corn Starch.) (Soy), Noodle, Yakisoba (Enriched Wheat Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Highly Refined Soybean Oil, Potassium Sorbate (To Retard Spoilage), Sodium Benzoate (To Retard Spoilage), Salt, Potassium Carbonate, Sodium Carbonate, Yellow 5, Yellow 6.) (Gluten, Soy, Wheat), Paste, Chili Sambal Oelek (Chili, Salt, Distilled Vinegar (Acetic Acid), Potassium Sorbate And Sodium Bisulfite As Preservatives, Xanthan Gum. Contains Sulphite (Sodium Bisulfite).), Vinegar, Seasoned Rice (Rice vinegar (made from real rice), water, invert sugar, salt, brown sugar.Diluted with water to 4% acidity (40 grain)..), Garlic, Peeled, Seeds, Sesame Toasted Black (Sesame Seeds.) (Sesame), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).)"
+              ],
+              "tags": [
+                "gluten",
+                "sesame",
+                "soy",
+                "vegetarian",
+                "wheat"
+              ],
+              "flags": {
+                "vegetarian": true
+              },
+              "labels": [
+                "Vegetarian",
+                "Contains Soy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "Contains Sesame",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Salads",
+          "name": "Caesar",
+          "description": "Chopped romaine lettuce tossed with caesar dressing topped with crispy parmesan cheese and diced tomato",
+          "price_cents": 1000,
+          "calories": 381,
+          "tags": [
+            "dairy",
+            "eggs",
+            "fish",
+            "soy"
+          ],
+          "source_item_id": "7027",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7027&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1000
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7027&recId=",
+            "cache_file": "nutrition-cache/7eb1d5bed3a984c9ebc5b16ae5088929757efedf173d0a2253279527f327d5b4.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:41.077Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Caesar",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 381,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "381"
+                },
+                "fat_cal": {
+                  "value": 308,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "308"
+                },
+                "fat": {
+                  "value": 34.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "34.2 g"
+                },
+                "carb": {
+                  "value": 11.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "11.6 g"
+                },
+                "sat_fat": {
+                  "value": 9.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "9.2 g"
+                },
+                "fiber": {
+                  "value": 3.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "3.5 g"
+                },
+                "trans_fat": {
+                  "value": 0.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.3 g"
+                },
+                "sugar": {
+                  "value": 3.4,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "3.4 g"
+                },
+                "cholesterol": {
+                  "value": 63.3,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "63.3 mg"
+                },
+                "protein": {
+                  "value": 11.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "11.5 g"
+                },
+                "sodium": {
+                  "value": 851.3,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "851.3 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 381,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "381"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 308,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "308"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 34.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "34.2 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 11.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "11.6 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 9.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "9.2 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 3.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "3.5 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.3 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 3.4,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "3.4 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 63.3,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "63.3 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 11.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "11.5 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 851.3,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "851.3 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 9,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "9.0 oz"
+              },
+              "serving_size_text": "Serving Size 9.0 oz",
+              "ingredients_text": "Lettuce, Romaine Chopped, Tomato, Beefsteak (Tomato), Dressing, Caesar (Soybean Oil, Water, Egg Yolk, White Wine And Distilled Vinegars, Lemon Juice Concentrate, Less Than 2% Of: Salt, Parmesan Cheese (Part-Skim Milk, Cheese Culture, Salt, Enzymes), Mustard Seed, Spice, Garlic*, Potassium Sorbate And Sodium Benzoate Added As Preservatives, Onion*, Xanthan Gum, Corn Syrup, Propylene Glycol Alginate, Calcium Disodium Edta Added To Protect Flavor, Celery Seed, Natural Flavor, Tamarind, Anchovies. *Dehydrated) (Egg, Fish, Milk, Soy), Cheese, Parmesan Grated (Made From Pasteurized Cow''s Milk, Culture, Salt, And Enzymes. Corn Starch And Cellulose Added to Prevent Caking. Potassium Sorbate (Added To Protect Flavor).) (Milk)",
+              "ingredients": [
+                "Lettuce, Romaine Chopped, Tomato, Beefsteak (Tomato), Dressing, Caesar (Soybean Oil, Water, Egg Yolk, White Wine And Distilled Vinegars, Lemon Juice Concentrate, Less Than 2% Of: Salt, Parmesan Cheese (Part-Skim Milk, Cheese Culture, Salt, Enzymes), Mustard Seed, Spice, Garlic*, Potassium Sorbate And Sodium Benzoate Added As Preservatives, Onion*, Xanthan Gum, Corn Syrup, Propylene Glycol Alginate, Calcium Disodium Edta Added To Protect Flavor, Celery Seed, Natural Flavor, Tamarind, Anchovies. *Dehydrated) (Egg, Fish, Milk, Soy), Cheese, Parmesan Grated (Made From Pasteurized Cow''s Milk, Culture, Salt, And Enzymes. Corn Starch And Cellulose Added to Prevent Caking. Potassium Sorbate (Added To Protect Flavor).) (Milk)"
+              ],
+              "tags": [
+                "dairy",
+                "eggs",
+                "fish",
+                "soy"
+              ],
+              "flags": {},
+              "labels": [
+                "Contains Dairy",
+                "Contains Soy",
+                "Contains Fish",
+                "Contains Eggs",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Salads",
+          "name": "Mediterranean",
+          "description": "Spring mix with marinated cucumber, tomato, and artichoke tossed with Italian dressing topped with feta cheese, kalamata olives, pepperoncini, and roasted red bell pepper",
+          "price_cents": 1000,
+          "calories": 257,
+          "tags": [
+            "dairy",
+            "soy",
+            "vegetarian"
+          ],
+          "source_item_id": "7042",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7042&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1000
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7042&recId=",
+            "cache_file": "nutrition-cache/f4f2332202dd455af82542fad3af22c1038d1cbab5146c009fca9625db5f26d2.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:43.119Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Mediterranean",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 257,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "257"
+                },
+                "fat_cal": {
+                  "value": 161,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "161"
+                },
+                "fat": {
+                  "value": 17.8,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "17.8 g"
+                },
+                "carb": {
+                  "value": 18.7,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "18.7 g"
+                },
+                "sat_fat": {
+                  "value": 5.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "5.3 g"
+                },
+                "fiber": {
+                  "value": 3.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "3.6 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 7.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "7.9 g"
+                },
+                "cholesterol": {
+                  "value": 25.3,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "25.3 mg"
+                },
+                "protein": {
+                  "value": 5.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "5.9 g"
+                },
+                "sodium": {
+                  "value": 1800.9,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "1800.9 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 257,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "257"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 161,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "161"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 17.8,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "17.8 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 18.7,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "18.7 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 5.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "5.3 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 3.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "3.6 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 7.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "7.9 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 25.3,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "25.3 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 5.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "5.9 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 1800.9,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "1800.9 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 11.5,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "11.5 oz"
+              },
+              "serving_size_text": "Serving Size 11.5 oz",
+              "ingredients_text": "Dressing, Italian Fat Free (Water, Distilled Vinegar, Sugar, Salt, Contains Less Than 2% Of Food Starch-Modified, Garlic Juice, Garlic*, Onion*, Xanthan Gum, Sodium Benzoate And Potassium Sorbate (As Preservatives), Red Bell Pepper*, Spices, Phosphoric Acid, Soybean Oil, Extractive Of Carrot (Color). *Dehydrated) (Soy), Lettuce, Spring Mix, Artichoke, Hearts Quartered (Artichoke Hearts, Water, Salt, Citric Acid.), Cucumber, American, Tomato, Beefsteak (Tomato), Pepper, Red Bell Whole (0.00 mg), Cheese, Feta Crumbled (Feta Cheese (Cultured Pasteurized Milk, Salt, Enzymes), Powdered Cellulose (To Prevent Caking), Natamycin (A Natural Mold Inhibitor).) (Milk), Olive, Kalamata Pitted (Kalamata Olives, Water, Salt, Sunflower Oil, Extra Virgin Olive Oil, Lactic Acid.), Pepperoncini, Sliced (Peppers, Water, Salt, Vinegar, Citric Acid, Sodium Benzoate (To Enhance Color), Sodium Bisulfite (To Enhance Color ), Fd&amp;C Yellow #5), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Garlic, Peeled, Pan Coating, Sunflower Spray (Sunflower Oil Sunflower Lecithin Propellant), Herb, Oregano Leaves Dried",
+              "ingredients": [
+                "Dressing, Italian Fat Free (Water, Distilled Vinegar, Sugar, Salt, Contains Less Than 2% Of Food Starch-Modified, Garlic Juice, Garlic*, Onion*, Xanthan Gum, Sodium Benzoate And Potassium Sorbate (As Preservatives), Red Bell Pepper*, Spices, Phosphoric Acid, Soybean Oil, Extractive Of Carrot (Color). *Dehydrated) (Soy), Lettuce, Spring Mix, Artichoke, Hearts Quartered (Artichoke Hearts, Water, Salt, Citric Acid.), Cucumber, American, Tomato, Beefsteak (Tomato), Pepper, Red Bell Whole (0.00 mg), Cheese, Feta Crumbled (Feta Cheese (Cultured Pasteurized Milk, Salt, Enzymes), Powdered Cellulose (To Prevent Caking), Natamycin (A Natural Mold Inhibitor).) (Milk), Olive, Kalamata Pitted (Kalamata Olives, Water, Salt, Sunflower Oil, Extra Virgin Olive Oil, Lactic Acid.), Pepperoncini, Sliced (Peppers, Water, Salt, Vinegar, Citric Acid, Sodium Benzoate (To Enhance Color), Sodium Bisulfite (To Enhance Color ), Fd&amp;C Yellow #5), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Garlic, Peeled, Pan Coating, Sunflower Spray (Sunflower Oil Sunflower Lecithin Propellant), Herb, Oregano Leaves Dried"
+              ],
+              "tags": [
+                "dairy",
+                "soy",
+                "vegetarian"
+              ],
+              "flags": {
+                "vegetarian": true
+              },
+              "labels": [
+                "Vegetarian",
+                "Contains Dairy",
+                "Contains Soy",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Salads",
+          "name": "Southwest Avocado Salad",
+          "description": "Chopped romaine, spring mix, roasted corn and peppers, black beans, and tomato tossed together with a chipotle honey dressing topped with tortilla strips, avocado, and cilantro",
+          "price_cents": 1100,
+          "calories": 539,
+          "tags": [
+            "dairy",
+            "vegetarian"
+          ],
+          "source_item_id": "7028",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7028&recId=910234",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1100
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7028&recId=910234",
+            "cache_file": "nutrition-cache/e59b7f139195e49a046d43cef0b86fe42f5506630da0a1544fe39deca81e17e3.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:45.159Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Southwest Avocado Salad",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 539,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "539"
+                },
+                "fat_cal": {
+                  "value": 398,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "398"
+                },
+                "fat": {
+                  "value": 44.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "44.2 g"
+                },
+                "carb": {
+                  "value": 30,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "30.0 g"
+                },
+                "sat_fat": {
+                  "value": 8.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "8.3 g"
+                },
+                "fiber": {
+                  "value": 8.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "8.6 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 8.1,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "8.1 g"
+                },
+                "cholesterol": {
+                  "value": 28.4,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "28.4 mg"
+                },
+                "protein": {
+                  "value": 11.1,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "11.1 g"
+                },
+                "sodium": {
+                  "value": 1027.2,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "1027.2 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 539,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "539"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 398,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "398"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 44.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "44.2 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 30,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "30.0 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 8.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "8.3 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 8.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "8.6 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 8.1,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "8.1 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 28.4,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "28.4 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 11.1,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "11.1 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 1027.2,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "1027.2 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 12.5,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "12.5 oz"
+              },
+              "serving_size_text": "Serving Size 12.5 oz",
+              "ingredients_text": "Avocado, Whole, Lettuce, Romaine Chopped, Lettuce, Spring Mix, Bean, Black (Prepared Black Beans, Water, Salt, Calcium Chloride), Cheese, Cotija Grated (Cultured Pasteurized Grade A Milk, Salt, Enzymes, Potato &amp; Corn Starch, Dextrose, Calcium Sulfate) (Milk), Tomato, Beefsteak (Tomato), Vegetable Mix, Corn and Peppers (Sweet Corn, Onion, Red Bell Pepper, Green Bell Pepper, Olive Oil, Contains Less Than 2% Of Citric Acid, Dehydrated Garlic And Onion, Natural Flavors (Including Grill And Smoke), Paprika, Salt, Spices, Sugar.), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Pepper, Chipotle In Adobo Sauce (Water, Tomato Paste, Dried Chipotle Peppers, Distilled Vinegar, Corn Oil, Contains 2% Or Less Of Iodized Salt (Contains Potassium Iodate), Corn Starch, Onion Powder, Garlic Powder, Spices.), Tortilla, Corn 6\" (Fresh ground corn treated with lime, water, dextrose, may contain cellulose gum, propionic acid, phosphoric acid, and sodium propionate.), Vinegar, Wine Red (Red Wine Vinegar, Potassium Metabisulfite (A Preservative), Diluted With Water To 5% Acidity.), Honey, Pure Clover (Honey.), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Cilantro Fresh, Spice, Cumin Ground, Spice, Pepper Black Ground (Black Pepper)",
+              "ingredients": [
+                "Avocado, Whole, Lettuce, Romaine Chopped, Lettuce, Spring Mix, Bean, Black (Prepared Black Beans, Water, Salt, Calcium Chloride), Cheese, Cotija Grated (Cultured Pasteurized Grade A Milk, Salt, Enzymes, Potato &amp; Corn Starch, Dextrose, Calcium Sulfate) (Milk), Tomato, Beefsteak (Tomato), Vegetable Mix, Corn and Peppers (Sweet Corn, Onion, Red Bell Pepper, Green Bell Pepper, Olive Oil, Contains Less Than 2% Of Citric Acid, Dehydrated Garlic And Onion, Natural Flavors (Including Grill And Smoke), Paprika, Salt, Spices, Sugar.), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Pepper, Chipotle In Adobo Sauce (Water, Tomato Paste, Dried Chipotle Peppers, Distilled Vinegar, Corn Oil, Contains 2% Or Less Of Iodized Salt (Contains Potassium Iodate), Corn Starch, Onion Powder, Garlic Powder, Spices.), Tortilla, Corn 6\" (Fresh ground corn treated with lime, water, dextrose, may contain cellulose gum, propionic acid, phosphoric acid, and sodium propionate.), Vinegar, Wine Red (Red Wine Vinegar, Potassium Metabisulfite (A Preservative), Diluted With Water To 5% Acidity.), Honey, Pure Clover (Honey.), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Garlic, Peeled, Herb, Cilantro Fresh, Spice, Cumin Ground, Spice, Pepper Black Ground (Black Pepper)"
+              ],
+              "tags": [
+                "dairy",
+                "vegetarian"
+              ],
+              "flags": {
+                "vegetarian": true
+              },
+              "labels": [
+                "Vegetarian",
+                "Contains Dairy",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Sandwiches & More",
+          "name": "Cecil's BLAT",
+          "description": "Bacon, lettuce, tomato, avocado, and garlic aioli on toasted sourdough served with fries",
+          "price_cents": 1550,
+          "calories": 1132,
+          "tags": [
+            "gluten",
+            "soy",
+            "wheat"
+          ],
+          "source_item_id": "7047",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7047&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1550
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7047&recId=",
+            "cache_file": "nutrition-cache/32e55f0b4d3da4d4f1407c09d4d7ffdd6868d28d976a4bd0145ee8dc3d752709.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:47.202Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Cecil's BLAT",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1132,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1132"
+                },
+                "fat_cal": {
+                  "value": 649,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "649"
+                },
+                "fat": {
+                  "value": 72.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "72.2 g"
+                },
+                "carb": {
+                  "value": 92,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "92.0 g"
+                },
+                "sat_fat": {
+                  "value": 15,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "15.0 g"
+                },
+                "fiber": {
+                  "value": 6.8,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "6.8 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 4.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "4.5 g"
+                },
+                "cholesterol": {
+                  "value": 63.9,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "63.9 mg"
+                },
+                "protein": {
+                  "value": 30.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "30.9 g"
+                },
+                "sodium": {
+                  "value": 2894.3,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "2894.3 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1132,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1132"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 649,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "649"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 72.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "72.2 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 92,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "92.0 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 15,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "15.0 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 6.8,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "6.8 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 4.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "4.5 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 63.9,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "63.9 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 30.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "30.9 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 2894.3,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "2894.3 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 17.2,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "17.2 oz"
+              },
+              "serving_size_text": "Serving Size 17.2 oz",
+              "ingredients_text": "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Sourdough Sliced (Enriched wheat flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, dough conditioner (wheat flour, salt, organic acids, soybeanoil, ascorbic acid, enzymes), refined soybean oil, yeast, vinegar, sugar, vegetable oil (canola oil, high oleic soybean oil, and/or high oleic canola oil, mineral oil, sunflower lecithin), bread improver (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid, calcium sulfate, enzymes).) (Gluten, Soy, Wheat), Tomato, Beefsteak (Tomato), Avocado, Whole, Pork, Bacon 13/17 (Pork, Water, Salt, Turbinado Sugar, Cultured Celery Powder, Sea Salt.), Lettuce, Iceberg Whole, Mayonnaise, Veganaise (Expeller-Pressed Canola Oil, Filtered Water, Brown Rice Syrup, Apple Cider Vinegar, Soy Protein, Sea Salt, Mustard Flour, Lemon Juice Concentrate) (Soy), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Garlic, Peeled, Juice, Lemon, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Herb, Parsley Italian Fresh",
+              "ingredients": [
+                "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Sourdough Sliced (Enriched wheat flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, dough conditioner (wheat flour, salt, organic acids, soybeanoil, ascorbic acid, enzymes), refined soybean oil, yeast, vinegar, sugar, vegetable oil (canola oil, high oleic soybean oil, and/or high oleic canola oil, mineral oil, sunflower lecithin), bread improver (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid, calcium sulfate, enzymes).) (Gluten, Soy, Wheat), Tomato, Beefsteak (Tomato), Avocado, Whole, Pork, Bacon 13/17 (Pork, Water, Salt, Turbinado Sugar, Cultured Celery Powder, Sea Salt.), Lettuce, Iceberg Whole, Mayonnaise, Veganaise (Expeller-Pressed Canola Oil, Filtered Water, Brown Rice Syrup, Apple Cider Vinegar, Soy Protein, Sea Salt, Mustard Flour, Lemon Juice Concentrate) (Soy), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Garlic, Peeled, Juice, Lemon, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Herb, Parsley Italian Fresh"
+              ],
+              "tags": [
+                "gluten",
+                "soy",
+                "wheat"
+              ],
+              "flags": {},
+              "labels": [
+                "Contains Soy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Sandwiches & More",
+          "name": "Grilled Vegetable Pesto Melt",
+          "description": "Grilled zucchini, roasted bell pepper, tomato, arugula, cheddar cheese, feta cheese, and basil pesto aioli on toasted sourdough served with fries",
+          "price_cents": 1350,
+          "calories": 1035,
+          "tags": [
+            "dairy",
+            "gluten",
+            "soy",
+            "vegetarian",
+            "wheat"
+          ],
+          "source_item_id": "7045",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7045&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1350
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7045&recId=",
+            "cache_file": "nutrition-cache/0966801e122468a9954a8dcfef8571e9919940c24bb94bbf0098aa2ecd0b60f7.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:49.243Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Grilled Vegetable Pesto Melt",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1035,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1035"
+                },
+                "fat_cal": {
+                  "value": 595,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "595"
+                },
+                "fat": {
+                  "value": 66.1,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "66.1 g"
+                },
+                "carb": {
+                  "value": 89.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "89.2 g"
+                },
+                "sat_fat": {
+                  "value": 14.3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "14.3 g"
+                },
+                "fiber": {
+                  "value": 4,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "4.0 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 5.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "5.2 g"
+                },
+                "cholesterol": {
+                  "value": 55.4,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "55.4 mg"
+                },
+                "protein": {
+                  "value": 22.1,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "22.1 g"
+                },
+                "sodium": {
+                  "value": 2396,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "2396.0 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1035,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1035"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 595,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "595"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 66.1,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "66.1 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 89.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "89.2 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 14.3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "14.3 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 4,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "4.0 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 5.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "5.2 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 55.4,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "55.4 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 22.1,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "22.1 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 2396,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "2396.0 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 16.9,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "16.9 oz"
+              },
+              "serving_size_text": "Serving Size 16.9 oz",
+              "ingredients_text": "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Sourdough Sliced (Enriched wheat flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, dough conditioner (wheat flour, salt, organic acids, soybeanoil, ascorbic acid, enzymes), refined soybean oil, yeast, vinegar, sugar, vegetable oil (canola oil, high oleic soybean oil, and/or high oleic canola oil, mineral oil, sunflower lecithin), bread improver (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid, calcium sulfate, enzymes).) (Gluten, Soy, Wheat), Squash, Zucchini Fancy, Tomato, Beefsteak (Tomato), Cheese, Cheddar Mild Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (Vegetable Color).) (Milk), Mayonnaise, Veganaise (Expeller-Pressed Canola Oil, Filtered Water, Brown Rice Syrup, Apple Cider Vinegar, Soy Protein, Sea Salt, Mustard Flour, Lemon Juice Concentrate) (Soy), Cheese, Feta Crumbled (Feta Cheese (Cultured Pasteurized Milk, Salt, Enzymes), Powdered Cellulose (To Prevent Caking), Natamycin (A Natural Mold Inhibitor).) (Milk), Lettuce, Arugula Baby Wild, Pepper, Red Bell Whole (0.00 mg), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Sauce, Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.) (Milk), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Spice, Pepper Black Ground (Black P",
+              "ingredients": [
+                "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Sourdough Sliced (Enriched wheat flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, dough conditioner (wheat flour, salt, organic acids, soybeanoil, ascorbic acid, enzymes), refined soybean oil, yeast, vinegar, sugar, vegetable oil (canola oil, high oleic soybean oil, and/or high oleic canola oil, mineral oil, sunflower lecithin), bread improver (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid, calcium sulfate, enzymes).) (Gluten, Soy, Wheat), Squash, Zucchini Fancy, Tomato, Beefsteak (Tomato), Cheese, Cheddar Mild Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (Vegetable Color).) (Milk), Mayonnaise, Veganaise (Expeller-Pressed Canola Oil, Filtered Water, Brown Rice Syrup, Apple Cider Vinegar, Soy Protein, Sea Salt, Mustard Flour, Lemon Juice Concentrate) (Soy), Cheese, Feta Crumbled (Feta Cheese (Cultured Pasteurized Milk, Salt, Enzymes), Powdered Cellulose (To Prevent Caking), Natamycin (A Natural Mold Inhibitor).) (Milk), Lettuce, Arugula Baby Wild, Pepper, Red Bell Whole (0.00 mg), Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Sauce, Basil Pesto (Basil, Canola Oil, Water, Parmesan Cheese (pasteurized Part-skim Cows Milk, Cheese Culture, Salt, Enzymes), Granulated Garlic, Salt.) (Milk), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Spice, Pepper Black Ground (Black P"
+              ],
+              "tags": [
+                "dairy",
+                "gluten",
+                "soy",
+                "vegetarian",
+                "wheat"
+              ],
+              "flags": {
+                "vegetarian": true
+              },
+              "labels": [
+                "Vegetarian",
+                "Contains Dairy",
+                "Contains Soy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Sandwiches & More",
+          "name": "Hot Italian Sub",
+          "description": "Turkey, ham, salami, tomato, pepperoncini, and provolone, on a sub roll with a dijonaise spread served with fries",
+          "price_cents": 1550,
+          "calories": 1104,
+          "tags": [
+            "dairy",
+            "eggs",
+            "gluten",
+            "soy",
+            "wheat"
+          ],
+          "source_item_id": "7046",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7046&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1550
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7046&recId=",
+            "cache_file": "nutrition-cache/667a51fcc933406a2b4b65140dab6a404a25d14ef2455eef9e522beb294af096.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:51.316Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Hot Italian Sub",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1104,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1104"
+                },
+                "fat_cal": {
+                  "value": 580,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "580"
+                },
+                "fat": {
+                  "value": 64.4,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "64.4 g"
+                },
+                "carb": {
+                  "value": 92.1,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "92.1 g"
+                },
+                "sat_fat": {
+                  "value": 22.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "22.2 g"
+                },
+                "fiber": {
+                  "value": 5.6,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "5.6 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 4.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "4.9 g"
+                },
+                "cholesterol": {
+                  "value": 100.3,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "100.3 mg"
+                },
+                "protein": {
+                  "value": 35.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "35.9 g"
+                },
+                "sodium": {
+                  "value": 3677.2,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "3677.2 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1104,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1104"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 580,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "580"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 64.4,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "64.4 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 92.1,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "92.1 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 22.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "22.2 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 5.6,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "5.6 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 4.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "4.9 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 100.3,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "100.3 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 35.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "35.9 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 3677.2,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "3677.2 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 18.3,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "18.3 oz"
+              },
+              "serving_size_text": "Serving Size 18.3 oz",
+              "ingredients_text": "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Amoroso Roll 8 IN (Enriched Wheat Flour (Wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), Water, Dough Conditioner (Salt, Sugar, Enriched Wheat Flour, Dextrose, Soybean Oil, Calcium Stearoyl Lactylate (CSL) and 2% or Less of Each of the Following: Malt Powder (Dried Corn Syrup, Barley Malt Extract), Diacetyl Tartaric Acid Esters of Mono-Diglycerides (DATEM), Mono- And Diglycerides, Ascorbic Acid (Vitamin C), Potassium Iodate, Ethoxylated Mono- and Diglycerides, Calcium Sulfate, Enzymes), Yeast, Soybean Oil, Yellow Cornmeal, Vital Wheat Gluten, Bakery Enzyme (Wheat Starch, Protein Enzymes), Hydrated Distilled Monoglyceride (Water, Monoglycerides and 2% or Less of Each of the Following: Preservatives Propionic Acid and Phosphoric Acid), Calcium Propionate, Citric Acid (Citric Acid, Carnuaba Wax), Sorbic Acid (Sorbic Acid, Fully Hydrogenated Soybean Oil).) (Gluten, Soy, Wheat), Cheese, Provolone Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes.) (Milk), Tomato, Beefsteak (Tomato), Turkey, Breast Sliced (Turkey Breast, Water, Vinegar, Natural Flavorings, Salt, Modified Food Starch, Sugar, Potassium And Sodium Phosphates.), Lettuce, Iceberg Whole, Pepperoncini, Sliced (Peppers, Water, Salt, Vinegar, Citric Acid, Sodium Benzoate (To Enhance Color), Sodium Bisulfite (To Enhance Color ), Fd&amp;C Yellow #5), Pork, Sliced Genoa Salami (Pork, Salt, Contains Less Than 2% Of The Following: Dextrose, Natural Flavoring, Wine, Garlic, Lactic Acid Starter Culture, Sodium Ascorbate, Potassium Nitrate, Sodium Nitrite.), Pork, Sliced Honey Smoked Ham (Pork, W",
+              "ingredients": [
+                "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Amoroso Roll 8 IN (Enriched Wheat Flour (Wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), Water, Dough Conditioner (Salt, Sugar, Enriched Wheat Flour, Dextrose, Soybean Oil, Calcium Stearoyl Lactylate (CSL) and 2% or Less of Each of the Following: Malt Powder (Dried Corn Syrup, Barley Malt Extract), Diacetyl Tartaric Acid Esters of Mono-Diglycerides (DATEM), Mono- And Diglycerides, Ascorbic Acid (Vitamin C), Potassium Iodate, Ethoxylated Mono- and Diglycerides, Calcium Sulfate, Enzymes), Yeast, Soybean Oil, Yellow Cornmeal, Vital Wheat Gluten, Bakery Enzyme (Wheat Starch, Protein Enzymes), Hydrated Distilled Monoglyceride (Water, Monoglycerides and 2% or Less of Each of the Following: Preservatives Propionic Acid and Phosphoric Acid), Calcium Propionate, Citric Acid (Citric Acid, Carnuaba Wax), Sorbic Acid (Sorbic Acid, Fully Hydrogenated Soybean Oil).) (Gluten, Soy, Wheat), Cheese, Provolone Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes.) (Milk), Tomato, Beefsteak (Tomato), Turkey, Breast Sliced (Turkey Breast, Water, Vinegar, Natural Flavorings, Salt, Modified Food Starch, Sugar, Potassium And Sodium Phosphates.), Lettuce, Iceberg Whole, Pepperoncini, Sliced (Peppers, Water, Salt, Vinegar, Citric Acid, Sodium Benzoate (To Enhance Color), Sodium Bisulfite (To Enhance Color ), Fd&amp;C Yellow #5), Pork, Sliced Genoa Salami (Pork, Salt, Contains Less Than 2% Of The Following: Dextrose, Natural Flavoring, Wine, Garlic, Lactic Acid Starter Culture, Sodium Ascorbate, Potassium Nitrate, Sodium Nitrite.), Pork, Sliced Honey Smoked Ham (Pork, W"
+              ],
+              "tags": [
+                "dairy",
+                "eggs",
+                "gluten",
+                "soy",
+                "wheat"
+              ],
+              "flags": {},
+              "labels": [
+                "Contains Dairy",
+                "Contains Soy",
+                "Contains Wheat",
+                "Contains Eggs",
+                "Contains Gluten",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        },
+        {
+          "category": "Sandwiches & More",
+          "name": "Turkey Club",
+          "description": "Sliced Turkey, cheddar cheese, bacon, sliced tomatoes, lettuce, aioli, multigrain bread with fries",
+          "price_cents": 1650,
+          "calories": 1367,
+          "tags": [
+            "dairy",
+            "gluten",
+            "sesame",
+            "soy",
+            "wheat"
+          ],
+          "source_item_id": "7044",
+          "nutrition_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7044&recId=",
+          "meal_periods": [
+            "lunch"
+          ],
+          "prices_by_meal_period": {
+            "lunch": 1650
+          },
+          "nutrition": {
+            "source_url": "https://hdh-web.ucsd.edu/dining/apps/diningservices/Nutrition/Nutritionfacts2?id=7044&recId=",
+            "cache_file": "nutrition-cache/7b17e69f088658c350958512a14c0844a31921c477a4741cdd4c36f8c1a94419.html",
+            "cached": true,
+            "retrieved_at": "2026-11-20T08:30:53.376Z",
+            "collection_status": "cached",
+            "verification_status": "no_known_calorie_conflict_date_unverified",
+            "conflict": null,
+            "error": null,
+            "data": {
+              "title": "Turkey Club",
+              "recognized": true,
+              "field_status": {
+                "fat_cal": "present",
+                "calorie": "present",
+                "fat": "present",
+                "sat_fat": "present",
+                "trans_fat": "present",
+                "cholesterol": "present",
+                "sodium": "present",
+                "carb": "present",
+                "fiber": "present",
+                "sugar": "present",
+                "protein": "present"
+              },
+              "nutrients": {
+                "calorie": {
+                  "value": 1367,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "1367"
+                },
+                "fat_cal": {
+                  "value": 719,
+                  "unit": "kcal",
+                  "original_unit": null,
+                  "qualifier": null,
+                  "raw": "719"
+                },
+                "fat": {
+                  "value": 79.9,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "79.9 g"
+                },
+                "carb": {
+                  "value": 99,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "99.0 g"
+                },
+                "sat_fat": {
+                  "value": 24.2,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "24.2 g"
+                },
+                "fiber": {
+                  "value": 3,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "3.0 g"
+                },
+                "trans_fat": {
+                  "value": 0,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "0.0 g"
+                },
+                "sugar": {
+                  "value": 9.5,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "9.5 g"
+                },
+                "cholesterol": {
+                  "value": 164.8,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "164.8 mg"
+                },
+                "protein": {
+                  "value": 63.8,
+                  "unit": "g",
+                  "original_unit": "g",
+                  "qualifier": null,
+                  "raw": "63.8 g"
+                },
+                "sodium": {
+                  "value": 4064.6,
+                  "unit": "mg",
+                  "original_unit": "mg",
+                  "qualifier": null,
+                  "raw": "4064.6 mg"
+                }
+              },
+              "observations": {
+                "calorie": [
+                  {
+                    "value": 1367,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "1367"
+                  }
+                ],
+                "fat_cal": [
+                  {
+                    "value": 719,
+                    "unit": "kcal",
+                    "original_unit": null,
+                    "qualifier": null,
+                    "raw": "719"
+                  }
+                ],
+                "fat": [
+                  {
+                    "value": 79.9,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "79.9 g"
+                  }
+                ],
+                "carb": [
+                  {
+                    "value": 99,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "99.0 g"
+                  }
+                ],
+                "sat_fat": [
+                  {
+                    "value": 24.2,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "24.2 g"
+                  }
+                ],
+                "fiber": [
+                  {
+                    "value": 3,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "3.0 g"
+                  }
+                ],
+                "trans_fat": [
+                  {
+                    "value": 0,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "0.0 g"
+                  }
+                ],
+                "sugar": [
+                  {
+                    "value": 9.5,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "9.5 g"
+                  }
+                ],
+                "cholesterol": [
+                  {
+                    "value": 164.8,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "164.8 mg"
+                  }
+                ],
+                "protein": [
+                  {
+                    "value": 63.8,
+                    "unit": "g",
+                    "original_unit": "g",
+                    "qualifier": null,
+                    "raw": "63.8 g"
+                  }
+                ],
+                "sodium": [
+                  {
+                    "value": 4064.6,
+                    "unit": "mg",
+                    "original_unit": "mg",
+                    "qualifier": null,
+                    "raw": "4064.6 mg"
+                  }
+                ]
+              },
+              "serving_size": {
+                "value": 19.7,
+                "unit": "oz",
+                "original_unit": "oz",
+                "qualifier": null,
+                "raw": "19.7 oz"
+              },
+              "serving_size_text": "Serving Size 19.7 oz",
+              "ingredients_text": "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Multigrain Sliced (Enriched wheat flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, grain blend (rye flakes, wheat flour, cracked wheat, hulled millet, flax seeds, oats, sesame seeds, sunflower seeds), sunflower seeds, oats, hulled millet, flax seeds, sugar, refined soybean oil, salt, yeast, caramel color, vinegar, calcium propionate, vegetable oil (canola oil, high oleic soybean oil, and/or high oleic canola oil, mineral oil, sunflower lecithin), bread improver (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid, calcium sulfate, enzymes).) (Gluten, Sesame, Soy, Wheat), Turkey, Breast Sliced (Turkey Breast, Water, Vinegar, Natural Flavorings, Salt, Modified Food Starch, Sugar, Potassium And Sodium Phosphates.), Tomato, Beefsteak (Tomato), Cheese, Cheddar Mild Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (Vegetable Color).) (Milk), Pork, Bacon 13/17 (Pork, Water, Salt, Turbinado Sugar, Cultured Celery Powder, Sea Salt.), Lettuce, Iceberg Whole, Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Mayonnaise, Veganaise (Expeller-Pressed Canola Oil, Filtered Water, Brown Rice Syrup, Apple Cider Vinegar, Soy Protein, Sea Salt, Mustard Flour, Lemon Juice Concentrate) (Soy), Garlic, Peeled, Juice, Lemon, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Herb, Parsley Italian Fresh",
+              "ingredients": [
+                "Potato, French Fry Standard 5/16 Cut (Potatoes, Vegetable Oil (Soybean, Canola, And/Or Cottonseed Oils), Food Starch-Modified, Contains Less Than 2% Of Dextrose, Leavening (Sodium Acid Pyrophosphate, Sodium Bicarbonate), Rice Flour, Salt, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Maintain Natural Color).) (Soy), Bread, Multigrain Sliced (Enriched wheat flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, grain blend (rye flakes, wheat flour, cracked wheat, hulled millet, flax seeds, oats, sesame seeds, sunflower seeds), sunflower seeds, oats, hulled millet, flax seeds, sugar, refined soybean oil, salt, yeast, caramel color, vinegar, calcium propionate, vegetable oil (canola oil, high oleic soybean oil, and/or high oleic canola oil, mineral oil, sunflower lecithin), bread improver (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid, calcium sulfate, enzymes).) (Gluten, Sesame, Soy, Wheat), Turkey, Breast Sliced (Turkey Breast, Water, Vinegar, Natural Flavorings, Salt, Modified Food Starch, Sugar, Potassium And Sodium Phosphates.), Tomato, Beefsteak (Tomato), Cheese, Cheddar Mild Sliced (Pasteurized Milk, Cheese Culture, Salt, Enzymes, Annatto (Vegetable Color).) (Milk), Pork, Bacon 13/17 (Pork, Water, Salt, Turbinado Sugar, Cultured Celery Powder, Sea Salt.), Lettuce, Iceberg Whole, Oil, Shortening Fry Canola (Canola Oil, Tbhq And Citric Acid Added To Protect Flavor, Dimethylpolysiloxane (an Anti-foaming Agent).), Mayonnaise, Veganaise (Expeller-Pressed Canola Oil, Filtered Water, Brown Rice Syrup, Apple Cider Vinegar, Soy Protein, Sea Salt, Mustard Flour, Lemon Juice Concentrate) (Soy), Garlic, Peeled, Juice, Lemon, Salt, Kosher (Salt, Yellow Prussiate Of Soda (Yps)), Oil, Olive Canola Blend 75/25 (75% Canola Oil 25% Extra Virgin Olive Oil), Herb, Parsley Italian Fresh"
+              ],
+              "tags": [
+                "dairy",
+                "gluten",
+                "sesame",
+                "soy",
+                "wheat"
+              ],
+              "flags": {},
+              "labels": [
+                "Contains Dairy",
+                "Contains Soy",
+                "Contains Wheat",
+                "Contains Gluten",
+                "Contains Sesame",
+                "UCSD Housing Dining Hospitality Services strives to provide our customers with the most accurate, current nutrition and allergen information present in our menu items on campus. The nutritional information and allergens identified for each of our items have been auto-generated from our recipe management database system. However, there is always a chance that changes have occurred in the manufacturing of products off-site, which may occur without our knowledge. Similarly, there is always a possibility that certain ingredients may be substituted on the actual day of preparation. Thus, we cannot guarantee that a particular dish or item is free of a certain ingredient.Particularly for those individuals with sensitive food allergies, we want to inform you of this risk. We are in the process of verifying our nutrition information and allergens. Should you have any questions, please contact our nutrition team at HDHdiningmenus@ucsd.edu."
+              ],
+              "issues": []
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "rows": 15,
+    "merged_occurrences": 0,
+    "errors": [],
+    "warnings": []
+  },
+  "source_files": [
+    "raw/ucsdRestaurants/cecilsAtFacultyClub-day0.html"
+  ]
+}
