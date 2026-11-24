@@ -14,3 +14,11 @@
   color: var(--text-muted);
   text-align: left;
 }
+
+.recent-meals-empty {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  text-align: left;
+}
