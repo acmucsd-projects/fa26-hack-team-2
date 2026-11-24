@@ -1,13 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getMe, getLog, getWeek } from '../api/me'
 
-function dollars(cents) {
-  return (cents ?? 0) / 100
-}
-
-function goalOf(range) {
-  return range.max ?? range.min
-}
+const EMPTY_TOTALS = { calories: 0, proteinG: 0, carbsG: 0, fatG: 0, spentCents: 0 }
 
 function toDateString(date) {
   return date.toLocaleDateString('en-CA')
@@ -23,117 +17,89 @@ function formatDate(dateString, options) {
   return new Date(`${dateString}T12:00`).toLocaleDateString('en-US', options)
 }
 
-function buildHomeData({ today, me, log, week }) {
-  const todayLog = log[log.length - 1]
-  const totals = todayLog.totals
+function goalOf(range) {
+  return range?.max ?? range?.min ?? null
+}
 
-  const caloriesGoal = goalOf(me.goals.calories)
-  const budgetGoal = dollars(me.budget.dailyCents)
-
-  const initials = me.name
+function initialsOf(name) {
+  return name
     .split(' ')
     .map((word) => word[0])
     .join('')
     .slice(0, 2)
     .toUpperCase()
+}
 
-  const recentMeals = [...log]
-    .reverse()
-    .flatMap((day) =>
-      [...day.meals]
-        .sort((a, b) => b.loggedAt.localeCompare(a.loggedAt))
-        .map((meal) => ({
-          id: meal.id,
-          date: day.date,
-          name: meal.name,
-          price: dollars(meal.priceCents),
-          calories: Math.round(meal.calories ?? 0),
-        }))
-    )
+function weekTitle(start, end, today) {
+  const contains = (date) => date >= start && date <= end
+  if (contains(today)) return 'This week'
+  if (contains(addDays(today, -7))) return 'Last week'
+  if (contains(addDays(today, 7))) return 'Next week'
+  return `Week of ${formatDate(start, { month: 'short', day: 'numeric' })}`
+}
 
-  const caloriesLeft = Math.round(caloriesGoal - totals.calories)
+function buildHomeData({ today, me, week, log }) {
+  const days = week.days.map((day) => {
+    const logDay = log.find((entry) => entry.date === day.date)
+    return {
+      date: day.date,
+      dayNumber: Number(day.date.slice(8)),
+      dayName: day.date === today ? 'TODAY' : formatDate(day.date, { weekday: 'short' }).toUpperCase(),
+      label: formatDate(day.date, { weekday: 'short', month: 'short', day: 'numeric' }),
+      state: day.date < today ? 'past' : day.date === today ? 'today' : 'future',
+      totals: logDay?.totals ?? EMPTY_TOTALS,
+      meals: [...(logDay?.meals ?? [])].sort((a, b) => b.loggedAt.localeCompare(a.loggedAt)),
+    }
+  })
 
   return {
-    dateLabel: formatDate(today, { weekday: 'long', month: 'short', day: 'numeric' }),
-    caloriesLeft,
-    moneyLeft: budgetGoal - dollars(totals.spentCents),
-    user: { name: me.name, initials },
-    bubbles: {
-      calories: { current: totals.calories, goal: caloriesGoal },
-      budget: { current: dollars(totals.spentCents), goal: budgetGoal },
-      macros: {
-        protein: { current: totals.proteinG, goal: goalOf(me.goals.proteinG) },
-        carbs: { current: totals.carbsG, goal: goalOf(me.goals.carbsG) },
-        fat: { current: totals.fatG, goal: goalOf(me.goals.fatG) },
-      },
-      details: {
-        calories: {
-          amount: Math.round(totals.calories).toLocaleString(),
-          amountLabel: `of ${caloriesGoal.toLocaleString()} cal`,
-          lines: todayLog.meals.map((meal) => ({
-            label: `${meal.name} · ${meal.locationName}`,
-            value: `${Math.round(meal.calories ?? 0)} cal`,
-          })),
-          total: { label: 'Left today', value: `${caloriesLeft.toLocaleString()} cal` },
-        },
-        budget: {
-          amount: `$${dollars(totals.spentCents).toFixed(2)}`,
-          amountLabel: `of $${budgetGoal.toFixed(2)}`,
-          lines: todayLog.meals.map((meal) => ({
-            label: `${meal.name} · ${meal.locationName}`,
-            value: `$${dollars(meal.priceCents).toFixed(2)}`,
-          })),
-          total: {
-            label: 'This week',
-            value: `$${dollars(week.totals.spentCents).toFixed(2)} / $${dollars(week.goals.weeklyBudgetCents).toFixed(0)}`,
-          },
-        },
-        macros: {
-          lines: [
-            { label: 'Protein', value: `${Math.round(totals.proteinG)} / ${goalOf(me.goals.proteinG)} g` },
-            { label: 'Carbs', value: `${Math.round(totals.carbsG)} / ${goalOf(me.goals.carbsG)} g` },
-            { label: 'Fat', value: `${Math.round(totals.fatG)} / ${goalOf(me.goals.fatG)} g` },
-          ],
-        },
-      },
+    user: { name: me.name, initials: initialsOf(me.name) },
+    goals: {
+      calories: goalOf(me.goals.calories),
+      budgetCents: me.budget.dailyCents,
+      proteinG: goalOf(me.goals.proteinG),
+      carbsG: goalOf(me.goals.carbsG),
+      fatG: goalOf(me.goals.fatG),
     },
-    recentMeals,
     week: {
+      start: week.start,
+      end: week.end,
+      title: weekTitle(week.start, week.end, today),
       rangeLabel: `${formatDate(week.start, { month: 'short', day: 'numeric' })} – ${formatDate(week.end, { month: 'short', day: 'numeric' })}`,
-      days: week.days.map((day) => ({
-        date: Number(day.date.slice(8)),
-        fullDate: day.date,
-        dayName: day.date === today ? 'TODAY' : formatDate(day.date, { weekday: 'short' }).toUpperCase(),
-        state: day.date < today ? 'past' : day.date === today ? 'today' : 'future',
-        caloriesPercent: day.caloriesPercent ?? 0,
-        budgetPercent: day.budgetPercent ?? 0,
-      })),
+      spentCents: week.totals.spentCents,
+      budgetCents: week.goals.weeklyBudgetCents,
+      days,
     },
   }
 }
 
 export default function useHomeData() {
+  const [weekStart, setWeekStart] = useState(null)
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
 
   const reload = useCallback(async () => {
     try {
-      const today = toDateString(new Date())
-      const [me, log, week] = await Promise.all([
-        getMe(),
-        getLog(addDays(today, -6), today),
-        getWeek(),
-      ])
-      setData(buildHomeData({ today, me, log, week }))
+      const [me, week] = await Promise.all([getMe(), getWeek(weekStart)])
+      const log = await getLog(week.start, week.end)
+      setData(buildHomeData({ today: toDateString(new Date()), me, week, log }))
       setError(null)
     } catch (err) {
       setError(err)
     }
-  }, [])
+  }, [weekStart])
 
   useEffect(() => {
     reload()
   }, [reload])
 
-  return { data, error, isLoading: !data && !error, reload }
+  function prevWeek() {
+    if (data) setWeekStart(addDays(data.week.start, -7))
+  }
+
+  function nextWeek() {
+    if (data) setWeekStart(addDays(data.week.start, 7))
+  }
+
+  return { data, error, isLoading: !data && !error, reload, prevWeek, nextWeek }
 }
