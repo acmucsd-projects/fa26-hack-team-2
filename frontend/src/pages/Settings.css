@@ -1,0 +1,330 @@
+.settings-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 32px;
+  background: var(--bg-settings);
+  font-family: var(--font-main);
+  color: var(--text-navy);
+}
+
+.settings-card {
+  width: 100%;
+  max-width: 1040px;
+  padding: 28px 32px 32px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-6xl);
+  box-shadow: var(--shadow-lg);
+}
+
+/* header */
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.settings-title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-extrabold);
+}
+
+.settings-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--action-secondary);
+  color: var(--text-navy);
+  font-size: var(--font-size-3xl);
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* three panels */
+
+.settings-sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  background: var(--white);
+  border-radius: var(--radius-3xl);
+}
+
+.settings-section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-extrabold);
+}
+
+.settings-section-subtitle {
+  margin: 4px 0 16px;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* dining plan */
+
+.settings-plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--action-secondary);
+  color: var(--text-navy);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-semibold);
+  text-align: left;
+  cursor: pointer;
+}
+
+.settings-plan-selected {
+  background: var(--action-primary);
+  color: var(--text-on-dark);
+}
+
+.settings-plan-check {
+  font-weight: var(--font-extrabold);
+}
+
+.settings-plan-custom {
+  background: transparent;
+  border: 2px dashed var(--tile-past);
+  color: var(--text-muted);
+  font-weight: var(--font-medium);
+}
+
+.settings-plan-custom-active {
+  gap: 8px;
+  justify-content: flex-start;
+  border-color: var(--action-primary);
+  color: var(--text-navy);
+  cursor: text;
+}
+
+.settings-plan-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: var(--font-bold);
+}
+
+/* budget */
+
+.settings-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4px;
+  background: var(--action-secondary);
+  border-radius: var(--radius-md);
+}
+
+.settings-toggle-option {
+  padding: 8px 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-navy);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+}
+
+.settings-toggle-option-active {
+  background: var(--action-primary);
+  color: var(--text-on-dark);
+}
+
+.settings-budget-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 24px;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-extrabold);
+  line-height: 1;
+}
+
+.settings-budget-period {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-medium);
+  color: var(--text-muted);
+}
+
+.settings-budget-note {
+  margin-top: 12px;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+/* daily goals */
+
+.settings-goals {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.settings-goal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-goal-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-semibold);
+}
+
+.settings-goal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+}
+
+.settings-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-stepper-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--action-secondary);
+  color: var(--text-navy);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.settings-stepper-value {
+  min-width: 64px;
+  text-align: right;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-extrabold);
+}
+
+.settings-stepper-unit {
+  margin-left: 3px;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-medium);
+  color: var(--text-muted);
+}
+
+.settings-split-label {
+  margin-bottom: 6px;
+  font-size: var(--font-size-3xs);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.settings-split-bar {
+  display: flex;
+  height: 8px;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
+}
+
+.settings-split-note {
+  margin-top: 6px;
+  font-size: var(--font-size-2xs);
+  color: var(--text-muted);
+}
+
+.settings-suggest {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--action-secondary);
+  color: var(--text-navy);
+  text-align: left;
+  cursor: pointer;
+}
+
+.settings-suggest-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-bold);
+}
+
+.settings-suggest-subtitle {
+  font-size: var(--font-size-2xs);
+  color: var(--text-muted);
+}
+
+/* footer */
+
+.settings-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/* shared */
+
+.settings-page button:focus-visible,
+.settings-plan-custom-active:focus-within {
+  outline: 3px solid var(--bubble-blue);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .settings-page {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-sections {
+    grid-template-columns: 1fr;
+  }
+}

@@ -4,6 +4,8 @@ import ProfileMenu from "../components/ProfileMenu/ProfileMenu"
 import WeekStrip from "../components/WeekStrip/WeekStrip"
 import StatBubbles from "../components/StatBubbles/StatBubbles"
 import RecentMeals from "../components/RecentMeals/RecentMeals"
+import AddFoodPopup from "../components/AddFoodPopup/AddFoodPopup"
+import { addFoodLog } from "../api/foodLogs"
 import "./Dashboard.css";
 
 const DEFAULT_USER = {
@@ -162,13 +164,18 @@ function Dashboard({
   weeks = DEFAULT_WEEKS,
   onSettings,
   onSignOut,
-  onAddFood = () => {},
+  onFoodAdded = () => {},
   onMealClick = () => {},
   extraSections = [],
 }) {
   const navigate = useNavigate();
   const handleSettings = onSettings ?? (() => navigate('/settings'))
   const handleSignOut = onSignOut ?? (() => navigate('/login'))
+
+  const [isAddFoodOpen, setIsAddFoodOpen] = useState(false)
+  // Meals added in this session, keyed by day. Temporary: once the backend
+  // has food logs, refetch the day's meals after adding instead.
+  const [addedMeals, setAddedMeals] = useState({})
 
   const [weekIndex, setWeekIndex] = useState(0)
   const currentWeek = weeks[weekIndex] ?? weeks[0]
@@ -241,19 +248,27 @@ function Dashboard({
     setSelectedDate(day.date)
   }
 
-  // Config-driven section registry for easy reordering or extending
+  async function handleAddFood(entry) {
+    const saved = await addFoodLog(entry)
+    const meal = {
+      id: saved.id,
+      name: saved.name,
+      price: (saved.priceCents ?? 0) / 100,
+      calories: saved.nutrition?.calories ?? 0,
+    }
+    setAddedMeals((prev) => ({
+      ...prev,
+      [activeDay.date]: [meal, ...(prev[activeDay.date] ?? [])],
+    }))
+    onFoodAdded(saved, activeDay)
+  }
+
+  const activeDayMeals = [...(addedMeals[activeDay?.date] ?? []), ...(activeDay?.meals ?? [])]
+
+  // Config-driven section registry for easy reordering or extending.
+  // Order matters: the grid lays sections out in this order
+  // (bubbles left, recent meals right, week strip full-width underneath).
   const sections = [
-    {
-      id: 'week-strip',
-      Component: WeekStrip,
-      props: {
-        rangeLabel: currentWeek.rangeLabel,
-        days: formattedDays,
-        onPrevWeek: handlePrevWeek,
-        onNextWeek: handleNextWeek,
-        onDayClick: handleDayClick,
-      },
-    },
     {
       id: 'stat-bubbles',
       Component: StatBubbles,
@@ -263,9 +278,20 @@ function Dashboard({
       id: 'recent-meals',
       Component: RecentMeals,
       props: {
-        meals: activeDay?.meals ?? [],
-        onAddFood: () => onAddFood(activeDay),
+        meals: activeDayMeals,
+        onAddFood: () => setIsAddFoodOpen(true),
         onMealClick: (meal) => onMealClick(meal, activeDay),
+      },
+    },
+    {
+      id: 'week-strip',
+      Component: WeekStrip,
+      props: {
+        rangeLabel: currentWeek.rangeLabel,
+        days: formattedDays,
+        onPrevWeek: handlePrevWeek,
+        onNextWeek: handleNextWeek,
+        onDayClick: handleDayClick,
       },
     },
     ...extraSections,
@@ -290,6 +316,17 @@ function Dashboard({
           </section>
         ))}
       </main>
+
+      {isAddFoodOpen && (
+        <AddFoodPopup
+          // TODO: give each day a full ISO date ('2026-11-16') so this can
+          // say "Mon, Nov 16" and the log entry gets a real `date`.
+          dayLabel={activeDay ? `${activeDay.dayName} ${activeDay.date}` : null}
+          date={activeDay?.isoDate ?? null}
+          onClose={() => setIsAddFoodOpen(false)}
+          onSubmit={handleAddFood}
+        />
+      )}
     </div>
   )
 }
