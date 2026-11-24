@@ -3,15 +3,33 @@
     "bsonType": "object",
     "description": "Contains information on each on campus food location including hours, sub-stations, and menu items",
     "required": [
+      "version",
       "name",
       "type",
       "location",
-      "stations"
+      "stations",
+      "hours"
     ],
     "properties": {
+      "version": {
+        "bsonType": "number",
+        "multipleOf": 1,
+        "minimum": 1,
+        "description": "tracks which version of this collection this document is from"
+      },
       "name": {
         "bsonType": "string",
         "description": "the name of the location"
+      },
+      "type": {
+        "bsonType": "string",
+        "description": "The type of location this is: \"dining hall\", \"cafe\", \"market\", or \"other\"",
+        "enum": [
+          "dining hall",
+          "cafe",
+          "market",
+          "other"
+        ]
       },
       "location": {
         "bsonType": "object",
@@ -28,6 +46,43 @@
           "geodata": {
             "bsonType": "object",
             "description": "the GeoJSON object that contains all geodata"
+          }
+        }
+      },
+      "hours": {
+        "bsonType": "object",
+        "description": "Contains the opening and closing times for a location",
+        "required": [
+          "days",
+          "open",
+          "close"
+        ],
+        "properties": {
+          "days": {
+            "bsonType": "array",
+            "description": "The days that this location is open as strings, ex: \"mon\", \"tue\", \"wed\", \"thu\", \"fri\", \"sat\", \"sun\"",
+            "items": {
+              "bsonType": "string",
+              "enum": [
+                "mon",
+                "tue",
+                "wed",
+                "thu",
+                "fri",
+                "sat",
+                "sun"
+              ]
+            }
+          },
+          "open": {
+            "bsonType": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$",
+            "description": "the time this location opens, on a 24 hour clock as a string ex. \"13:30\""
+          },
+          "close": {
+            "bsonType": "string",
+            "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$",
+            "description": "the time this location closes, on a 24 hour clock as a string ex. \"13:30\""
           }
         }
       },
@@ -52,16 +107,6 @@
             }
           }
         }
-      },
-      "type": {
-        "bsonType": "string",
-        "description": "The type of location this is: \"dining hall\", \"cafe\", \"market\", or \"other\"",
-        "enum": [
-          "dining hall",
-          "cafe",
-          "market",
-          "other"
-        ]
       }
     }
   }
