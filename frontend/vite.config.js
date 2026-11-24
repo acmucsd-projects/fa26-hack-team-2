@@ -5,6 +5,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
+    // Send /api requests to the Express backend during development,
+    // so the frontend can call fetch('/api/...') without CORS setup.
     proxy: {
       '/api': 'http://localhost:3001',
     },

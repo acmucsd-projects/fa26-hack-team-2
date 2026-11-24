@@ -1,13 +1,13 @@
-import { request } from './client'
+import { apiPost } from './client'
 
 export function register(name, email, password) {
-  return request('/auth/register', { method: 'POST', body: { name, email, password } })
+  return apiPost('/auth/register', { name, email, password })
 }
 
 export function login(email, password) {
-  return request('/auth/login', { method: 'POST', body: { email, password } })
+  return apiPost('/auth/login', { email, password })
 }
 
 export function logout() {
-  return request('/auth/logout', { method: 'POST' })
+  return apiPost('/auth/logout')
 }

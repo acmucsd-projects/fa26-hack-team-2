@@ -1,0 +1,74 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: var(--bg-overlay);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: calc(100svh - 32px);
+  padding: 22px 22px 20px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-5xl);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-main);
+  color: var(--text-navy);
+  text-align: left;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.modal-title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-extrabold);
+}
+
+.modal-subtitle {
+  margin-top: 8px;
+}
+
+.modal-close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--action-secondary);
+  color: var(--text-navy);
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  margin-top: 14px;
+}
+
+.modal button:focus-visible,
+.modal input:focus-visible {
+  outline: 3px solid var(--bubble-blue);
+  outline-offset: 2px;
+}
