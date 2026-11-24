@@ -3,7 +3,7 @@ import arrowLeft from '../../assets/arrow-left.svg'
 import arrowRight from '../../assets/arrow-right.svg'
 import './WeekStrip.css'
 
-function WeekStrip({ rangeLabel, days, onPrevWeek, onNextWeek, onDayClick }) {
+function WeekStrip({ title = 'This week', rangeLabel, days, goals, selectedDate, onPrevWeek, onNextWeek, onDayClick }) {
   return (
     <div className="week-strip">
       <div className="week-strip-header">
@@ -11,7 +11,7 @@ function WeekStrip({ rangeLabel, days, onPrevWeek, onNextWeek, onDayClick }) {
           <button className="week-strip-arrow" onClick={onPrevWeek} aria-label="Previous week">
             <img src={arrowLeft} alt="" />
           </button>
-          <span className="week-strip-title">This week</span>
+          <span className="week-strip-title">{title}</span>
           <span className="week-strip-range">{rangeLabel}</span>
           <button className="week-strip-arrow" onClick={onNextWeek} aria-label="Next week">
             <img src={arrowRight} alt="" />
@@ -35,10 +35,13 @@ function WeekStrip({ rangeLabel, days, onPrevWeek, onNextWeek, onDayClick }) {
           <DayTile
             key={day.date}
             dayName={day.dayName}
-            date={day.date}
+            date={day.dayNumber}
             state={day.state}
-            caloriesPercent={day.caloriesPercent}
-            budgetPercent={day.budgetPercent}
+            isSelected={day.date === selectedDate}
+            calories={day.totals.calories}
+            calorieGoal={goals.calories}
+            spentCents={day.totals.spentCents}
+            budgetCents={goals.budgetCents}
             onClick={() => onDayClick(day)}
           />
         ))}

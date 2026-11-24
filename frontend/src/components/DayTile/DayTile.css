@@ -67,3 +67,8 @@
 .day-tile-future .day-tile-bar {
   background: var(--white);
 }
+
+.day-tile-selected {
+  outline: 3px solid var(--action-primary);
+  outline-offset: 2px;
+}

@@ -6,12 +6,53 @@ import titleBudget from '../../assets/title-budget.svg'
 import titleMacros from '../../assets/title-macros.svg'
 import './StatBubbles.css'
 
-function percent(item) {
-  return (item.current / item.goal) * 100
+function percentOf(value, goal) {
+  if (!goal) return 0
+  return ((value ?? 0) / goal) * 100
 }
 
-function StatBubbles({ calories, budget, macros, details }) {
+function dollars(cents) {
+  return `$${((cents ?? 0) / 100).toFixed(2)}`
+}
+
+function buildDetails(stats, goals, meals, week) {
+  const caloriesLeft = Math.round((goals.calories ?? 0) - (stats.calories ?? 0))
+  const centsLeft = (goals.budgetCents ?? 0) - (stats.spentCents ?? 0)
+
+  return {
+    calories: {
+      amount: Math.round(stats.calories ?? 0).toLocaleString(),
+      amountLabel: `of ${(goals.calories ?? 0).toLocaleString()} cal`,
+      lines: meals.map((meal) => ({
+        label: meal.locationName ? `${meal.name} · ${meal.locationName}` : meal.name,
+        value: meal.calories == null ? '? cal' : `${Math.round(meal.calories)} cal`,
+      })),
+      total: { label: 'Left today', value: `${caloriesLeft.toLocaleString()} cal` },
+    },
+    budget: {
+      amount: dollars(stats.spentCents),
+      amountLabel: `of ${dollars(goals.budgetCents)}`,
+      lines: meals.map((meal) => ({
+        label: meal.locationName ? `${meal.name} · ${meal.locationName}` : meal.name,
+        value: meal.priceCents == null ? '?' : dollars(meal.priceCents),
+      })),
+      total: week
+        ? { label: 'This week', value: `${dollars(week.spentCents)} / ${dollars(week.budgetCents)}` }
+        : { label: 'Left today', value: dollars(centsLeft) },
+    },
+    macros: {
+      lines: [
+        { label: 'Protein', value: `${Math.round(stats.proteinG ?? 0)} / ${goals.proteinG ?? 0} g` },
+        { label: 'Carbs', value: `${Math.round(stats.carbsG ?? 0)} / ${goals.carbsG ?? 0} g` },
+        { label: 'Fat', value: `${Math.round(stats.fatG ?? 0)} / ${goals.fatG ?? 0} g` },
+      ],
+    },
+  }
+}
+
+function StatBubbles({ stats, goals, meals = [], week }) {
   const [hovered, setHovered] = useState(null)
+  const details = buildDetails(stats, goals, meals, week)
 
   const bubbles = [
     {
@@ -20,7 +61,7 @@ function StatBubbles({ calories, budget, macros, details }) {
       size: 280,
       color: 'yellow',
       circles: [
-        { name: 'eaten', color: 'teal', percent: percent(calories), maxSize: 70, x: 66, y: 40 },
+        { name: 'eaten', color: 'teal', percent: percentOf(stats.calories, goals.calories), maxSize: 70, x: 66, y: 40 },
       ],
     },
     {
@@ -29,7 +70,7 @@ function StatBubbles({ calories, budget, macros, details }) {
       size: 224,
       color: 'coral',
       circles: [
-        { name: 'spent', color: 'blue', percent: percent(budget), maxSize: 57, x: 57, y: 60 },
+        { name: 'spent', color: 'blue', percent: percentOf(stats.spentCents, goals.budgetCents), maxSize: 57, x: 57, y: 60 },
       ],
     },
     {
@@ -38,9 +79,9 @@ function StatBubbles({ calories, budget, macros, details }) {
       size: 280,
       color: 'pink',
       circles: [
-        { name: 'carbs', color: 'yellow', percent: percent(macros.carbs), maxSize: 58, x: 46, y: 30 },
-        { name: 'protein', color: 'teal', percent: percent(macros.protein), maxSize: 26, x: 32, y: 64 },
-        { name: 'fat', color: 'blue', percent: percent(macros.fat), maxSize: 26, x: 62, y: 64 },
+        { name: 'carbs', color: 'yellow', percent: percentOf(stats.carbsG, goals.carbsG), maxSize: 58, x: 46, y: 30 },
+        { name: 'protein', color: 'teal', percent: percentOf(stats.proteinG, goals.proteinG), maxSize: 26, x: 32, y: 64 },
+        { name: 'fat', color: 'blue', percent: percentOf(stats.fatG, goals.fatG), maxSize: 26, x: 62, y: 64 },
       ],
     },
   ]
